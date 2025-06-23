@@ -1,5 +1,5 @@
 import { Restaurant } from "@/Type";
-const restaurants: Restaurant[] = [
+export const restaurants: Restaurant[] = [
   {
     id: 1,
     name: "Pizza Palace",
@@ -9,6 +9,7 @@ const restaurants: Restaurant[] = [
     deliveryFee: 50,
     isOpen: true,
     estimatedDeliveryTime: "30-40 mins",
+    imageUrl: "/myFood.jpg",
     foods: [
       {
         id: 101,
@@ -19,7 +20,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: true,
         calories: 800,
-        imageUrl: "/images/margherita.jpg"
+        imageUrl: "/myFood.jpg"
       },
       {
         id: 102,
@@ -30,7 +31,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: false,
         calories: 950,
-        imageUrl: "/images/bbq-chicken.jpg"
+        imageUrl: "/myFood.jpg"
       },
       {
         id: 103,
@@ -41,7 +42,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: true,
         calories: 720,
-        imageUrl: "/images/veggie-supreme.jpg"
+        imageUrl: "/myFood.jpg"
       }
     ]
   },
@@ -54,6 +55,7 @@ const restaurants: Restaurant[] = [
     deliveryFee: 40,
     isOpen: false,
     estimatedDeliveryTime: "25-35 mins",
+    imageUrl: "/myFood.jpg",
     foods: [
       {
         id: 201,
@@ -75,7 +77,7 @@ const restaurants: Restaurant[] = [
         isAvailable: false,
         isVeg: false,
         calories: 680,
-        imageUrl: "/images/cheesy-chicken.jpg"
+        imageUrl: "/myFood.jpg"
       },
       {
         id: 203,
@@ -86,7 +88,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: true,
         calories: 650,
-        imageUrl: "/images/veg-burger.jpg"
+        imageUrl: "/myFood.jpg"
       }
     ]
   },
@@ -99,6 +101,7 @@ const restaurants: Restaurant[] = [
     deliveryFee: 70,
     isOpen: true,
     estimatedDeliveryTime: "40-50 mins",
+    imageUrl: "/myFood.jpg",
     foods: [
       {
         id: 301,
@@ -109,7 +112,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: false,
         calories: 300,
-        imageUrl: "/images/salmon-nigiri.jpg"
+        imageUrl: "/myFood.jpg"
       },
       {
         id: 302,
@@ -120,7 +123,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: false,
         calories: 280,
-        imageUrl: "/images/tuna-maki.jpg"
+        imageUrl: "/myFood.jpgg"
       },
       {
         id: 303,
@@ -131,7 +134,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: true,
         calories: 260,
-        imageUrl: "/images/avocado-sushi.jpg"
+        imageUrl: "/myFood.jpg"
       }
     ]
   },
@@ -144,6 +147,7 @@ const restaurants: Restaurant[] = [
     deliveryFee: 30,
     isOpen: true,
     estimatedDeliveryTime: "35-45 mins",
+    imageUrl: "/myFood.jpg",
     foods: [
       {
         id: 401,
@@ -154,7 +158,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: false,
         calories: 1200,
-        imageUrl: "/images/kacchi.jpg"
+        imageUrl: "/myFood.jpg"
       },
       {
         id: 402,
@@ -165,7 +169,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: false,
         calories: 1100,
-        imageUrl: "/images/tehari.jpg"
+        imageUrl: "/myFood.jpg"
       },
       {
         id: 403,
@@ -176,7 +180,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: true,
         calories: 600,
-        imageUrl: "/images/veg-pulao.jpg"
+        imageUrl: "/myFood.jpg"
       }
     ]
   },
@@ -189,6 +193,7 @@ const restaurants: Restaurant[] = [
     deliveryFee: 45,
     isOpen: false,
     estimatedDeliveryTime: "30-40 mins",
+    imageUrl: "/myFood.jpg",
     foods: [
       {
         id: 501,
@@ -199,7 +204,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: false,
         calories: 950,
-        imageUrl: "/images/tandoori-chicken.jpg"
+        imageUrl: "/myFood.jpg"
       },
       {
         id: 502,
@@ -210,7 +215,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: true,
         calories: 650,
-        imageUrl: "/images/paneer-tikka.jpg"
+        imageUrl: "/myFood.jpg"
       },
       {
         id: 503,
@@ -221,7 +226,7 @@ const restaurants: Restaurant[] = [
         isAvailable: true,
         isVeg: true,
         calories: 250,
-        imageUrl: "/images/butter-naan.jpg"
+        imageUrl: "/myFood.jpg"
       }
     ]
   }
