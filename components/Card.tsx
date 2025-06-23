@@ -1,6 +1,7 @@
 import React from "react";
 import { Clock, Star, Bike } from "lucide-react";
 import { RestaurantCardProps } from "@/Type";
+import Image from "next/image";
 
 const RestaurantCard: React.FC<RestaurantCardProps> = ({
   name,
@@ -15,9 +16,15 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
   tag
 }) => {
   return (
-    <div className="rounded-xl shadow-sm border bg-white overflow-hidden w-72">
+    <div className="rounded-xl shadow-sm border bg-white overflow-hidden w-full cursor-pointer">
       <div className="relative">
-        <img src={imageUrl} alt={name} className="w-full h-40 object-cover" />
+         <Image
+    src={imageUrl}
+    alt={name}
+    width={500}
+    height={500}
+    className="w-full h-40 object-cover transition-transform duration-500 ease-in-out hover:scale-110 "
+  />
         {tag && (
           <div className="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
             {tag}

@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.container-custom {
+  /* @apply px-4 md:px-56 max-w-screen-xxl mx-auto; */
+  /* @apply px-4 md:w-[1275px] md:mx-auto; */
+  @apply px-4 md:w-[1120px] md:mx-auto;
+  
+}
