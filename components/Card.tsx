@@ -42,17 +42,21 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
       </div>
 
       <div className="p-3">
-        <h3 className="font-semibold text-sm text-gray-600">{name}</h3>
+      <div className="flex justify-start items-center space-x-1">
+          <span className="font-semibold text-sm text-gray-600">{name}</span>
+          <span className="font-semibold text-sm text-gray-600"> - </span>
+          <span className="font-semibold text-sm text-gray-600">{location}</span>
+      </div>
         <p className="text-xs text-gray-600">{cuisine}</p>
         <div className="flex items-center text-xs mt-2 gap-3">
-          <span className="flex items-center text-red-500 font-medium">
-            <Star size={14} className="mr-1" />
-            {rating} <span className="text-gray-500 ml-1">({reviews})</span>
-          </span>
-          <span className="flex items-center text-gray-700">
-            <Bike size={14} className="mr-1" />
+          <span className="flex items-center text-gray-700 text-[18px] font-semibold">
             {deliveryFee} tk
           </span>
+          <span className="flex justify-center items-center text-red-500 font-medium">
+            <Star size={14} className="mr-1" />
+            {rating} 
+          </span>
+          
         </div>
       </div>
     </div>

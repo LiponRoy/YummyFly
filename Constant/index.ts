@@ -231,3 +231,30 @@ export const restaurants: Restaurant[] = [
     ]
   }
 ];
+
+export const FavouriteCuisinesData = [
+    {
+      title: "Biryani",
+      imageUrl: "/myFood.jpg",
+    },
+    {
+      title: "Burger",
+      imageUrl: "/myFood.jpg",
+    },
+    {
+      title: "Pizza",
+      imageUrl: "/myFood.jpg",
+    },
+    {
+      title: "Chicken",
+      imageUrl: "/myFood.jpg",
+    },
+    {
+      title: "Fast Food",
+      imageUrl: "/myFood.jpg",
+    },
+    {
+      title: "Pasta",
+      imageUrl: "/myFood.jpg",
+    },
+  ];
