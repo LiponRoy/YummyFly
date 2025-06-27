@@ -22,6 +22,7 @@ export default function Home() {
           location={restaurant.location}
           rating={restaurant.rating}
           deliveryFee={restaurant.deliveryFee}
+          discountPercent={restaurant.discountPercent}
         />
       ))}
 

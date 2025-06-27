@@ -3,6 +3,7 @@ export interface Food {
   name: string;
   description: string;
   price: number;
+  discountPercent?: number;
   category: string;
   isAvailable: boolean;
   isVeg: boolean;
@@ -17,6 +18,7 @@ export interface Restaurant {
   rating: number;
   cuisines: string[];
   deliveryFee: number;
+  discountPercent?: number;
   isOpen: boolean;
   estimatedDeliveryTime: string;
   imageUrl:string;
@@ -30,6 +32,7 @@ export interface RestaurantCardProps {
   rating?: number;
   reviews?: number;
   deliveryFee?: number;
+   discountPercent?: number;
   imageUrl: string;
   estimatedTime?: string;
   discountText?: string;

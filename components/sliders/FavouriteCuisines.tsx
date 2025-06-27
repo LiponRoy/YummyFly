@@ -13,7 +13,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 5000,
   speed: 600,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   pauseOnHover: true,
   responsive: [
@@ -58,7 +58,7 @@ const settings = {
               priority
             />
            </div>
-            <span className="font-semibold text-base">{item.title}</span>
+            <span className="font-semibold text-base text-blue-950">{item.title}</span>
           </div>
         ))}
       </Slider>
