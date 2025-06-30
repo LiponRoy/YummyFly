@@ -12,7 +12,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
     deliveryFee,
     discountPercent,
     imageUrl,
-    estimatedTime,
+    estimatedDeliveryTime,
     discountText,
     tag,
 }) => {
@@ -29,13 +29,24 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
                
 
                 {/* Percent counting */}
-                {discountPercent > 0 && (
+                {discountPercent && discountPercent > 0 && (
                     <div className="absolute top-4 -left-1 bg-green-600 px-2 text-white rounded-md">
                         <div className="flex justify-center items-center pl-4">
                             <div className=" pr-2">
                                 <BadgePercent size={16}/>
                             </div>{" "}
                             Up to {discountPercent}% off
+                        </div>
+                    </div>
+                )}
+                {/* estimatedDeliveryTime */}
+                {discountPercent && discountPercent > 0 && (
+                    <div className="absolute bottom-4 -right-1  px-2 text-slate-600 bg-white rounded-md">
+                        <div className="flex justify-center items-center pl-1 py-1">
+                            <div className=" pr-1">
+                                
+                            </div>{" "}
+                             {estimatedDeliveryTime}
                         </div>
                     </div>
                 )}

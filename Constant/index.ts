@@ -263,3 +263,29 @@ export const FavouriteCuisinesData = [
       imageUrl: "/myFood.jpg",
     },
   ];
+export const DailyDealsData = [
+    {
+      title: "Biryani",
+      imageUrl: "/DailyDealsImage.jpg",
+    },
+    {
+      title: "Burger",
+      imageUrl: "/DailyDealsImage.jpg",
+    },
+    {
+      title: "Pizza",
+      imageUrl: "/DailyDealsImage.jpg",
+    },
+    {
+      title: "Chicken",
+      imageUrl: "/DailyDealsImage.jpg",
+    },
+    {
+      title: "Fast Food",
+      imageUrl: "/DailyDealsImage.jpg",
+    },
+    {
+      title: "Pasta",
+      imageUrl: "/DailyDealsImage.jpg",
+    },
+  ];

@@ -1,4 +1,5 @@
 import RestaurantCard from "@/components/Card";
+import DailyDeals from "@/components/sliders/DailyDeals";
 import FavouriteCuisines from "@/components/sliders/FavouriteCuisines";
 import { restaurants } from "@/Constant";
 import Image from "next/image";
@@ -11,6 +12,9 @@ export default function Home() {
   </div>
   <div className="col-span-6">
     <div className="w-full my-4">
+      <DailyDeals/>
+    </div>
+    <div className="w-full my-4">
       <FavouriteCuisines/>
     </div>
     <div className=" grid grid-cols-1 md:grid-cols-3 gap-2 m-4">
@@ -22,6 +26,7 @@ export default function Home() {
           location={restaurant.location}
           rating={restaurant.rating}
           deliveryFee={restaurant.deliveryFee}
+          estimatedDeliveryTime={restaurant.estimatedDeliveryTime}
           discountPercent={restaurant.discountPercent}
         />
       ))}

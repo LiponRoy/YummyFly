@@ -13,7 +13,7 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 5000,
   speed: 600,
-  slidesToShow: 4,
+  slidesToShow: 6,
   slidesToScroll: 1,
   pauseOnHover: true,
   responsive: [
@@ -37,28 +37,30 @@ const settings = {
 
   
   return (
-    <div className="w-full   rounded-md text-white text-sm text-center my-6">
-        <div className="my-4 w-full text-start ml-6">
+    <div className="w-full   rounded-md text-white text-sm text-center my-2">
+        <div className="relative my-2 w-full text-start ml-6 ">
                 Favourite Cuisines
             </div>
       <Slider {...settings}>
         {FavouriteCuisinesData?.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center space-y-1"
+            className=" flex flex-col justify-center items-center space-y-1 w-"
           >
             
-           <div className="flex flex-col justify-center items-center">
+           <div className="relative bg-slate-300 m-2 h-[130px] w-[130px] rounded-md ">
+            <div className=" absolute top-0 left-0 right-0 flex flex-col justify-center items-center py-1">
              <Image
               src={item.imageUrl} // Replace with your actual image path
               alt="Your description"
               width={100}
               height={100}
               className="rounded-full"
-              priority
+              // priority
             />
            </div>
-            <span className="font-semibold text-base text-blue-950">{item.title}</span>
+            <span className="absolute bottom-1 left-0 right-0 font-semibold text-base mt-6 text-slate-800">{item.title}</span>
+           </div>
           </div>
         ))}
       </Slider>
