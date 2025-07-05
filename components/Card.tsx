@@ -7,12 +7,12 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
     name,
     location,
     cuisine,
-    rating,
+    topRated,
     reviews,
     deliveryFee,
     discountPercent,
     imageUrl,
-    estimatedDeliveryTime,
+    fastestDelivery,
     discountText,
     tag,
 }) => {
@@ -46,7 +46,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
                             <div className=" pr-1">
                                 
                             </div>{" "}
-                             {estimatedDeliveryTime}
+                             {fastestDelivery}
                         </div>
                     </div>
                 )}
@@ -72,7 +72,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
                     </span>
                     <span className="flex justify-center items-center text-red-500 font-medium">
                         <Star size={14} className="mr-1 text-red-600" />
-                        <span className="text-[14px]">{rating} </span>
+                        <span className="text-[14px]">{topRated} </span>
                     </span>
                 </div>
             </div>
