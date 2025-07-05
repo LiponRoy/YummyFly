@@ -46,7 +46,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
                             <div className=" pr-1">
                                 
                             </div>{" "}
-                             {fastestDelivery}
+                             {fastestDelivery} min
                         </div>
                     </div>
                 )}

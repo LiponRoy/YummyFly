@@ -69,9 +69,9 @@ export const restaurants = [
         discountPercent: 12,
         isOpen: false,
         imageUrl: "/myFood.jpg",
-        fastestDelivery: 30,
-        distance: 5,
-        topRated: 4.3,
+        fastestDelivery: 15,
+        distance: 2,
+        topRated: 3.3,
         foods: [
             {
                 id: 201,
@@ -118,9 +118,9 @@ export const restaurants = [
         discountPercent: 15,
         isOpen: true,
         imageUrl: "/myFood.jpg",
-        fastestDelivery: 30,
-        distance: 5,
-        topRated: 4.3,
+        fastestDelivery: 40,
+        distance: 8,
+        topRated: 4.9,
         foods: [
             {
                 id: 301,
@@ -166,9 +166,9 @@ export const restaurants = [
         discountPercent: 0,
         isOpen: true,
         imageUrl: "/myFood.jpg",
-        fastestDelivery: 30,
-        distance: 5,
-        topRated: 4.3,
+        fastestDelivery: 50,
+        distance: 7,
+        topRated: 2.3,
         foods: [
             {
                 id: 401,
@@ -215,9 +215,9 @@ export const restaurants = [
         discountPercent: 5,
         isOpen: false,
         imageUrl: "/myFood.jpg",
-        fastestDelivery: 30,
-        distance: 5,
-        topRated: 4.3,
+        fastestDelivery: 20,
+        distance: 1,
+        topRated: 5.0,
         foods: [
             {
                 id: 501,
