@@ -2,8 +2,10 @@ import React from "react";
 import { Clock, Star, Bike, BadgePercent } from "lucide-react";
 import { RestaurantCardProps } from "@/Type";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const RestaurantCard: React.FC<RestaurantCardProps> = ({
+    id,
     name,
     location,
     cuisine,
@@ -16,8 +18,14 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
     discountText,
     tag,
 }) => {
+    const route =useRouter();
+
+    const goToFoodDetail = (id) => {
+    route.push(`/foodDetail/${id}`);
+  };
     return (
-        <div className="rounded-xl shadow-sm border bg-white overflow-hidden w-full cursor-pointer">
+        // href={`/user/${user.id}`}
+        <div onClick={()=>goToFoodDetail(id)} className="rounded-xl shadow-sm border bg-white overflow-hidden w-full cursor-pointer">
             <div className="relative">
                 <Image
                     src={imageUrl}

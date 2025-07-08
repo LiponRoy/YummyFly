@@ -156,6 +156,7 @@ export default function Home() {
                     {filteredProducts.map((restaurant, i) => (
                         <RestaurantCard
                             key={i}
+                            id={restaurant.id}
                             name={restaurant.name}
                             imageUrl={restaurant.imageUrl}
                             location={restaurant.location}
