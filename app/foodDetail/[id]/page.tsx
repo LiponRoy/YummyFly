@@ -10,10 +10,11 @@ type FoodProps = {
   };
 };
 // ({ params }: { params: Promise<{ id: string }> }) {
-const FoodDetail = ({ params }: { params: Promise<FoodProps['params']> }) => {
-   const { id } = use(params);
-  const [openMoreInfo, setOpenMoreInfo] = useState(false);
-  console.log("openMoreInfo: ", openMoreInfo);
+const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
+  const { id } = use(params);
+  const [openMoreInfoModal, setOpenMoreInfoModal] = useState(false);
+  const [openFoodItemModal, setOpenFoodItemModal] = useState(false);
+  console.log("openMoreInfoModal: ", openMoreInfoModal);
 
   const product = restaurants.find((item) => item.id.toString() === id);
 
@@ -67,55 +68,60 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps['params']> }) => {
               </div>
               {/* More Info  */}
               <div className="mt-2">
-                <div className="text-red-400 flex justify-start items-center space-x-1 cursor-pointer" onClick={() => setOpenMoreInfo(!openMoreInfo)}>
-                  <OctagonAlert className="text-red-400" size={16}/>
+                <div
+                  className="text-red-400 flex justify-start items-center space-x-1 cursor-pointer"
+                  onClick={() => setOpenMoreInfoModal(!openMoreInfoModal)}
+                >
+                  <OctagonAlert className="text-red-400" size={16} />
                   <span>More Info</span>
                 </div>
               </div>
               {/* // More info Modal */}
-              {openMoreInfo && (
+              {openMoreInfoModal && (
                 <div className=" absolute inset-0 mx-auto my-auto w-full h-full bg-slate-800/80 ">
                   <div className="absolute inset-0 mx-auto my-auto bg-slate-200 w-[500px] max-h-[500px] overflow-hidden text-slate-600 rounded-xl p-4">
                     <div
-                      onClick={() => setOpenMoreInfo(false)}
+                      onClick={() => setOpenMoreInfoModal(false)}
                       className="absolute top-2 right-2 text-md font-bold bg-amber-700 rounded-full w-6 h-6 cursor-pointer z-50 flex justify-center items-center text-white"
                     >
-                     <span> X</span>
+                      <span> X</span>
                     </div>
                     <span className="pl-4 font-semibold">More Info</span>
                     <div className="col-span-1 ">
-              <Image
-                src={product?.moreInfo?.imageUrl}
-                alt={"food"}
-                width={500}
-                height={500}
-                className="w-full h-40 object-cover"
-              />
-              <div className=" ml-4">
-                <div className="flex justify-start items-start space-x-1 my-2">
-                  <MapPinPlusInside className="text-red-400" />
-                   <span>{product?.moreInfo?.fullLocation}</span>
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <span className="text-md font-semibold">Delivery Fee :</span>
-                  <span>{product?.moreInfo?.aboutDeliveryFee}</span>
-
-                </div>
-                <div className="flex flex-col justify-start items-start">
-                  <span  className="text-md font-semibold">Minimum Order</span>
-                  <span>{product?.moreInfo?.aboutMinimumOrder}</span>
-                </div>
-                  <div className="flex flex-col justify-start items-start mt-4">
-                  <span>Opening Hours</span>
-                  {product?.moreInfo?.OpeningHours.map((val,i)=>(
-                    <div key={i} className="">{val}</div>
-                  ))}
-                </div>
-              </div>
-                   
-
-            </div>
-
+                      <Image
+                        src={product?.moreInfo?.imageUrl}
+                        alt={"food"}
+                        width={500}
+                        height={500}
+                        className="w-full h-40 object-cover"
+                      />
+                      <div className=" ml-4">
+                        <div className="flex justify-start items-start space-x-1 my-2">
+                          <MapPinPlusInside className="text-red-400" />
+                          <span>{product?.moreInfo?.fullLocation}</span>
+                        </div>
+                        <div className="flex flex-col justify-start items-start">
+                          <span className="text-md font-semibold">
+                            Delivery Fee :
+                          </span>
+                          <span>{product?.moreInfo?.aboutDeliveryFee}</span>
+                        </div>
+                        <div className="flex flex-col justify-start items-start">
+                          <span className="text-md font-semibold">
+                            Minimum Order
+                          </span>
+                          <span>{product?.moreInfo?.aboutMinimumOrder}</span>
+                        </div>
+                        <div className="flex flex-col justify-start items-start mt-4">
+                          <span>Opening Hours</span>
+                          {product?.moreInfo?.OpeningHours.map((val, i) => (
+                            <div key={i} className="">
+                              {val}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   .
                 </div>
@@ -130,6 +136,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps['params']> }) => {
             {product?.foods.map((val, i) => (
               <div
                 key={i}
+                onClick={() => setOpenFoodItemModal(!openFoodItemModal)}
                 className=" w-1/2 border border-slate-300 p-4 bg-slate-100 text-slate-700 rounded-lg m-2 grid grid-cols-12 hover:bg-red-50"
               >
                 <div className="col-span-10 flex flex-col justify-start items-start">
@@ -151,6 +158,50 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps['params']> }) => {
                     className="h-24 w-24 object-cover transition-transform duration-500 ease-in-out hover:scale-110 rounded-lg"
                   />
                 </div>
+
+                {/* // Food Item Modal */}
+                {openFoodItemModal && (
+                  <div className=" absolute inset-0 mx-auto my-auto w-full h-full bg-slate-800/80 ">
+                    <div className="absolute inset-0 mx-auto my-auto bg-slate-200 w-[500px] max-h-[500px] overflow-hidden text-slate-600 rounded-xl p-4">
+                      <span
+                        onClick={() => setOpenFoodItemModal(false)}
+                        className="absolute top-2 right-2 text-md font-bold bg-amber-700 rounded-full w-6 h-6 cursor-pointer z-50 flex justify-center items-center text-white"
+                      >
+                        <span> X</span>
+                      </span>
+                      <span className="pl-4 font-semibold">Food Item</span>
+                      <div className="col-span-1 ">
+                        <Image
+                          src={val.imageUrl}
+                          alt={"food"}
+                          width={500}
+                          height={500}
+                          className="w-[100px] h-[100px] object-cover rounded-full"
+                        />
+                        <div className=" ml-4">
+                          <div className="flex justify-start items-start space-x-1 my-2">
+                            <MapPinPlusInside className="text-red-400" />
+                            <span>{val.name}</span>
+                          </div>
+                          <div className="flex flex-col justify-start items-start">
+                            <span className="text-md font-semibold">
+                              Delivery Fee :
+                            </span>
+                            <span>{val.name}</span>
+                          </div>
+                          <div className="flex flex-col justify-start items-start">
+                            <span className="text-md font-semibold">
+                              Minimum Order
+                            </span>
+                            <span>{val.name}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    .
+                  </div>
+                )}
+                {/* end Food Item modal  */}
               </div>
             ))}
           </div>
