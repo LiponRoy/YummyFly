@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = () => {
 
   return (
-    <nav className="bg-white shadow px-4 py-3">
+    <nav className="bg-white shadow px-4 py-3 z-50">
       <div className="container-custom mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold text-orange-600">
         BD-Foody-Zone
