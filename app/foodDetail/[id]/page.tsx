@@ -2,16 +2,16 @@
 import { restaurants } from "@/Constant";
 import { Bike, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 
 type FoodProps = {
   params: {
     id: string;
   };
 };
-
-const FoodDetail = ({ params }: FoodProps) => {
-  const { id } = params;
+// ({ params }: { params: Promise<{ id: string }> }) {
+const FoodDetail = ({ params }: { params: Promise<FoodProps['params']> }) => {
+   const { id } = use(params);
   const [openMoreInfo, setOpenMoreInfo] = useState(false);
   console.log("openMoreInfo: ", openMoreInfo);
 
@@ -29,7 +29,7 @@ const FoodDetail = ({ params }: FoodProps) => {
 
   return (
     <>
-      <div className=" mt-4 relative">
+      <div className=" mt-4 relative ">
         <div className="container-custom flex flex-col justify-start items-start">
           {/* // top restaurant info */}
           <div className="grid grid-cols-8 space-x-2">
@@ -75,14 +75,14 @@ const FoodDetail = ({ params }: FoodProps) => {
               {/* // More info Modal */}
               {openMoreInfo && (
                 <div className=" absolute inset-0 mx-auto my-auto w-full h-full bg-slate-800/80 ">
-                  <div className="absolute inset-0 mx-auto my-auto bg-slate-200 w-[500px] h-[500px] overflow-hidden text-slate-600">
+                  <div className="absolute inset-0 mx-auto my-auto bg-slate-200 w-[500px] max-h-[500px] overflow-hidden text-slate-600 rounded-xl p-4">
                     <div
                       onClick={() => setOpenMoreInfo(false)}
                       className="absolute top-2 right-2 text-md font-bold bg-amber-700 rounded-full w-6 h-6 cursor-pointer z-50 flex justify-center items-center text-white"
                     >
                      <span> X</span>
                     </div>
-                    <span>More Info</span>
+                    <span className="pl-4 font-semibold">More Info</span>
                     <div className="col-span-1 ">
               <Image
                 src={product?.moreInfo?.imageUrl}
