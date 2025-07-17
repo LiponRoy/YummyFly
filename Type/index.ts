@@ -1,4 +1,4 @@
-export interface Food {
+export interface IFood {
   id: number;
   name: string;
   description: string;
@@ -9,9 +9,10 @@ export interface Food {
   isVeg: boolean;
   calories: number;
   imageUrl: string;
+  cartQuantity?: number;
 }
 
-export interface Restaurant {
+export interface IRestaurant {
   id: number;
   name: string;
   location: string;
@@ -22,10 +23,10 @@ export interface Restaurant {
   isOpen: boolean;
   estimatedDeliveryTime: string;
   imageUrl:string;
-  foods: Food[];
+  foods: IFood[];
 }
 
-export interface RestaurantCardProps {
+export interface IRestaurantCardProps {
   name: string;
   location?: string;
   cuisine?: string;

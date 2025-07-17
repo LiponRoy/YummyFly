@@ -1,7 +1,8 @@
 "use client";
 import Modal from "@/components/Modal";
 import { restaurants } from "@/Constant";
-import { Food } from "@/Type";
+import { IFood } from "@/Type";
+
 import { Bike, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
 import Image from "next/image";
 import React, { use, useState } from "react";
@@ -18,9 +19,9 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
     const [openModal, setOpenModal] = useState<Boolean>(false);
 
     const [openFoodItemModal, setOpenFoodItemModal] = useState<Boolean>(false);
-    const [selectedFoodItem, setSelectedFoodItem] = useState<Food>();
+    const [selectedFoodItem, setSelectedFoodItem] = useState<IFood>();
 
-    const clickPerFoodItem = (val:Food) => {
+    const clickPerFoodItem = (val:IFood) => {
         setSelectedFoodItem(val);
         setOpenFoodItemModal(true);
     };
@@ -159,7 +160,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
 
                     {/* // All menu based on this restaurant */}
                     <div className="w-full mt-5">
-                        {product?.foods.map((val:Food, i) => (
+                        {product?.foods.map((val:IFood, i) => (
                             <div
                                 key={i}
                                 onClick={() => clickPerFoodItem(val)}
@@ -200,13 +201,26 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                                         height={500}
                                         className="w-full h-40 object-cover"
                                     />
-                         <div className="flex flex-col justify-start items-start space-y-2 mt-2">
+                         <div className="flex flex-col justify-start items-start space-y-2 my-6 mt-2">
                              <span className="text-[18px] font-semibold">
                                 {selectedFoodItem.name} :
                             </span>
                             <span>{selectedFoodItem.description}</span>
-                            <span><span className="mr-1">Taka</span>{selectedFoodItem.price}<span className="ml-1">/=</span></span>
+                            <span className="text-xl font-medium"><span className="mr-1">Taka</span>{selectedFoodItem.price}<span className="ml-1">/=</span></span>
                          </div>
+                         {/* add cart options */}
+                         <div className="w-full flex justify-between items-center p-2  bg-slate-100 border border-slate-300 my-4 rounded-lg">
+                            <div className="flex justify-center items-center space-x-4">
+                                <button className="bg-orange-600 w-8 h-8 rounded-2xl flex justify-center items-center text-white text-3xl">-</button>
+                                <span className="text-2xl font-bold">12</span>
+                                <button className="bg-orange-600 w-8 h-8 rounded-2xl flex justify-center items-center text-white text-2xl">+</button>
+                            </div>
+                            <div className="">
+                                <button className="bg-orange-600 w-[180px] p-1 rounded-lg text-white curser-pointer">Add to cart</button>
+                            </div>
+
+                         </div>
+                         {/* add cart options */}
                         </div>:<div>No food Found</div>}
                         
                     </Modal>
