@@ -9,6 +9,8 @@ interface ICartStore {
   addItemToCart: (newItem: IFood) => void;
   incrementCart: (newItem: IFood) => void;
   decrementCart: (newItem: IFood) => void;
+  removeItemFromCart: (newItem: IFood) => void;
+  allCartRemove: () => void;
 }
 
 const useCartStore = create<ICartStore>()(
@@ -80,6 +82,25 @@ const useCartStore = create<ICartStore>()(
             return {
               ...state,
               cartProducts: updatedCart,
+            };
+          });
+        },
+        removeItemFromCart: (removeItem) => {
+          const { id } = removeItem;
+
+          set((state) => {
+            const newItem = state.cartProducts.filter((item) => item.id !== id);
+            return {
+              ...state,
+              cartProducts: newItem,
+            };
+          });
+        },
+        allCartRemove: () => {
+          set((state) => {
+            return {
+              ...state,
+              cartProducts: [],
             };
           });
         },
