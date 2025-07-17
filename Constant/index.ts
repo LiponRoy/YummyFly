@@ -1,4 +1,4 @@
-import { Restaurant } from "@/Type";
+import { IAvailableDeals, Restaurant } from "@/Type";
 
 // All possible cuisines in the dataset for the filter UI
 export const allCuisines = [
@@ -25,7 +25,7 @@ export const restaurants = [
     topRated: 4.3,
     moreInfo: {
       imageUrl: "/myFood.jpg",
-      fullLocation:"Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
+      fullLocation: "Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
       aboutDeliveryFee:
         "Delivery fee is charged based on time of day and distance.",
       aboutMinimumOrder: "For orders below Tk 100.",
@@ -88,7 +88,7 @@ export const restaurants = [
     topRated: 3.3,
     moreInfo: {
       imageUrl: "/myFood.jpg",
-      fullLocation:"Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
+      fullLocation: "Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
       aboutDeliveryFee:
         "Delivery fee is charged based on time of day and distance.",
       aboutMinimumOrder: "For orders below Tk 100.",
@@ -151,7 +151,7 @@ export const restaurants = [
     topRated: 4.9,
     moreInfo: {
       imageUrl: "/myFood.jpg",
-      fullLocation:"Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
+      fullLocation: "Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
       aboutDeliveryFee:
         "Delivery fee is charged based on time of day and distance.",
       aboutMinimumOrder: "For orders below Tk 100.",
@@ -214,7 +214,7 @@ export const restaurants = [
     topRated: 2.3,
     moreInfo: {
       imageUrl: "/myFood.jpg",
-      fullLocation:"Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
+      fullLocation: "Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
       aboutDeliveryFee:
         "Delivery fee is charged based on time of day and distance.",
       aboutMinimumOrder: "For orders below Tk 100.",
@@ -277,7 +277,7 @@ export const restaurants = [
     topRated: 5.0,
     moreInfo: {
       imageUrl: "/myFood.jpg",
-      fullLocation:"Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
+      fullLocation: "Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
       aboutDeliveryFee:
         "Delivery fee is charged based on time of day and distance.",
       aboutMinimumOrder: "For orders below Tk 100.",
@@ -397,7 +397,7 @@ export const newFood = [
     imageUrl: "/myFood.jpg",
     moreInfo: {
       imageUrl: "/myFood.jpg",
-      fullLocation:"Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
+      fullLocation: "Shop 35/A Sayed Grand center. House 89,Road 28,Sector 07",
       aboutDeliveryFee:
         "Delivery fee is charged based on time of day and distance.",
       aboutMinimumOrder: "For orders below Tk 100.",
@@ -446,5 +446,31 @@ export const newFood = [
         imageUrl: "/myFood.jpg",
       },
     ],
+  },
+];
+
+export const availableDeals: IAvailableDeals[] = [
+  {
+    id: 1,
+    title: "Buy 1 Get 1 Free",
+    description:
+      "Enjoy a delicious pizza and get another one absolutely free. ",
+  },
+  {
+    id: 2,
+    title: "20% Off on Burgers",
+    description:
+      "Craving burgers? Get 20% off on all burger items every Monday.",
+  },
+  {
+    id: 3,
+    title: "Free Dessert",
+    description: "Order any combo meal and get a free dessert of your choice!",
+  },
+  {
+    id: 4,
+    title: "Family Platter ",
+    description:
+      "Perfect for groups! Get our Family Platter at a special discounted.",
   },
 ];

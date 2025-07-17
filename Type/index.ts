@@ -3,7 +3,7 @@ export interface IFood {
   name: string;
   description: string;
   price: number;
-  discountPercent?:number | undefined;
+  discountPercent?: number | undefined;
   category: string;
   isAvailable: boolean;
   isVeg: boolean;
@@ -19,10 +19,10 @@ export interface IRestaurant {
   rating: number;
   cuisines: string[];
   deliveryFee: number;
-  discountPercent?:number | undefined;
+  discountPercent?: number | undefined;
   isOpen: boolean;
   estimatedDeliveryTime: string;
-  imageUrl:string;
+  imageUrl: string;
   foods: IFood[];
 }
 
@@ -33,10 +33,16 @@ export interface IRestaurantCardProps {
   rating?: number;
   reviews?: number;
   deliveryFee?: number;
-   discountPercent?:number | undefined;
+  discountPercent?: number | undefined;
   imageUrl: string;
   estimatedDeliveryTime: string;
   estimatedTime?: string;
   discountText?: string;
   tag?: string;
+}
+
+export interface IAvailableDeals {
+  id: number;
+  title: string;
+  description: string;
 }

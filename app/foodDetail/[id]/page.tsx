@@ -1,7 +1,8 @@
 "use client";
+import AvailableDeals from "@/components/AvailableDeals";
 import Modal from "@/components/Modal";
 import { restaurants } from "@/Constant";
-import { IFood } from "@/Type";
+import { IAvailableDeals, IFood } from "@/Type";
 
 import { Bike, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
 import Image from "next/image";
@@ -21,10 +22,16 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
     const [openFoodItemModal, setOpenFoodItemModal] = useState<Boolean>(false);
     const [selectedFoodItem, setSelectedFoodItem] = useState<IFood>();
 
-    const clickPerFoodItem = (val:IFood) => {
+        const clickPerFoodItem = (val:IFood) => {
         setSelectedFoodItem(val);
         setOpenFoodItemModal(true);
     };
+
+    // Available Deals
+    const [openAvailableDealsModal, setOpenAvailableDealsModal] = useState<Boolean>(false);
+    const [selectedAvailableDeals, setSelectedAvailableDeals] = useState<IAvailableDeals>();
+
+    
 
     const product = restaurants.find((item) => item.id.toString() === id);
 
@@ -41,22 +48,22 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
     return (
         <>
             <div className=" mt-4 relative ">
-                <div className="container-custom flex flex-col justify-start items-start">
+                <div className="w-full container-custom flex flex-col justify-start items-start">
                     {/* // top restaurant info */}
                     <div className="grid grid-cols-8 space-x-2">
-                        <div className="col-span-1 ">
+                        <div className="col-span-3 ">
                             <Image
                                 src={product.imageUrl}
                                 alt={"food"}
                                 width={500}
                                 height={500}
-                                className="w-full h-40 object-cover transition-transform duration-500 ease-in-out hover:scale-110 "
+                                className="w-full h-48 object-cover transition-transform duration-500 ease-in-out hover:scale-110 rounded-md"
                             />
                         </div>
-                        <div className="col-span-7 ">
+                        <div className="col-span-5 ">
                             <div className="flex flex-col justify-start items-start ml-2 space-y-1">
                                 <div className="flex justify-center items-center">
-                                    <span className="text-[26px] font-normal">
+                                    <span className="text-[32px] font-normal">
                                         {product.name}
                                     </span>
                                     <span className="mx-2">-</span>
@@ -82,7 +89,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                                 </div>
                             </div>
                             {/* More Info  */}
-                            <div className="mt-2 w-28">
+                            <div className="mt-4 w-28 ml-2">
                                 <div
                                     className="text-red-400 flex justify-start items-center space-x-1 cursor-pointer"
                                     onClick={() => setOpenModal(true)}
@@ -157,6 +164,8 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                         </div>
                     </div>
                     {/* // End top restaurant info */}
+
+                    <AvailableDeals selectedAvailableDeals={selectedAvailableDeals} setSelectedAvailableDeals={setSelectedAvailableDeals} openAvailableDealsModal={openAvailableDealsModal} setOpenAvailableDealsModal={setOpenAvailableDealsModal}/>
 
                     {/* // All menu based on this restaurant */}
                     <div className="w-full mt-5">
