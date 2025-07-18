@@ -467,10 +467,5 @@ export const availableDeals: IAvailableDeals[] = [
     title: "Free Dessert",
     description: "Order any combo meal and get a free dessert of your choice!",
   },
-  {
-    id: 4,
-    title: "Family Platter ",
-    description:
-      "Perfect for groups! Get our Family Platter at a special discounted.",
-  },
+
 ];

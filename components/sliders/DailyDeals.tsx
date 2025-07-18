@@ -12,9 +12,14 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 5000,
   speed: 600,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   pauseOnHover: true,
+
+//  variableWidth: true,
+		centerMode: true,
+		centerPadding: "15",
+
   responsive: [
     {
       breakpoint: 1024, // below 1024px
@@ -36,18 +41,18 @@ const settings = {
 
   
   return (
-    <div className="w-full   rounded-md text-white text-sm text-center my-2">
-        <div className="relative my-2 w-full text-start ml-6 ">
-               Daily Deals
+    <div className=" rounded-md  text-sm text-center w-full m-0 p-0">
+        <div className="relative text-start ml-2 text-slate-700 text-[24px] my-2">
+               Your Daily Deals
             </div>
-      <Slider {...settings} >
+      <Slider className="w-full" {...settings} >
         {DailyDealsData?.map((item, index) => (
           <div
             key={index}
-            className=" flex flex-col justify-center items-center space-y-1 "
+            className=" flex flex-col justify-between items-center space-y-1 "
           >
             
-           <div className=" bg-slate-300 m-2 h-[130px] w-[290px] bg-cover bg-center rounded-xl" style={{
+           <div className="  h-[130px] w-[250px] bg-cover bg-center rounded-xl" style={{
         backgroundImage: `url(${item.imageUrl})`,
       }}>
             

@@ -16,50 +16,40 @@ const AvailableDeals = ({
   };
   return (
     <>
-      <div className="my-4">
-        <span className=" text-start text-2xl font-medium ">
+      <div className="w-full my-4">
+        <span className=" text-start text-[24px] font-medium ">
           Available Deals :
         </span>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="w-full grid grid-cols-4 gap-2">
           {availableDeals?.map((val, i) => (
             <div
               onClick={() => clickPerAvailableDeals(val)}
               key={i}
-              className="relative flex flex-col justify-start items-start  border border-y-amber-400 bg-slate-100 text-black rounded-xl p-4 mt-2 cursor-pointer"
+              className="relative w-[280px] h-[102px] flex flex-col justify-start items-start  border border-slate-500 bg-slate-100 text-slate-800 rounded-xl p-4 mt-2 cursor-pointer"
             >
-              <span className="text-lg font-semibold my-1 flex justify-start items-center gap-x-2">
+              <span className="text-[14px] font-semibold my-1 flex justify-start items-center gap-x-2">
                 <Utensils
-                  size={16}
-                  className="border border-slate rounded-md p-[2px]"
+                  size={18}
+                  className=""
                 />
-                {val.title}
+                <span className="text-primary-1 mr-2">{val.title}</span>
+                
               </span>
-              <span className="text-[12px] font-semibold my-1 flex justify-start items-center gap-x-2">
+              <span className="text-[12px] font-normal my-1 flex justify-start items-center gap-x-2">
                 {val.description}
               </span>
-              {(val.id === 1 || val.id === 3) && (
-                <div>
-                  <div className="absolute top-0 bottom-0 -left-3 my-auto w-5 h-5 rounded-full  bg-black"></div>
-                  <div className="absolute top-0 bottom-0 -right-3 my-auto w-5 h-5 rounded-full  bg-black"></div>
-                </div>
-              )}
-
-              {(val.id === 2 || val.id === 4) && (
-                <div>
-                  <div className="absolute top-0 bottom-0 -left-3 my-auto w-5 h-5 rounded-full  bg-black"></div>
-                  <div className="absolute top-3 -right-8 my-auto w-10 h-10 rounded-full  bg-black"></div>
-                </div>
-              )}
+              
             </div>
           ))}
         </div>
         <Modal
           isOpen={selectedAvailableDeals}
           onClose={() => setSelectedAvailableDeals(false)}
+             header="AvailableDeals"
         >
           <div className="max-h-40 text-black bg-white flex flex-col justify-items-start items-start">
-            <span>{selectedAvailableDeals.title}</span>
-            <span>{selectedAvailableDeals.description}</span>
+            <span>{selectedAvailableDeals?.title}</span>
+            <span>{selectedAvailableDeals?.description}</span>
             <span className="text-3xl text-red-800 font-semibold m-4">hurry up</span>
             
           </div>

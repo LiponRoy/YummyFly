@@ -145,14 +145,18 @@ export default function Home() {
 
                 <div onClick={()=>resetFilter()} className="mt-4 bg-green-500 p-1 w-[86%] text-center text-white rounded-sm">RESET FILTER</div>
             </div>
-            <div className="col-span-5">
+            <div className="col-span-5 ">
                 <div className="w-full my-2">
                     <DailyDeals />
                 </div>
-                <div className="w-full my-4">
+                {/* <div className="w-full my-4">
                     <FavouriteCuisines />
-                </div>
-                <div className=" grid grid-cols-1 md:grid-cols-3 gap-2 m-4">
+                </div> */}
+                <div className="my-2  text-slate-700 text-[24px] text-start ml-2 ">
+                 Restaurants
+            </div>
+                <div className=" grid grid-cols-1 md:grid-cols-3 gap-4 ">
+                    
                     {filteredProducts.map((restaurant, i) => (
                         <RestaurantCard
                             key={i}

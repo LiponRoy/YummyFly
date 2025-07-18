@@ -37,18 +37,18 @@ const settings = {
 
   
   return (
-    <div className="w-full   rounded-md text-white text-sm text-center my-2">
-        <div className="relative my-2 w-full text-start ml-6 ">
-                Favourite Cuisines
+    <div className="w-full   rounded-md text-sm text-center my-2">
+        <div className="relative my-2 w-full text-slate-700 text-[24px] text-start ml-2 ">
+                Favourite Cuisines Restaurants
             </div>
       <Slider {...settings}>
         {FavouriteCuisinesData?.map((item, index) => (
           <div
             key={index}
-            className=" flex flex-col justify-center items-center space-y-1 w-"
+            className=" flex flex-col justify-center items-center space-y-1 w-full"
           >
             
-           <div className="relative bg-slate-300 m-2 h-[130px] w-[130px] rounded-md ">
+           <div className="relative  m-2 h-[130px] w-[130px] rounded-md ">
             <div className=" absolute top-0 left-0 right-0 flex flex-col justify-center items-center py-1">
              <Image
               src={item.imageUrl} // Replace with your actual image path
