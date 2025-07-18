@@ -1,4 +1,5 @@
 "use client";
+import useCartStore from "@/app/store/useCartStore";
 import AvailableDeals from "@/components/AvailableDeals";
 import Modal from "@/components/Modal";
 import { restaurants } from "@/Constant";
@@ -13,9 +14,14 @@ type FoodProps = {
         id: string;
     };
 };
-// ({ params }: { params: Promise<{ id: string }> }) {
 const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
     const { id } = use(params);
+    const { addItemToCart } = useCartStore();
+
+      const {
+    cartProducts,
+  } = useCartStore();
+
 
     const [openModal, setOpenModal] = useState<Boolean>(false);
 
@@ -47,7 +53,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
         <>
         <div className="container-custom ">
             <div className="container-custom mt-4 relative grid grid-cols-12 ">
-                <div className=" w-full col-span-10  flex flex-col justify-start items-start">
+                <div className="col-span-9 w-full flex flex-col justify-start items-start">
                     {/* // top restaurant info */}
                     <div className="grid grid-cols-8 space-x-2 ">
                         <div className="col-span-2 ">
@@ -221,8 +227,8 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                                 <Image
                                     src={selectedFoodItem.imageUrl}
                                     alt={"food"}
-                                    width={500}
-                                    height={500}
+                                    width={200}
+                                    height={200}
                                     className="w-full h-40 object-cover"
                                 />
                                 <div className="flex flex-col justify-start items-start space-y-2 my-6 mt-2">
@@ -249,7 +255,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                                             +
                                         </button>
                                     </div>
-                                    <div className="">
+                                    <div onClick={() => selectedFoodItem && addItemToCart(selectedFoodItem)} className="">
                                         <button className="bg-orange-600 w-[180px] p-1 rounded-lg text-white curser-pointer">
                                             Add to cart
                                         </button>
@@ -264,8 +270,40 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                     {/* // End modal of selected food item */}
                 </div>
                 {/* //  cart option */}
-                <div className="col-span-2 bg-amber-600">
-                    something ...
+                <div className="col-span-3  border border-slate-400">
+                   {/* Right side  Cart items */}
+                    {cartProducts &&
+                                    cartProducts.map((item,i) => (
+                                      <div key={i} className="w-full flex flex-col justify-start items-start p-1 my-2 ">
+                                      <div className="w-full flex justify-center items-center ">
+                                          <Image
+                                          src={item.imageUrl}
+                                          width="200"
+                                          height="300"
+                                          alt="no pic"
+                                          className="w-12 h-12 rounded-md m-1"
+                                        />
+                                         <div className="flex flex-col justify-start w-full space-y-2">
+                                            <span className=" text-[14px]">
+                                            {item.name}
+                                          </span>
+                                          <div className="flex justify-between items-center">
+                                            <span className=" ml-2 md:ml-0">
+                                            {item.price} <span className=" ml-1">TK</span>{" "}
+                                          </span>
+                                          <div className="flex justify-between items-center border border-slate-500 px-2 rounded-md w-[70px]">
+                                               <button>-</button>
+                                               <span>12</span>
+                                               <button>+</button>
+                                          </div>
+                                          </div>
+                                         </div>
+
+                                      </div>
+                                        <div className=" flex flex-col justify-start ">
+                                        </div>
+                                      </div>
+                ))}
                 </div>
             </div>
             </div>

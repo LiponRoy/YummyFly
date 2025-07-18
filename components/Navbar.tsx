@@ -1,7 +1,10 @@
 "use client";
+import useCartStore from "@/app/store/useCartStore";
+import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = () => {
+    const { cartProducts } = useCartStore();
 
   return (
     <nav className="bg-white shadow px-4 py-3 z-50">
@@ -9,6 +12,12 @@ const Navbar = () => {
         <Link href="/" className="text-xl font-bold text-orange-600">
         BD-Foody-Zone
         </Link>
+
+        <div className="flex justify-center items-center gap-x-1 cursor-pointer ">
+                <span className=" text-xl text-slate-500">{cartProducts.length}</span>
+             
+                <ShoppingCart size={28}/>
+              </div>
 
         <div className="space-x-4 flex items-center">
           <Link href="/" className="text-gray-700 hover:text-orange-500">
