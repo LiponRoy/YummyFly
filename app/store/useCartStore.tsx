@@ -22,9 +22,7 @@ const useCartStore = create<ICartStore>()(
         totalPrice: 0,
         addItemToCart: (newItem) => {
           set((state) => {
-            const itemIndex = state.cartProducts.findIndex(
-              (item) => item.id === newItem.id
-            );
+            const itemIndex = state.cartProducts.findIndex((item) => item.id === newItem.id);
 
             if (itemIndex >= 0) {
               const updatedCart = [...state.cartProducts];
@@ -38,19 +36,14 @@ const useCartStore = create<ICartStore>()(
             } else {
               return {
                 ...state,
-                cartProducts: [
-                  ...state.cartProducts,
-                  { ...newItem, cartQuantity: 1 },
-                ],
+                cartProducts: [...state.cartProducts, { ...newItem, cartQuantity: 1 }],
               };
             }
           });
         },
         incrementCart: (newItem) => {
           set((state) => {
-            const itemIndex = state.cartProducts.findIndex(
-              (item) => item.id === newItem.id
-            );
+            const itemIndex = state.cartProducts.findIndex((item) => item.id === newItem.id);
 
             const updatedCart = [...state.cartProducts];
             const updatedItem = { ...updatedCart[itemIndex] };
@@ -67,9 +60,7 @@ const useCartStore = create<ICartStore>()(
         },
         decrementCart: (newItem) => {
           set((state) => {
-            const itemIndex = state.cartProducts.findIndex(
-              (item) => item.id === newItem.id
-            );
+            const itemIndex = state.cartProducts.findIndex((item) => item.id === newItem.id);
 
             const updatedCart = [...state.cartProducts];
             const updatedItem = { ...updatedCart[itemIndex] };

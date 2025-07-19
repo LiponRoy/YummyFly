@@ -16,11 +16,11 @@ const AvailableDeals = ({
   };
   return (
     <>
-      <div className="w-full my-4">
+      <div className="w-[88%] my-4">
         <span className=" text-start text-[24px] font-medium ">
           Available Deals :
         </span>
-        <div className="w-full grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 ">
           {availableDeals?.map((val, i) => (
             <div
               onClick={() => clickPerAvailableDeals(val)}
