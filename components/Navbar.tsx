@@ -4,20 +4,20 @@ import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = () => {
-    const { cartProducts } = useCartStore();
+  const { cartProducts } = useCartStore();
 
   return (
     <nav className="bg-white shadow px-4 py-3 z-50">
       <div className="container-custom mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold text-orange-600">
-        BD-Foody-Zone
+          BD-Foody-Zone
         </Link>
 
-        <div className="flex justify-center items-center gap-x-1 cursor-pointer ">
-                <span className=" text-xl text-slate-500">{cartProducts.length}</span>
-             
-                <ShoppingCart size={28}/>
-              </div>
+        <Link href="/cartDetails" className="text-gray-700 flex justify-center items-center gap-x-1 cursor-pointer">
+          <span className=" text-xl text-slate-500">{cartProducts.length}</span>
+
+          <ShoppingCart size={28} />
+        </Link>
 
         <div className="space-x-4 flex items-center">
           <Link href="/" className="text-gray-700 hover:text-orange-500">
