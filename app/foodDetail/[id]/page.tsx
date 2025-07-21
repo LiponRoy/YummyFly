@@ -44,25 +44,26 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   return (
     <>
       <div className="container-custom ">
-        <div className="container-custom mt-4 relative  ">
-          <div className="w-full flex flex-col justify-start items-start">
+        <div className="container-custom mt-4 relative mx-4 md:mx-1 ">
+          <div className="w-full flex flex-col justify-start items-start ">
             {/* // top restaurant info */}
-            <div className="grid grid-cols-8 space-x-2 ">
-              <div className="col-span-2 ">
+            <div className="w-full md:w-[55%] grid grid-cols-1 md:grid-cols-8 md:space-x-2 ">
+              <div className="md:col-span-2 ">
                 <Image
                   src={product.imageUrl}
                   alt={"food"}
                   width={500}
                   height={500}
-                  className="w-[156px] h-[156px] object-cover transition-transform duration-500 ease-in-out hover:scale-110 rounded-md"
+                  className="w-full md:w-[156px] h-[156px] object-cover transition-transform duration-500 ease-in-out hover:scale-110 rounded-xl"
                 />
               </div>
-              <div className="col-span-6 ">
+              <div className="md:col-span-6">
                 <div className="flex flex-col justify-start items-start space-y-1 ml-2">
-                  <div className="flex justify-center items-center">
-                    <span className="text-[32px] font-bold text-slate-800">{product.name}</span>
+                  <div className="flex justify-center items-center mt-3 md:mt-0">
+                    <span className="text-[28px] md:text-[32px] font-bold text-slate-800">{product.name}</span>
                     <span className="mx-2">-</span>
-                    <span className="text-[28px] font-normal">{product.location}</span>
+                    <span className="text-[22px] md:text-[28px] font-normal">{product.location}</span>
+                    
                   </div>
                   <div className="flex justify-center items-center space-x-1 text-[14px]">
                     <Star size={14} className="mr-1 text-red-600" />
@@ -126,8 +127,8 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
               </div>
             </div>
             {/* // End top restaurant info */}
-            <div className="w-full grid grid-cols-12 ">
-              <div className="col-span-9">
+            <div className="w-full grid grid-cols-1 md:grid-cols-12 mt-4">
+              <div className=" md:col-span-9">
                 <AvailableDeals
                   selectedAvailableDeals={selectedAvailableDeals}
                   setSelectedAvailableDeals={setSelectedAvailableDeals}
@@ -136,8 +137,8 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 />
 
                 {/* // All menu based on this restaurant */}
-                <span className=" text-start text-[24px] font-medium mb-2">All Food Menu :</span>
-                <div className="w-[94%] grid grid-cols-1 md:grid-cols-2 gap-2">
+                <h4 className=" text-start text-[20px] md:text-[24px] font-medium mb-2">All Food Menu :</h4>
+                <div className="w-[100%] md:w-[94%] grid grid-cols-1 md:grid-cols-2 gap-2">
                   {product?.foods.map((val: IFood, i) => (
                     <FoodItemCard key={i} val={val} clickPerFoodItem={clickPerFoodItem} />
                   ))}
@@ -175,7 +176,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                           </button>
                         </div>
                         <div onClick={() => selectedFoodItem && addItemToCart(selectedFoodItem)} className="">
-                          <button className="bg-orange-600 w-[180px] p-1 rounded-lg text-white curser-pointer">
+                          <button className="bg-orange-600 w-[150px] p-1 rounded-lg text-white curser-pointer">
                             Add to cart
                           </button>
                         </div>

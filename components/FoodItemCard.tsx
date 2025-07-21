@@ -6,7 +6,7 @@ const FoodItemCard = ({ val, clickPerFoodItem }: any) => {
   return (
     <div
       onClick={() => clickPerFoodItem(val)}
-      className=" w-full md:w-[460px] h-[154px] border border-slate-300 p-4 bg-slate-100 text-slate-700 rounded-lg  grid grid-cols-12 hover:bg-red-50 cursor-pointer"
+      className=" w-full md:w-[460px] h-[154px] border border-slate-300 p-4 bg-slate-100 text-slate-700 rounded-lg  grid grid-cols-12 hover:bg-red-50 cursor-pointer "
     >
       <div className="col-span-8 flex flex-col justify-start items-start">
         <span className="text-[18px] font-semibold">{val.name} :</span>
