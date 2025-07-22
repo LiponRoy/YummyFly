@@ -7,7 +7,7 @@ import Modal from "@/components/Modal";
 import { Restaurants } from "@/Constant";
 import { IAvailableDeals, IFood } from "@/Type";
 
-import { Bike, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
+import { Bike, ChefHat, ChevronDown, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
 import Image from "next/image";
 import React, { use, useState } from "react";
 
@@ -19,9 +19,11 @@ type FoodProps = {
 const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { id } = use(params);
 
-  const { addItemToCart } = useCartStore();
+  const { addItemToCart,incrementCart, decrementCart,totalQuantity } = useCartStore();
 
   const [openModal, setOpenModal] = useState<Boolean>(false);
+
+  const [openingHour, setOpeningHour] = useState<Boolean>(false);
 
   const [openFoodItemModal, setOpenFoodItemModal] = useState<Boolean>(false);
   const [selectedFoodItem, setSelectedFoodItem] = useState<IFood>();
@@ -36,6 +38,14 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const [selectedAvailableDeals, setSelectedAvailableDeals] = useState<IAvailableDeals>();
 
   const product = Restaurants.find((item) => item.id.toString() === id);
+
+    const incrementItem = (item: IFood) => {
+    incrementCart(item);
+  };
+
+  const decrementItem = (item: IFood) => {
+    decrementCart(item);
+  };
 
   if (!product) {
     return <div className="p-6 text-red-500 font-bold">Product not found for ID: {id}</div>;
@@ -61,22 +71,31 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
               <div className="md:col-span-6">
                 <div className="flex flex-col justify-start items-start space-y-1 ml-2">
                   <div className="flex justify-center items-center mt-3 md:mt-0">
-                    <span className="text-[28px] md:text-[32px] font-bold text-slate-800">{product.restaurantName}</span>
+                    <span className="text-[28px] md:text-[32px] font-bold text-slate-800">
+                      {product.restaurantName}
+                    </span>
                     <span className="mx-2">-</span>
                     <span className="text-[22px] md:text-[28px] font-normal">{product.location}</span>
-                    
                   </div>
                   <div className="flex justify-center items-center space-x-1 text-[14px]">
                     <Star size={14} className="mr-1 text-red-600" />
                     <span>
-                      ({product.rating}
-                      ) <span className="ml-2">Rating</span>
+                      <span className="mr-2 font-medium">Rating :</span>
+                      {product.rating}
+                      <span className="ml-2">({product.ratingPersons}+)</span>
                     </span>
                   </div>
                   <div className="flex justify-center items-center space-x-1 text-[14px]">
                     <Bike size={16} />
-                    <span className="mr-2">Delivery Fee :</span>
+                    <span className="mr-2 font-medium">Delivery Fee :</span>
                     {product.deliveryFee} <span className="ml-1">Taka</span>
+                  </div>
+                  <div className="flex justify-center items-center space-x-1 text-[14px]">
+                    <ChefHat size={16} />
+                    <span className="mr-2 font-medium">Cuisines :</span>
+                    {product.cuisines.map((val, i) => (
+                      <div key={i} className="flex justify-center items-center">{val},</div>
+                    ))}
                   </div>
                 </div>
                 {/* More Info  */}
@@ -100,11 +119,13 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                       height={500}
                       className="w-full h-40 object-cover"
                     />
-                    <div className=" ml-4">
-                      <div className="flex justify-start items-start space-x-1 my-2">
-                        {product.restaurantName}
-                        <MapPinPlusInside className="text-red-400" />
-                        <span>{product?.moreInfo?.fullLocation}</span>
+                    <div className=" ">
+                      <div className="flex flex-col justify-start items-start space-x-1 my-2">
+                        <span className="text-md font-semibold">{product.restaurantName} :</span>
+                        <div className="flex justify-center items-center space-x-1 mt-1">
+                          <MapPinPlusInside size={14}  className="text-red-400" />
+                          <span>{product?.moreInfo?.fullLocation}</span>
+                        </div>
                       </div>
                       <div className="flex flex-col justify-start items-start">
                         <span className="text-md font-semibold">Delivery Fee :</span>
@@ -115,8 +136,11 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                         <span>{product?.moreInfo?.aboutMinimumOrder}</span>
                       </div>
                       <div className="flex flex-col justify-start items-start mt-4">
-                        <span>Opening Hours</span>
-                        {product?.moreInfo?.OpeningHours.map((val, i) => (
+                       <div onClick={()=>setOpeningHour(!openingHour)} className="flex justify-center items-center cursor-pointer space-x-2">
+                         <span className="text-md font-semibold">Opening Hours</span>
+                        <ChevronDown size={18} className=" text-slate-500 font-bold border border-slate-400 rounded-full " />
+                       </div>
+                        {openingHour && product?.moreInfo?.OpeningHours.map((val, i) => (
                           <div key={i} className="">
                             {val}
                           </div>
@@ -129,8 +153,8 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
               </div>
             </div>
             {/* // End top restaurant info */}
-            <div className="w-full grid grid-cols-1 md:grid-cols-12 mt-4">
-              <div className=" md:col-span-9">
+            <div className="relative w-full grid grid-cols-1 md:grid-cols-12 mt-4 justify-between ">
+              <div className=" md:col-span-8">
                 <AvailableDeals
                   selectedAvailableDeals={selectedAvailableDeals}
                   setSelectedAvailableDeals={setSelectedAvailableDeals}
@@ -140,7 +164,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
 
                 {/* // All menu based on this restaurant */}
                 <h4 className=" text-start text-[20px] md:text-[24px] font-medium mb-2">All Food Menu :</h4>
-                <div className="w-[100%] md:w-[94%] grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="w-full md:w-[97%] grid grid-cols-1 md:grid-cols-2 gap-4 ">
                   {product?.foods.map((val: IFood, i) => (
                     <FoodItemCard key={i} val={val} clickPerFoodItem={clickPerFoodItem} />
                   ))}
@@ -170,13 +194,18 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                       {/* add cart options */}
                       <div className="w-full flex justify-between items-center p-2  bg-slate-100 border border-slate-300 my-4 rounded-lg">
                         <div className="flex justify-center items-center space-x-4">
-                          <button className="bg-orange-600 w-8 h-8 rounded-2xl flex justify-center items-center text-white text-3xl">
-                            -
-                          </button>
-                          <span className="text-2xl font-bold">12</span>
-                          <button className="bg-orange-600 w-8 h-8 rounded-2xl flex justify-center items-center text-white text-2xl">
-                            +
-                          </button>
+                          <button
+                              className={`font-bold bg-primary-1 w-8 h-8 rounded-full p-2 flex justify-center items-center text-white text-2xl  ${
+                                selectedFoodItem.cartQuantity === 1 ? "text-slate-200 cursor-not-allowed" : "cursor-pointer"
+                              }`}
+                              onClick={() => decrementItem(selectedFoodItem)}
+                            >
+                              <span >-</span>
+                            </button>
+                            <span className=" mx-2 text-slate-600">{selectedFoodItem.cartQuantity}</span>
+                            <button className="cursor-pointer font-bold bg-primary-1 w-8 h-8 rounded-full p-2 flex justify-center items-center text-white text-2xl" onClick={() => incrementItem(selectedFoodItem)}>
+                              +
+                            </button>
                         </div>
                         <div onClick={() => selectedFoodItem && addItemToCart(selectedFoodItem)} className="">
                           <button className="bg-orange-600 w-[150px] p-1 rounded-lg text-white curser-pointer">
@@ -192,7 +221,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 </Modal>
                 {/* // End modal of selected food item */}
               </div>
-              <div className="hidden md:block fixed top-0 right-10 my-auto   col-span-3 mt-14">
+              <div className="hidden md:flex justify-end col-span-4    mt-16 ">
                 {/* //  cart option */}
                 <CartItemBox />
               </div>

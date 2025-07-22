@@ -182,57 +182,37 @@ export default function Home() {
           {/* Filter section */}
 
           <div className="relative w-full col-span-1 flex flex-col justify-start items-start pl-6 pt-6 bg-slate-100 ">
-            {/* Sort By */}
-            <div>
-              <label className="block mb-1 font-medium mt-4">Sort By:</label>
-              <div className="flex flex-col space-y-1">
-                <label className="flex justify-start items-center space-x-1">
-                  <input
-                    type="radio"
-                    name="sort"
-                    value=""
-                    checked={selectedSort === ""}
-                    onChange={() => setSelectedSort("")}
-                    className="w-4 h-4"
-                  />{" "}
-                  <span>None</span>
-                </label>
-                <label className="flex justify-start items-center space-x-1">
-                  <input
-                    type="radio"
-                    name="sort"
-                    value="fastestDelivery"
-                    checked={selectedSort === "fastestDelivery"}
-                    onChange={() => setSelectedSort("fastestDelivery")}
-                    className="w-4 h-4"
-                  />{" "}
-                  <span>Fastest Delivery</span>
-                </label>
-                <label className="flex justify-start items-center space-x-1">
-                  <input
-                    type="radio"
-                    name="sort"
-                    value="distance"
-                    checked={selectedSort === "distance"}
-                    onChange={() => setSelectedSort("distance")}
-                    className="w-4 h-4"
-                  />{" "}
-                  <span>Distance</span>
-                </label>
-                <label className="flex justify-start items-center space-x-1">
-                  <input
-                    type="radio"
-                    name="sort"
-                    value="topRated"
-                    checked={selectedSort === "topRated"}
-                    onChange={() => setSelectedSort("topRated")}
-                    className="w-4 h-4"
-                  />{" "}
-                  <span>Top Rated</span>
-                </label>
-              </div>
-            </div>
-            {/* End Sort By */}
+{/* Sort By */}
+<div>
+  <label className="block mb-1 font-medium mt-4">Sort By:</label>
+  <div className="flex flex-col space-y-2">
+    {[
+      { label: "None x", value: "" },
+      { label: "Fastest Delivery", value: "fastestDelivery" },
+      { label: "Distance", value: "distance" },
+      { label: "Top Rated", value: "topRated" },
+    ].map((option) => (
+      <label key={option.value} className="flex items-center space-x-2 cursor-pointer">
+        <input
+          type="checkbox"
+          value={option.value}
+          checked={selectedSort === option.value}
+          onChange={() =>
+            setSelectedSort(selectedSort === option.value ? "" : option.value)
+          }
+          className="w-4 h-4 text-green-600 border-gray-300 rounded focus:ring-green-500"
+        />
+        <span className={selectedSort === option.value ? "text-green-600 font-medium" : ""}>
+          {option.label}
+        </span>
+      </label>
+    ))}
+  </div>
+</div>
+
+
+{/* End Sort By */}
+
 
             {/* Cuisine */}
             <div className="mt-4">

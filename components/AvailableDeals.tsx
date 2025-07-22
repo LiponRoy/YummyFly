@@ -1,6 +1,6 @@
 import { availableDeals } from "@/Constant";
-import { Utensils } from "lucide-react";
-import React from "react";
+import { ChevronDown, Utensils } from "lucide-react";
+import React, { useState } from "react";
 import Modal from "./Modal";
 import { IAvailableDeals } from "@/Type";
 
@@ -14,6 +14,9 @@ const AvailableDeals = ({
     setSelectedAvailableDeals(val);
     setOpenAvailableDealsModal(true);
   };
+
+  const [openingConditions, setOpeningConditions] = useState<Boolean>(false);
+
   return (
     <>
       <div className="hidden md:block w-[88%] my-4">
@@ -23,7 +26,7 @@ const AvailableDeals = ({
             <div
               onClick={() => clickPerAvailableDeals(val)}
               key={i}
-              className="relative w-[280px] h-[102px] flex flex-col justify-start items-start  border border-slate-500 bg-slate-100 text-slate-800 rounded-xl p-4 mt-2 cursor-pointer"
+              className="relative w-[240px] h-[102px] flex flex-col justify-start items-start  border border-slate-500 bg-slate-100 text-slate-800 rounded-xl p-4 mt-2 cursor-pointer"
             >
               <span className="text-[14px] font-semibold my-1 flex justify-start items-center gap-x-2">
                 <Utensils size={18} className="" />
@@ -36,10 +39,28 @@ const AvailableDeals = ({
           ))}
         </div>
         <Modal isOpen={selectedAvailableDeals} onClose={() => setSelectedAvailableDeals(false)} header="AvailableDeals">
-          <div className="max-h-40 text-black bg-white flex flex-col justify-items-start items-start">
-            <span>{selectedAvailableDeals?.title}</span>
+          <div className="max-h-400 text-black bg-white flex flex-col justify-items-start items-start space-y-2">
+            <span className="text-[24px] font-bold">{selectedAvailableDeals?.title}</span>
+            <span>{selectedAvailableDeals?.time}</span>
+            <span>Min. Order: {selectedAvailableDeals?.minOrder}</span>
             <span>{selectedAvailableDeals?.description}</span>
-            <span className="text-3xl text-red-800 font-semibold m-4">hurry up</span>
+            <div className="">
+              <div onClick={() => setOpeningConditions(!openingConditions)} className="flex justify-start items-center space-x-1 mt-2">
+                <span className="font-bold">
+                  Conditions
+                </span>
+                <ChevronDown size={18} className=" text-slate-500 font-bold border border-slate-400 rounded-full " />
+              </div>
+
+              <div>
+                {openingConditions &&
+                  selectedAvailableDeals?.Conditions?.map((val: string, i: any) => (
+                    <span key={i} className="flex flex-col justify-center in-checked:">
+                      {val}
+                    </span>
+                  ))}
+              </div>
+            </div>
           </div>
         </Modal>
       </div>

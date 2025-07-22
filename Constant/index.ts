@@ -430,16 +430,40 @@ export const availableDeals: IAvailableDeals[] = [
     id: 1,
     title: "Buy 1 Get 1 Free",
     description: "Enjoy a delicious pizza and get another one absolutely free. ",
+    time: "From Today TO Next 7 Days",
+    minOrder: "Tk 599",
+    Conditions:[
+      "Valid for a minimum order of Tk599",
+      "Valid for payment with Credit card, Credit or debit card",
+      "For selected users only.",
+      "Applicable for Delivery, Pick-Up.",
+    ]
   },
   {
     id: 2,
     title: "20% Off on Burgers",
     description: "Craving burgers? Get 20% off on all burger items every Monday.",
+    time: "From Today TO Next 7 Days",
+    minOrder: "Tk 599",
+    Conditions:[
+      "Valid for a minimum order of Tk599",
+      "Valid for payment with Credit card, Credit or debit card",
+      "For selected users only.",
+      "Applicable for Delivery, Pick-Up.",
+    ]
   },
   {
     id: 3,
     title: "Free Dessert",
     description: "Order any combo meal and get a free dessert of your choice!",
+    time: "From Today TO Next 7 Days",
+    minOrder: "Tk 599",
+    Conditions:[
+      "Valid for a minimum order of Tk599",
+      "Valid for payment with Credit card, Credit or debit card",
+      "For selected users only.",
+      "Applicable for Delivery, Pick-Up.",
+    ]
   },
 ];
 
