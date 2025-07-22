@@ -47,7 +47,7 @@ const CartItemBox = () => {
 
   return (
     <div>
-      <div className="relative col-span-3 border border-slate-400 rounded-xl p-2 mt-10 md:mt-0 mx-4 md:mx-0">
+      <div className="col-span-3 border border-slate-400 rounded-xl p-2 mt-10 md:mt-0 mx-4 md:mx-0">
         {/* Clear All Button */}
         {cartProducts.length > 0 && (
           <div onClick={() => allCartRemove()} className="absolute -top-7 right-2 cursor-pointer">

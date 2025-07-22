@@ -2,7 +2,7 @@
 import RestaurantCard from "@/components/Card";
 import DailyDeals from "@/components/sliders/DailyDeals";
 import FavouriteCuisines from "@/components/sliders/FavouriteCuisines";
-import { allCuisines, restaurants } from "@/Constant";
+import { allCuisines, Restaurants } from "@/Constant";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ export default function Home() {
   };
 
   // Filtering
-  const filteredProducts = restaurants
+  const filteredProducts = Restaurants
     .filter((product) => {
       // Filter by cuisines: show product if any cuisine matches any selected cuisine
       const cuisineMatch =
@@ -37,13 +37,13 @@ export default function Home() {
       if (!selectedSort) return 0;
 
       if (selectedSort === "fastestDelivery") {
-        return a.fastestDelivery - b.fastestDelivery;
+        return a.distance - b.distance;
       }
       if (selectedSort === "distance") {
         return a.distance - b.distance;
       }
       if (selectedSort === "topRated") {
-        return b.topRated - a.topRated;
+        return b.rating - a.rating;
       }
       return 0;
     });
@@ -57,7 +57,7 @@ export default function Home() {
   const [sidebarToggle, setSidebarToggle] = useState(false);
 
   return (
-    <div className="container-custom grid grid-cols-1 md:grid-cols-6 text-slate-600">
+    <div className="container-custom grid grid-cols-1 md:grid-cols-6 text-slate-600 mt-14">
       <div className="hidden w-full col-span-1 md:flex flex-col justify-start items-start pl-6 pt-6 bg-slate-100 ">
         {/* Sort By */}
 
@@ -145,7 +145,7 @@ export default function Home() {
         {/* // filter button for mobile view */}
         <div
           onClick={() => setSidebarToggle(!sidebarToggle)}
-          className="md:hidden mt-3 bg-primary-1 text-white rounded-r-xl w-20 p-1 pl-3  cursor-pointer  text-lg"
+          className="md:hidden mt-1 bg-primary-1 text-white rounded-r-xl w-20 p-1 pl-3  cursor-pointer  text-lg"
         >
           Filter
         </div>
@@ -160,14 +160,7 @@ export default function Home() {
           {filteredProducts.map((restaurant, i) => (
             <RestaurantCard
               key={i}
-              id={restaurant.id}
-              name={restaurant.name}
-              imageUrl={restaurant.imageUrl}
-              location={restaurant.location}
-              topRated={restaurant.topRated}
-              deliveryFee={restaurant.deliveryFee}
-              fastestDelivery={restaurant.fastestDelivery}
-              discountPercent={restaurant.discountPercent}
+              restaurant={restaurant}
             />
           ))}
         </div>

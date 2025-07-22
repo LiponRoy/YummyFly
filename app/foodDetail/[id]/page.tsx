@@ -4,7 +4,7 @@ import AvailableDeals from "@/components/AvailableDeals";
 import CartItemBox from "@/components/CartItemBox";
 import FoodItemCard from "@/components/FoodItemCard";
 import Modal from "@/components/Modal";
-import { restaurants } from "@/Constant";
+import { Restaurants } from "@/Constant";
 import { IAvailableDeals, IFood } from "@/Type";
 
 import { Bike, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
@@ -35,7 +35,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const [openAvailableDealsModal, setOpenAvailableDealsModal] = useState<Boolean>(false);
   const [selectedAvailableDeals, setSelectedAvailableDeals] = useState<IAvailableDeals>();
 
-  const product = restaurants.find((item) => item.id.toString() === id);
+  const product = Restaurants.find((item) => item.id.toString() === id);
 
   if (!product) {
     return <div className="p-6 text-red-500 font-bold">Product not found for ID: {id}</div>;
@@ -43,14 +43,15 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
 
   return (
     <>
-      <div className="container-custom ">
+      <div className="container-custom mt-16">
         <div className="container-custom mt-4 relative mx-4 md:mx-1 ">
           <div className="w-full flex flex-col justify-start items-start ">
             {/* // top restaurant info */}
             <div className="w-full md:w-[55%] grid grid-cols-1 md:grid-cols-8 md:space-x-2 ">
               <div className="md:col-span-2 ">
                 <Image
-                  src={product.imageUrl}
+                  // src={product.imageUrl}
+                  src="/myFood.jpg"
                   alt={"food"}
                   width={500}
                   height={500}
@@ -60,7 +61,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
               <div className="md:col-span-6">
                 <div className="flex flex-col justify-start items-start space-y-1 ml-2">
                   <div className="flex justify-center items-center mt-3 md:mt-0">
-                    <span className="text-[28px] md:text-[32px] font-bold text-slate-800">{product.name}</span>
+                    <span className="text-[28px] md:text-[32px] font-bold text-slate-800">{product.restaurantName}</span>
                     <span className="mx-2">-</span>
                     <span className="text-[22px] md:text-[28px] font-normal">{product.location}</span>
                     
@@ -68,8 +69,8 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                   <div className="flex justify-center items-center space-x-1 text-[14px]">
                     <Star size={14} className="mr-1 text-red-600" />
                     <span>
-                      ({product.topRated}
-                      .0) <span className="ml-2">Rating</span>
+                      ({product.rating}
+                      ) <span className="ml-2">Rating</span>
                     </span>
                   </div>
                   <div className="flex justify-center items-center space-x-1 text-[14px]">
@@ -92,7 +93,8 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 <Modal isOpen={openModal} onClose={() => setOpenModal(false)} header="Restaurants More Info">
                   <div className="">
                     <Image
-                      src={product?.moreInfo?.imageUrl}
+                      // src={product?.moreInfo?.imageUrl}
+                      src="/myFood.jpg"
                       alt={"food"}
                       width={500}
                       height={500}
@@ -100,7 +102,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                     />
                     <div className=" ml-4">
                       <div className="flex justify-start items-start space-x-1 my-2">
-                        {product.name}
+                        {product.restaurantName}
                         <MapPinPlusInside className="text-red-400" />
                         <span>{product?.moreInfo?.fullLocation}</span>
                       </div>
@@ -149,7 +151,8 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                   {selectedFoodItem ? (
                     <div className="">
                       <Image
-                        src={selectedFoodItem.imageUrl}
+                        // src={selectedFoodItem.imageUrl}
+                        src="/myFood.jpg"
                         alt={"food"}
                         width={200}
                         height={200}
@@ -189,7 +192,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 </Modal>
                 {/* // End modal of selected food item */}
               </div>
-              <div className="hidden md:block col-span-3 mt-14">
+              <div className="hidden md:block fixed top-0 right-10 my-auto   col-span-3 mt-14">
                 {/* //  cart option */}
                 <CartItemBox />
               </div>

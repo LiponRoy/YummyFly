@@ -3,7 +3,7 @@ import React from "react";
 
 const CartDetailsForMobile = () => {
   return (
-    <div>
+    <div className="mt-16">
       <CartItemBox />
     </div>
   );
