@@ -7,6 +7,9 @@ import React, { useEffect, useState } from "react";
 
 const CartItemBox = () => {
   const { addItemToCart, incrementCart, decrementCart, removeItemFromCart, allCartRemove } = useCartStore();
+  const getItemQuantity = useCartStore((state) => state.getItemQuantity);
+
+
 
   const { cartProducts } = useCartStore();
   const [totalQuantity, setTotalQuantity] = useState(0);
@@ -90,7 +93,8 @@ const CartItemBox = () => {
                             >
                               -
                             </button>
-                            <span className=" mx-2">{item.cartQuantity}</span>
+                            {/* <span className=" mx-2">{item.cartQuantity}</span> */}
+                            <span className=" mx-2">{getItemQuantity && getItemQuantity(item.id.toString())}</span>
                             <button className="cursor-pointer font-bold" onClick={() => incrementItem(item)}>
                               +
                             </button>

@@ -31,7 +31,7 @@ const FoodItemCard = ({ val, clickPerFoodItem }: any) => {
           className="h-[120px] w-[130px] object-cover transition-transform duration-500 ease-in-out hover:scale-105 rounded-lg"
         />
       </div>
-      <div  className=" absolute bottom-2 right-2  w-8 h-8 bg-white shadow-xl text-slate-600 border-2 border-primary-1 rounded-md flex justify-center items-center text-2xl font-semibold transition-transform duration-500 ease-in-out group-hover:scale-110 z-50 py-2">
+      <div  className=" absolute bottom-2 right-2  w-8 h-8 bg-white shadow-xl text-slate-600 border-2 border-primary-1 rounded-md flex justify-center items-center text-2xl font-semibold transition-transform duration-500 ease-in-out group-hover:scale-110 py-2">
         <span className="text-[24px] transition-transform duration-500 ease-in-out group-hover:scale-125 font-normal p-1 inline-block">+</span>
 
       </div>

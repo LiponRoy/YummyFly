@@ -17,7 +17,7 @@ const Modal = ({ isOpen, onClose, header = "Header", children }: Imodal) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative mx-4 md:mx-1 mt-40"
+        className="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative mx-4 md:mx-1 mt-24"
       >
         <div className="absolute top-1 left-3 ">
           <span className="text-[14px]">{header}</span>

@@ -7,7 +7,7 @@ import Modal from "@/components/Modal";
 import { Restaurants } from "@/Constant";
 import { IAvailableDeals, IFood } from "@/Type";
 
-import { Bike, ChefHat, ChevronDown, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
+import { ArchiveX, Bike, ChefHat, ChevronDown, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
 import Image from "next/image";
 import React, { use, useEffect, useState } from "react";
 
@@ -19,7 +19,9 @@ type FoodProps = {
 const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { id } = use(params);
 
-  const { addItemToCart,removeItemFromCart,cartProducts } = useCartStore();
+  const { addItemToCart, removeItemFromCart, cartProducts, incrementCart, decrementCart } = useCartStore();
+  const getItemQuantity = useCartStore((state) => state.getItemQuantity);
+  const alreadyInCart = useCartStore((state) => state.alreadyInCart);
 
   const [openModal, setOpenModal] = useState<Boolean>(false);
   const [openingHour, setOpeningHour] = useState<Boolean>(false);
@@ -33,15 +35,21 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
 
   const addToCart = (val: IFood) => {
     addItemToCart(val);
-    setOpenFoodItemModal(false);
   };
 
   // Available Deals
   const [openAvailableDealsModal, setOpenAvailableDealsModal] = useState<Boolean>(false);
   const [selectedAvailableDeals, setSelectedAvailableDeals] = useState<IAvailableDeals>();
 
-  const product = Restaurants.find((item) => item.id.toString() === id); 
+  const product = Restaurants.find((item) => item.id.toString() === id);
 
+  const incrementItem = (item: IFood) => {
+    incrementCart(item);
+  };
+
+  const decrementItem = (item: IFood) => {
+    decrementCart(item);
+  };
 
   if (!product) {
     return <div className="p-6 text-red-500 font-bold">Product not found for ID: {id}</div>;
@@ -90,7 +98,9 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                     <ChefHat size={16} />
                     <span className="mr-2 font-medium">Cuisines :</span>
                     {product.cuisines.map((val, i) => (
-                      <div key={i} className="flex justify-center items-center">{val},</div>
+                      <div key={i} className="flex justify-center items-center">
+                        {val},
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -119,7 +129,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                       <div className="flex flex-col justify-start items-start space-x-1 my-2">
                         <span className="text-md font-semibold">{product.restaurantName} :</span>
                         <div className="flex justify-center items-center space-x-1 mt-1">
-                          <MapPinPlusInside size={14}  className="text-red-400" />
+                          <MapPinPlusInside size={14} className="text-red-400" />
                           <span>{product?.moreInfo?.fullLocation}</span>
                         </div>
                       </div>
@@ -132,15 +142,22 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                         <span>{product?.moreInfo?.aboutMinimumOrder}</span>
                       </div>
                       <div className="flex flex-col justify-start items-start mt-4">
-                       <div onClick={()=>setOpeningHour(!openingHour)} className="flex justify-center items-center cursor-pointer space-x-2">
-                         <span className="text-md font-semibold">Opening Hours</span>
-                        <ChevronDown size={18} className=" text-slate-500 font-bold border border-slate-400 rounded-full " />
-                       </div>
-                        {openingHour && product?.moreInfo?.OpeningHours.map((val, i) => (
-                          <div key={i} className="">
-                            {val}
-                          </div>
-                        ))}
+                        <div
+                          onClick={() => setOpeningHour(!openingHour)}
+                          className="flex justify-center items-center cursor-pointer space-x-2"
+                        >
+                          <span className="text-md font-semibold">Opening Hours</span>
+                          <ChevronDown
+                            size={18}
+                            className=" text-slate-500 font-bold border border-slate-400 rounded-full "
+                          />
+                        </div>
+                        {openingHour &&
+                          product?.moreInfo?.OpeningHours.map((val, i) => (
+                            <div key={i} className="">
+                              {val}
+                            </div>
+                          ))}
                       </div>
                     </div>
                   </div>
@@ -183,20 +200,50 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                         <span>{selectedFoodItem.description}</span>
                         <span className="text-lg font-medium">
                           <span className="mr-1">Taka</span>
-                        <span className="text-xl font-semibold">{selectedFoodItem.price}</span>
+                          <span className="text-xl font-semibold">{selectedFoodItem.price}</span>
                           <span className="ml-1">/=</span>
                         </span>
                       </div>
                       {/* add cart options */}
                       <div className="w-full flex justify-between items-center p-2  bg-slate-100 border border-slate-300 my-4 rounded-lg">
                         <div className="flex justify-center items-center space-x-4">
-                          {cartProducts.some((item) => item.id=== selectedFoodItem.id) &&   <span onClick={() => selectedFoodItem && removeItemFromCart(selectedFoodItem)}>Remove</span> 
-}
-                        
+                          {alreadyInCart && alreadyInCart(selectedFoodItem.id.toString()) && (
+                            <div className=" flex justify-center items-center space-x-2">
+                                <span onClick={() => selectedFoodItem && removeItemFromCart(selectedFoodItem)}>
+                                  <ArchiveX />
+                                </span>
+                              <div className="flex justify-between items-center border-2 border-slate-200 px-1 rounded-md w-[80px] text-lg ">
+                            <button
+                              className={`font-bold ${
+                                selectedFoodItem.cartQuantity === 1
+                                  ? "text-slate-100 cursor-not-allowed"
+                                  : "cursor-pointer"
+                              }`}
+                              onClick={() => decrementItem(selectedFoodItem)}
+                            >
+                              -
+                            </button>
+                            {/* <span className=" mx-2">{item.cartQuantity}</span> */}
+                            <span className=" mx-2">
+                              {getItemQuantity && getItemQuantity(selectedFoodItem.id.toString())}
+                            </span>
+                            <button
+                              className="cursor-pointer font-bold"
+                              onClick={() => incrementItem(selectedFoodItem)}
+                            >
+                              +
+                            </button>
+                          </div>
+                            </div>
+                          
+                            
+                          )}
+                          
                         </div>
                         <div onClick={() => selectedFoodItem && addToCart(selectedFoodItem)}>
-                          <button  className="bg-orange-600 w-[150px] p-1 rounded-lg text-white cursor-pointer">
-                            Add to cart 
+                          <button disabled={alreadyInCart && alreadyInCart(selectedFoodItem.id.toString())} className={`${alreadyInCart && alreadyInCart(selectedFoodItem.id.toString())?"bg-slate-300 text-slate-800":"bg-orange-600 text-white cursor-pointer"} w-[150px] p-1 rounded-lg `}>
+                            {alreadyInCart && alreadyInCart(selectedFoodItem.id.toString())?"Already in cart ":"Add to cart"}
+                            
                           </button>
                         </div>
                       </div>

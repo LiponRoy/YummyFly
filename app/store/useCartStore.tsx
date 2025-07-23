@@ -11,12 +11,14 @@ interface ICartStore {
   decrementCart: (newItem: IFood) => void;
   removeItemFromCart: (newItem: IFood) => void;
   allCartRemove: () => void;
+  getItemQuantity: (id: string) => number;
+  alreadyInCart: (id: string) => boolean;
 }
 
 const useCartStore = create<ICartStore>()(
   devtools(
     persist(
-      (set) => ({
+      (set, get) => ({
         cartProducts: [],
         totalQuantity: 0,
         totalPrice: 0,
@@ -94,6 +96,14 @@ const useCartStore = create<ICartStore>()(
               cartProducts: [],
             };
           });
+        },
+        getItemQuantity: (id: string) => {
+          const item = get().cartProducts.find((item) => String(item.id) === id);
+          return item?.cartQuantity || 0;
+        },
+        alreadyInCart: (id: string) => {
+          const item = get().cartProducts.some((item) => String(item.id) === id);
+          return item;
         },
       }),
       { name: "CartStore" }

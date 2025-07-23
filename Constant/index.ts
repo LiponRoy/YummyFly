@@ -509,7 +509,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 900,
-        imageUrl: "/images/kacchi.jpg"
+        imageUrl: "/images/kacchi.jpg",
+        cartQuantity:0
       },
       {
         id: 102,
@@ -520,7 +521,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 850,
-        imageUrl: "/images/chicken-biryani.jpg"
+        imageUrl: "/images/chicken-biryani.jpg",
+        cartQuantity:0
       },
       {
         id: 103,
@@ -531,7 +533,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 880,
-        imageUrl: "/images/beef-tehari.jpg"
+        imageUrl: "/images/beef-tehari.jpg",
+        cartQuantity:0
       },
       {
         id: 104,
@@ -542,7 +545,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 820,
-        imageUrl: "/images/morog-polao.jpg"
+        imageUrl: "/images/morog-polao.jpg",
+        cartQuantity:0
       },
       {
         id: 105,
@@ -553,7 +557,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 300,
-        imageUrl: "/images/shami-kabab.jpg"
+        imageUrl: "/images/shami-kabab.jpg",
+        cartQuantity:0
       },
       {
         id: 106,
@@ -564,7 +569,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 250,
-        imageUrl: "/images/firni.jpg"
+        imageUrl: "/images/firni.jpg",
+        cartQuantity:0
       },
       {
         id: 107,
@@ -575,7 +581,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 100,
-        imageUrl: "/images/borhani.jpg"
+        imageUrl: "/images/borhani.jpg",
+        cartQuantity:0
       },
       {
         id: 108,
@@ -586,7 +593,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 600,
-        imageUrl: "/images/beef-rezala.jpg"
+        imageUrl: "/images/beef-rezala.jpg",
+        cartQuantity:0
       },
       {
         id: 109,
@@ -597,7 +605,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 200,
-        imageUrl: "/images/paratha.jpg"
+        imageUrl: "/images/paratha.jpg",
+        cartQuantity:0
       },
       {
         id: 110,
@@ -608,7 +617,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 700,
-        imageUrl: "/images/mutton-curry.jpg"
+        imageUrl: "/images/mutton-curry.jpg",
+        cartQuantity:0
       }
     ]
   },
@@ -650,7 +660,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 1100,
-        imageUrl: "/images/beef-burger.jpg"
+        imageUrl: "/images/beef-burger.jpg",
+        cartQuantity:0
       },
       {
         id: 202,
@@ -661,7 +672,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 950,
-        imageUrl: "/images/chicken-burger.jpg"
+        imageUrl: "/images/chicken-burger.jpg",
+        cartQuantity:0
       },
       {
         id: 203,
@@ -672,7 +684,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 400,
-        imageUrl: "/images/fries.jpg"
+        imageUrl: "/images/fries.jpg",
+        cartQuantity:0
       },
       {
         id: 204,
@@ -683,7 +696,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 700,
-        imageUrl: "/images/grilled-wrap.jpg"
+        imageUrl: "/images/grilled-wrap.jpg",
+        cartQuantity:0
       },
       {
         id: 205,
@@ -694,7 +708,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 350,
-        imageUrl: "/images/onion-rings.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 206,
@@ -705,7 +720,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 600,
-        imageUrl: "/images/chicken-wings.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 207,
@@ -716,7 +732,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 700,
-        imageUrl: "/images/nachos.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 208,
@@ -727,7 +744,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 500,
-        imageUrl: "/images/lava-cake.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 209,
@@ -738,7 +756,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 150,
-        imageUrl: "/images/coke.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 210,
@@ -749,7 +768,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 500,
-        imageUrl: "/images/nuggets.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       }
     ]
   },
@@ -791,7 +811,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 200,
-        imageUrl: "/images/beef-shingara.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 302,
@@ -802,7 +823,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 180,
-        imageUrl: "/images/veg-shingara.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 303,
@@ -813,7 +835,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 300,
-        imageUrl: "/images/chicken-roll.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 304,
@@ -824,7 +847,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 250,
-        imageUrl: "/images/egg-puff.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 305,
@@ -835,7 +859,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 160,
-        imageUrl: "/images/samucha.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 306,
@@ -846,7 +871,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 100,
-        imageUrl: "/images/tea.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 307,
@@ -857,7 +883,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 1800,
-        imageUrl: "/images/singara-box.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 308,
@@ -868,7 +895,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 280,
-        imageUrl: "/images/chicken-patties.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 309,
@@ -879,7 +907,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 120,
-        imageUrl: "/images/iced-tea.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 310,
@@ -890,7 +919,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 500,
-        imageUrl: "/images/chicken-pakora.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       }
     ]
   },
@@ -932,7 +962,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 950,
-        imageUrl: "/foods/kacchi.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 402,
@@ -943,7 +974,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 720,
-        imageUrl: "/foods/chicken_tehari.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 403,
@@ -954,7 +986,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 850,
-        imageUrl: "/foods/beef_tehari.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 404,
@@ -965,7 +998,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 790,
-        imageUrl: "/foods/morog_polao.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 405,
@@ -976,7 +1010,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 380,
-        imageUrl: "/foods/shami_kebab.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 406,
@@ -987,7 +1022,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 280,
-        imageUrl: "/foods/firni.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 407,
@@ -998,7 +1034,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 410,
-        imageUrl: "/foods/jali_kebab.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 408,
@@ -1009,7 +1046,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 600,
-        imageUrl: "/foods/plain_polao.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 409,
@@ -1020,7 +1058,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 150,
-        imageUrl: "/foods/borhani.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 410,
@@ -1031,7 +1070,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 500,
-        imageUrl: "/foods/chicken_roast.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       }
     ]
   },
@@ -1073,7 +1113,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 300,
-        imageUrl: "/foods/plain_dosa.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 502,
@@ -1084,7 +1125,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 420,
-        imageUrl: "/foods/masala_dosa.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 503,
@@ -1095,7 +1137,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 280,
-        imageUrl: "/foods/idli.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 504,
@@ -1106,7 +1149,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 350,
-        imageUrl: "/foods/vada.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 505,
@@ -1117,7 +1161,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 330,
-        imageUrl: "/foods/uttapam.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 506,
@@ -1128,7 +1173,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 300,
-        imageUrl: "/foods/lemon_rice.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 507,
@@ -1139,7 +1185,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 260,
-        imageUrl: "/foods/curd_rice.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 508,
@@ -1150,7 +1197,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 120,
-        imageUrl: "/foods/filter_coffee.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 509,
@@ -1161,7 +1209,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 310,
-        imageUrl: "/foods/upma.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       },
       {
         id: 510,
@@ -1172,7 +1221,8 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 280,
-        imageUrl: "/foods/pongal.jpg"
+        imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
       }
     ]
   },
@@ -1205,16 +1255,16 @@ export const Restaurants = [
     ]
   },
   "foods": [
-    { "id": 901, "name": "Puli Pitha", "description": "Sweet coconut stuffed rice pitha", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/puli.jpg" },
-    { "id": 902, "name": "Patishapta", "description": "Coconut & jaggery stuffed pancake", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/patishapta.jpg" },
-    { "id": 903, "name": "Chitoi Pitha", "description": "Steamed rice cake served with molasses", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/chitoi.jpg" },
-    { "id": 904, "name": "Tel Pitha", "description": "Fried jaggery pitha", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/tel.jpg" },
-    { "id": 905, "name": "Bhapa Pitha", "description": "Steamed rice cake with coconut & jaggery", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/bhapa.jpg" },
-    { "id": 906, "name": "Dudh Chitoi", "description": "Chitoi pitha soaked in milk", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 210, "imageUrl": "/images/dudh-chitoi.jpg" },
-    { "id": 907, "name": "Sada Pitha", "description": "Plain steamed rice pitha", "price": 15, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/sada.jpg" },
-    { "id": 908, "name": "Shutki Chitoi", "description": "Chitoi with dry fish bharta", "price": 40, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 250, "imageUrl": "/images/shutki.jpg" },
-    { "id": 909, "name": "Gur Puli", "description": "Rice pitha dipped in jaggery syrup", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/gur-puli.jpg" },
-    { "id": 910, "name": "Chingri Pitha", "description": "Prawn stuffed fried pitha", "price": 45, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/chingri.jpg" }
+    { "id": 901, "name": "Puli Pitha", "description": "Sweet coconut stuffed rice pitha", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/puli.jpg","cartQuantity":0 },
+    { "id": 902, "name": "Patishapta", "description": "Coconut & jaggery stuffed pancake", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/patishapta.jpg","cartQuantity":0 },
+    { "id": 903, "name": "Chitoi Pitha", "description": "Steamed rice cake served with molasses", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/chitoi.jpg","cartQuantity":0 },
+    { "id": 904, "name": "Tel Pitha", "description": "Fried jaggery pitha", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/tel.jpg","cartQuantity":0 },
+    { "id": 905, "name": "Bhapa Pitha", "description": "Steamed rice cake with coconut & jaggery", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/bhapa.jpg","cartQuantity":0 },
+    { "id": 906, "name": "Dudh Chitoi", "description": "Chitoi pitha soaked in milk", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 210, "imageUrl": "/images/dudh-chitoi.jpg","cartQuantity":0 },
+    { "id": 907, "name": "Sada Pitha", "description": "Plain steamed rice pitha", "price": 15, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/sada.jpg","cartQuantity":0 },
+    { "id": 908, "name": "Shutki Chitoi", "description": "Chitoi with dry fish bharta", "price": 40, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 250, "imageUrl": "/images/shutki.jpg","cartQuantity":0 },
+    { "id": 909, "name": "Gur Puli", "description": "Rice pitha dipped in jaggery syrup", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/gur-puli.jpg","cartQuantity":0 },
+    { "id": 910, "name": "Chingri Pitha", "description": "Prawn stuffed fried pitha", "price": 45, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/chingri.jpg","cartQuantity":0 }
   ]
 },
 {
@@ -1246,16 +1296,16 @@ export const Restaurants = [
     ]
   },
   "foods": [
-    { "id": 1001, "name": "Doi-Chira", "description": "Flattened rice with yogurt & sugar", "price": 40, "category": "Traditional", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/doi-chira.jpg" },
-    { "id": 1002, "name": "Muri-Makha", "description": "Spiced puffed rice mix", "price": 30, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/muri-makha.jpg" },
-    { "id": 1003, "name": "Chira Bhuna", "description": "Fried chira with spices", "price": 35, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chira-bhuna.jpg" },
-    { "id": 1004, "name": "Singara", "description": "Fried pastry stuffed with potato", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/singara.jpg" },
-    { "id": 1005, "name": "Shingara (Beef)", "description": "Beef-filled singara", "price": 15, "category": "Snacks", "isAvailable": true, "isVeg": false, "calories": 130, "imageUrl": "/images/beef-singara.jpg" },
-    { "id": 1006, "name": "Samosa", "description": "Triangular fried snack", "price": 12, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/samosa.jpg" },
-    { "id": 1007, "name": "Piaju", "description": "Lentil fritters", "price": 8, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 110, "imageUrl": "/images/piaju.jpg" },
-    { "id": 1008, "name": "Beguni", "description": "Fried eggplant slices", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/beguni.jpg" },
-    { "id": 1009, "name": "Muri with Beguni", "description": "Muri combo with fried eggplant", "price": 25, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/muri-beguni.jpg" },
-    { "id": 1010, "name": "Aloor Chop", "description": "Potato fritter", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/aloor-chop.jpg" }
+    { "id": 1001, "name": "Doi-Chira", "description": "Flattened rice with yogurt & sugar", "price": 40, "category": "Traditional", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/doi-chira.jpg","cartQuantity":0 },
+    { "id": 1002, "name": "Muri-Makha", "description": "Spiced puffed rice mix", "price": 30, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/muri-makha.jpg","cartQuantity":0 },
+    { "id": 1003, "name": "Chira Bhuna", "description": "Fried chira with spices", "price": 35, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chira-bhuna.jpg","cartQuantity":0 },
+    { "id": 1004, "name": "Singara", "description": "Fried pastry stuffed with potato", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/singara.jpg","cartQuantity":0 },
+    { "id": 1005, "name": "Shingara (Beef)", "description": "Beef-filled singara", "price": 15, "category": "Snacks", "isAvailable": true, "isVeg": false, "calories": 130, "imageUrl": "/images/beef-singara.jpg","cartQuantity":0 },
+    { "id": 1006, "name": "Samosa", "description": "Triangular fried snack", "price": 12, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/samosa.jpg","cartQuantity":0 },
+    { "id": 1007, "name": "Piaju", "description": "Lentil fritters", "price": 8, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 110, "imageUrl": "/images/piaju.jpg","cartQuantity":0 },
+    { "id": 1008, "name": "Beguni", "description": "Fried eggplant slices", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/beguni.jpg","cartQuantity":0 },
+    { "id": 1009, "name": "Muri with Beguni", "description": "Muri combo with fried eggplant", "price": 25, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/muri-beguni.jpg","cartQuantity":0 },
+    { "id": 1010, "name": "Aloor Chop", "description": "Potato fritter", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/aloor-chop.jpg","cartQuantity":0 }
   ]
 },
 {
@@ -1287,16 +1337,16 @@ export const Restaurants = [
     ]
   },
   "foods": [
-    { "id": 901, "name": "Alu Vorta", "description": "Mashed potato with mustard oil & chili", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/alu-vorta.jpg" },
-    { "id": 902, "name": "Shutki Vorta", "description": "Fermented fish mash", "price": 60, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 200, "imageUrl": "/images/shutki-vorta.jpg" },
-    { "id": 903, "name": "Begun Vorta", "description": "Roasted eggplant mash", "price": 45, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/begun-vorta.jpg" },
-    { "id": 904, "name": "Tomato Vorta", "description": "Spicy mashed tomato", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/tomato-vorta.jpg" },
-    { "id": 905, "name": "Chingri Vorta", "description": "Spicy mashed shrimp", "price": 70, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 180, "imageUrl": "/images/chingri-vorta.jpg" },
-    { "id": 906, "name": "Kacha Morich Vorta", "description": "Raw chili mash", "price": 30, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 50, "imageUrl": "/images/morich-vorta.jpg" },
-    { "id": 907, "name": "Garlic Vorta", "description": "Spicy garlic mash", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 70, "imageUrl": "/images/garlic-vorta.jpg" },
-    { "id": 908, "name": "Onion Vorta", "description": "Burnt onion mash", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/onion-vorta.jpg" },
-    { "id": 909, "name": "Sutki Shutki Combo", "description": "Mixed mash platter", "price": 90, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/combo-vorta.jpg" },
-    { "id": 910, "name": "Vorta Platter", "description": "5-item mash platter with rice", "price": 150, "category": "Combo", "isAvailable": true, "isVeg": false, "calories": 450, "imageUrl": "/images/vorta-platter.jpg" }
+    { "id": 901, "name": "Alu Vorta", "description": "Mashed potato with mustard oil & chili", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/alu-vorta.jpg","cartQuantity":0 },
+    { "id": 902, "name": "Shutki Vorta", "description": "Fermented fish mash", "price": 60, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 200, "imageUrl": "/images/shutki-vorta.jpg","cartQuantity":0 },
+    { "id": 903, "name": "Begun Vorta", "description": "Roasted eggplant mash", "price": 45, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/begun-vorta.jpg","cartQuantity":0 },
+    { "id": 904, "name": "Tomato Vorta", "description": "Spicy mashed tomato", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/tomato-vorta.jpg","cartQuantity":0 },
+    { "id": 905, "name": "Chingri Vorta", "description": "Spicy mashed shrimp", "price": 70, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 180, "imageUrl": "/images/chingri-vorta.jpg","cartQuantity":0 },
+    { "id": 906, "name": "Kacha Morich Vorta", "description": "Raw chili mash", "price": 30, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 50, "imageUrl": "/images/morich-vorta.jpg","cartQuantity":0 },
+    { "id": 907, "name": "Garlic Vorta", "description": "Spicy garlic mash", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 70, "imageUrl": "/images/garlic-vorta.jpg","cartQuantity":0 },
+    { "id": 908, "name": "Onion Vorta", "description": "Burnt onion mash", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/onion-vorta.jpg","cartQuantity":0 },
+    { "id": 909, "name": "Sutki Shutki Combo", "description": "Mixed mash platter", "price": 90, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/combo-vorta.jpg","cartQuantity":0 },
+    { "id": 910, "name": "Vorta Platter", "description": "5-item mash platter with rice", "price": 150, "category": "Combo", "isAvailable": true, "isVeg": false, "calories": 450, "imageUrl": "/images/vorta-platter.jpg","cartQuantity":0 }
   ]
 },
 {
@@ -1328,16 +1378,16 @@ export const Restaurants = [
     ]
   },
   "foods": [
-    { "id": 1001, "name": "Spaghetti Carbonara", "description": "Creamy egg-based pasta with beef bacon", "price": 350, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 720, "imageUrl": "/images/carbonara.jpg" },
-    { "id": 1002, "name": "Fettuccine Alfredo", "description": "Rich cheese sauce with grilled chicken", "price": 370, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 800, "imageUrl": "/images/alfredo.jpg" },
-    { "id": 1003, "name": "Penne Arrabbiata", "description": "Spicy tomato-based pasta", "price": 290, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 600, "imageUrl": "/images/arrabbiata.jpg" },
-    { "id": 1004, "name": "Chicken Lasagna", "description": "Layered pasta with chicken and cheese", "price": 400, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 850, "imageUrl": "/images/lasagna.jpg" },
-    { "id": 1005, "name": "Beef Macaroni", "description": "Minced beef with elbow macaroni", "price": 320, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 700, "imageUrl": "/images/macaroni.jpg" },
-    { "id": 1006, "name": "Pasta Bolognese", "description": "Traditional Italian meat sauce pasta", "price": 350, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 780, "imageUrl": "/images/bolognese.jpg" },
-    { "id": 1007, "name": "Cheesy Pasta Bake", "description": "Baked pasta with 3 cheeses", "price": 370, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 840, "imageUrl": "/images/pasta-bake.jpg" },
-    { "id": 1008, "name": "Mushroom Penne", "description": "Creamy mushroom with penne", "price": 300, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 650, "imageUrl": "/images/mushroom-penne.jpg" },
-    { "id": 1009, "name": "Seafood Pasta", "description": "Mixed seafood in garlic sauce", "price": 420, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 760, "imageUrl": "/images/seafood-pasta.jpg" },
-    { "id": 1010, "name": "Spinach Ravioli", "description": "Stuffed ravioli with spinach and cheese", "price": 380, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 690, "imageUrl": "/images/ravioli.jpg" }
+    { "id": 1001, "name": "Spaghetti Carbonara", "description": "Creamy egg-based pasta with beef bacon", "price": 350, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 720, "imageUrl": "/images/carbonara.jpg","cartQuantity":0 },
+    { "id": 1002, "name": "Fettuccine Alfredo", "description": "Rich cheese sauce with grilled chicken", "price": 370, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 800, "imageUrl": "/images/alfredo.jpg","cartQuantity":0 },
+    { "id": 1003, "name": "Penne Arrabbiata", "description": "Spicy tomato-based pasta", "price": 290, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 600, "imageUrl": "/images/arrabbiata.jpg","cartQuantity":0 },
+    { "id": 1004, "name": "Chicken Lasagna", "description": "Layered pasta with chicken and cheese", "price": 400, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 850, "imageUrl": "/images/lasagna.jpg","cartQuantity":0 },
+    { "id": 1005, "name": "Beef Macaroni", "description": "Minced beef with elbow macaroni", "price": 320, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 700, "imageUrl": "/images/macaroni.jpg","cartQuantity":0 },
+    { "id": 1006, "name": "Pasta Bolognese", "description": "Traditional Italian meat sauce pasta", "price": 350, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 780, "imageUrl": "/images/bolognese.jpg","cartQuantity":0 },
+    { "id": 1007, "name": "Cheesy Pasta Bake", "description": "Baked pasta with 3 cheeses", "price": 370, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 840, "imageUrl": "/images/pasta-bake.jpg","cartQuantity":0 },
+    { "id": 1008, "name": "Mushroom Penne", "description": "Creamy mushroom with penne", "price": 300, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 650, "imageUrl": "/images/mushroom-penne.jpg","cartQuantity":0 },
+    { "id": 1009, "name": "Seafood Pasta", "description": "Mixed seafood in garlic sauce", "price": 420, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 760, "imageUrl": "/images/seafood-pasta.jpg","cartQuantity":0 },
+    { "id": 1010, "name": "Spinach Ravioli", "description": "Stuffed ravioli with spinach and cheese", "price": 380, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 690, "imageUrl": "/images/ravioli.jpg","cartQuantity":0 }
   ]
 },
 {
@@ -1369,16 +1419,16 @@ export const Restaurants = [
     ]
   },
   "foods": [
-    { "id": 1101, "name": "Rosogolla", "description": "Soft syrupy balls", "price": 120, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 250, "imageUrl": "/images/rosogolla.jpg" },
-    { "id": 1102, "name": "Sandesh", "description": "Sweet milk-based dessert", "price": 100, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/sandesh.jpg" },
-    { "id": 1103, "name": "Chomchom", "description": "Traditional syrupy sweet", "price": 130, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 300, "imageUrl": "/images/chomchom.jpg" },
-    { "id": 1104, "name": "Motichoor Laddu", "description": "Sweet laddus made from boondi", "price": 90, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 240, "imageUrl": "/images/laddu.jpg" },
-    { "id": 1105, "name": "Nimki", "description": "Crispy salty snack", "price": 60, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/nimki.jpg" },
-    { "id": 1106, "name": "Chanachur Mix", "description": "Spicy snack mix", "price": 80, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chanachur.jpg" },
-    { "id": 1107, "name": "Peda", "description": "Milk sweet", "price": 90, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/peda.jpg" },
-    { "id": 1108, "name": "Balushahi", "description": "Fried flaky dessert", "price": 110, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 280, "imageUrl": "/images/balushahi.jpg" },
-    { "id": 1109, "name": "Khaja", "description": "Layered sweet", "price": 95, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 230, "imageUrl": "/images/khaja.jpg" },
-    { "id": 1110, "name": "Jilapi", "description": "Deep-fried syrupy spiral", "price": 70, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/jilapi.jpg" }
+    { "id": 1101, "name": "Rosogolla", "description": "Soft syrupy balls", "price": 120, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 250, "imageUrl": "/images/rosogolla.jpg","cartQuantity":0 },
+    { "id": 1102, "name": "Sandesh", "description": "Sweet milk-based dessert", "price": 100, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/sandesh.jpg","cartQuantity":0 },
+    { "id": 1103, "name": "Chomchom", "description": "Traditional syrupy sweet", "price": 130, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 300, "imageUrl": "/images/chomchom.jpg","cartQuantity":0 },
+    { "id": 1104, "name": "Motichoor Laddu", "description": "Sweet laddus made from boondi", "price": 90, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 240, "imageUrl": "/images/laddu.jpg","cartQuantity":0 },
+    { "id": 1105, "name": "Nimki", "description": "Crispy salty snack", "price": 60, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/nimki.jpg","cartQuantity":0 },
+    { "id": 1106, "name": "Chanachur Mix", "description": "Spicy snack mix", "price": 80, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chanachur.jpg","cartQuantity":0 },
+    { "id": 1107, "name": "Peda", "description": "Milk sweet", "price": 90, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/peda.jpg","cartQuantity":0 },
+    { "id": 1108, "name": "Balushahi", "description": "Fried flaky dessert", "price": 110, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 280, "imageUrl": "/images/balushahi.jpg","cartQuantity":0 },
+    { "id": 1109, "name": "Khaja", "description": "Layered sweet", "price": 95, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 230, "imageUrl": "/images/khaja.jpg","cartQuantity":0 },
+    { "id": 1110, "name": "Jilapi", "description": "Deep-fried syrupy spiral", "price": 70, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/jilapi.jpg","cartQuantity":0 }
   ]
 },
 {
@@ -1410,16 +1460,16 @@ export const Restaurants = [
     ]
   },
   "foods": [
-    { "id": 1201, "name": "Mutton Curry", "description": "Slow-cooked mutton with rich spices", "price": 420, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 850, "imageUrl": "/images/mutton-curry.jpg" },
-    { "id": 1202, "name": "Chicken Rezala", "description": "Mild creamy chicken curry", "price": 350, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 700, "imageUrl": "/images/rezala.jpg" },
-    { "id": 1203, "name": "Beef Korma", "description": "Beef cooked in ghee and spices", "price": 460, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 900, "imageUrl": "/images/beef-korma.jpg" },
-    { "id": 1204, "name": "Grilled Chicken", "description": "Smoky grilled half chicken", "price": 300, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 600, "imageUrl": "/images/grilled-chicken.jpg" },
-    { "id": 1205, "name": "Seekh Kebab", "description": "Skewered minced meat", "price": 250, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 500, "imageUrl": "/images/seekh-kebab.jpg" },
-    { "id": 1206, "name": "Paratha", "description": "Buttery flatbread", "price": 30, "category": "Bread", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/paratha.jpg" },
-    { "id": 1207, "name": "Plain Rice", "description": "Steamed basmati rice", "price": 60, "category": "Rice", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/plain-rice.jpg" },
-    { "id": 1208, "name": "Beef Bhuna", "description": "Dry spiced beef curry", "price": 400, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 800, "imageUrl": "/images/beef-bhuna.jpg" },
-    { "id": 1209, "name": "Mixed Grill Platter", "description": "Kebab, chicken, beef in one plate", "price": 550, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 950, "imageUrl": "/images/mixed-grill.jpg" },
-    { "id": 1210, "name": "Chicken Curry", "description": "Home-style chicken with potatoes", "price": 340, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 680, "imageUrl": "/images/chicken-curry.jpg" }
+    { "id": 1201, "name": "Mutton Curry", "description": "Slow-cooked mutton with rich spices", "price": 420, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 850, "imageUrl": "/images/mutton-curry.jpg","cartQuantity":0 },
+    { "id": 1202, "name": "Chicken Rezala", "description": "Mild creamy chicken curry", "price": 350, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 700, "imageUrl": "/images/rezala.jpg","cartQuantity":0 },
+    { "id": 1203, "name": "Beef Korma", "description": "Beef cooked in ghee and spices", "price": 460, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 900, "imageUrl": "/images/beef-korma.jpg","cartQuantity":0 },
+    { "id": 1204, "name": "Grilled Chicken", "description": "Smoky grilled half chicken", "price": 300, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 600, "imageUrl": "/images/grilled-chicken.jpg","cartQuantity":0 },
+    { "id": 1205, "name": "Seekh Kebab", "description": "Skewered minced meat", "price": 250, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 500, "imageUrl": "/images/seekh-kebab.jpg","cartQuantity":0 },
+    { "id": 1206, "name": "Paratha", "description": "Buttery flatbread", "price": 30, "category": "Bread", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/paratha.jpg","cartQuantity":0 },
+    { "id": 1207, "name": "Plain Rice", "description": "Steamed basmati rice", "price": 60, "category": "Rice", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/plain-rice.jpg","cartQuantity":0 },
+    { "id": 1208, "name": "Beef Bhuna", "description": "Dry spiced beef curry", "price": 400, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 800, "imageUrl": "/images/beef-bhuna.jpg","cartQuantity":0 },
+    { "id": 1209, "name": "Mixed Grill Platter", "description": "Kebab, chicken, beef in one plate", "price": 550, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 950, "imageUrl": "/images/mixed-grill.jpg","cartQuantity":0 },
+    { "id": 1210, "name": "Chicken Curry", "description": "Home-style chicken with potatoes", "price": 340, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 680, "imageUrl": "/images/chicken-curry.jpg","cartQuantity":0 }
   ]
 },
 {
@@ -1460,7 +1510,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: false,
       calories: 150,
-      imageUrl: "/images/shutki-vorta.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1202,
@@ -1471,7 +1522,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: true,
       calories: 120,
-      imageUrl: "/images/aloo-vorta.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1203,
@@ -1482,7 +1534,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: true,
       calories: 130,
-      imageUrl: "/images/begun-vorta.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1204,
@@ -1493,7 +1546,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: true,
       calories: 110,
-      imageUrl: "/images/tomato-vorta.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1205,
@@ -1504,7 +1558,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: true,
       calories: 180,
-      imageUrl: "/images/pui-shaak.jpg"
+     imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1206,
@@ -1515,7 +1570,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: false,
       calories: 250,
-      imageUrl: "/images/shutki-bhuna.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1207,
@@ -1526,7 +1582,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: true,
       calories: 150,
-      imageUrl: "/images/daal.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1208,
@@ -1537,7 +1594,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: true,
       calories: 200,
-      imageUrl: "/images/plain-rice.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1209,
@@ -1548,7 +1606,8 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: false,
       calories: 380,
-      imageUrl: "/images/hilsha-fry.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+        cartQuantity:0
     },
     {
       id: 1210,
@@ -1559,7 +1618,9 @@ export const Restaurants = [
       isAvailable: true,
       isVeg: true,
       calories: 130,
-      imageUrl: "/images/korola-bhaji.jpg"
+      imageUrl: "/images/onion-rings.jpg",
+      cartQuantity:0
+      
     }
   ]
 }
