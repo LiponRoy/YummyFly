@@ -9,7 +9,7 @@ import { IAvailableDeals, IFood } from "@/Type";
 
 import { Bike, ChefHat, ChevronDown, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
 import Image from "next/image";
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 
 type FoodProps = {
   params: {
@@ -19,12 +19,10 @@ type FoodProps = {
 const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { id } = use(params);
 
-  const { addItemToCart,incrementCart, decrementCart,totalQuantity } = useCartStore();
+  const { addItemToCart,removeItemFromCart,cartProducts } = useCartStore();
 
   const [openModal, setOpenModal] = useState<Boolean>(false);
-
   const [openingHour, setOpeningHour] = useState<Boolean>(false);
-
   const [openFoodItemModal, setOpenFoodItemModal] = useState<Boolean>(false);
   const [selectedFoodItem, setSelectedFoodItem] = useState<IFood>();
 
@@ -33,19 +31,17 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
     setOpenFoodItemModal(true);
   };
 
+  const addToCart = (val: IFood) => {
+    addItemToCart(val);
+    setOpenFoodItemModal(false);
+  };
+
   // Available Deals
   const [openAvailableDealsModal, setOpenAvailableDealsModal] = useState<Boolean>(false);
   const [selectedAvailableDeals, setSelectedAvailableDeals] = useState<IAvailableDeals>();
 
-  const product = Restaurants.find((item) => item.id.toString() === id);
+  const product = Restaurants.find((item) => item.id.toString() === id); 
 
-    const incrementItem = (item: IFood) => {
-    incrementCart(item);
-  };
-
-  const decrementItem = (item: IFood) => {
-    decrementCart(item);
-  };
 
   if (!product) {
     return <div className="p-6 text-red-500 font-bold">Product not found for ID: {id}</div>;
@@ -185,31 +181,22 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                       <div className="flex flex-col justify-start items-start space-y-2 my-6 mt-2">
                         <span className="text-[18px] font-semibold">{selectedFoodItem.name} :</span>
                         <span>{selectedFoodItem.description}</span>
-                        <span className="text-xl font-medium">
+                        <span className="text-lg font-medium">
                           <span className="mr-1">Taka</span>
-                          {selectedFoodItem.price}
+                        <span className="text-xl font-semibold">{selectedFoodItem.price}</span>
                           <span className="ml-1">/=</span>
                         </span>
                       </div>
                       {/* add cart options */}
                       <div className="w-full flex justify-between items-center p-2  bg-slate-100 border border-slate-300 my-4 rounded-lg">
                         <div className="flex justify-center items-center space-x-4">
-                          <button
-                              className={`font-bold bg-primary-1 w-8 h-8 rounded-full p-2 flex justify-center items-center text-white text-2xl  ${
-                                selectedFoodItem.cartQuantity === 1 ? "text-slate-200 cursor-not-allowed" : "cursor-pointer"
-                              }`}
-                              onClick={() => decrementItem(selectedFoodItem)}
-                            >
-                              <span >-</span>
-                            </button>
-                            <span className=" mx-2 text-slate-600">{selectedFoodItem.cartQuantity}</span>
-                            <button className="cursor-pointer font-bold bg-primary-1 w-8 h-8 rounded-full p-2 flex justify-center items-center text-white text-2xl" onClick={() => incrementItem(selectedFoodItem)}>
-                              +
-                            </button>
+                          {cartProducts.some((item) => item.id=== selectedFoodItem.id) &&   <span onClick={() => selectedFoodItem && removeItemFromCart(selectedFoodItem)}>Remove</span> 
+}
+                        
                         </div>
-                        <div onClick={() => selectedFoodItem && addItemToCart(selectedFoodItem)} className="">
-                          <button className="bg-orange-600 w-[150px] p-1 rounded-lg text-white curser-pointer">
-                            Add to cart
+                        <div onClick={() => selectedFoodItem && addToCart(selectedFoodItem)}>
+                          <button  className="bg-orange-600 w-[150px] p-1 rounded-lg text-white cursor-pointer">
+                            Add to cart 
                           </button>
                         </div>
                       </div>
