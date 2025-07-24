@@ -36,3 +36,11 @@ body {
 @theme {
   --color-primary-1: #FE5D26;
 }
+
+.custom-scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.custom-scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

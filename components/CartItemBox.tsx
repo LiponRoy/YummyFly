@@ -50,7 +50,7 @@ const CartItemBox = () => {
 
   return (
     <div>
-      <div className="col-span-3 border border-slate-400 rounded-xl p-4 mt-10 md:mt-0 mx-4 md:mx-0 w-[395px] md:w-[400px] max-h-[600px] overflow-y-auto">
+      <div className="border border-slate-400 rounded-xl p-1 md:p-4 mt-10 md:mt-0 mx-4 md:mx-0 w-[368px] md:w-[400px] max-h-[600px] overflow-y-auto">
        
 
         {/* Scrollable container */}

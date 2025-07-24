@@ -7,7 +7,7 @@ import Modal from "@/components/Modal";
 import { Restaurants } from "@/Constant";
 import { IAvailableDeals, IFood } from "@/Type";
 
-import { ArchiveX, Bike, ChefHat, ChevronDown, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
+import { ArchiveX, Bike, ChefHat, ChevronDown, MapPin, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
 import Image from "next/image";
 import React, { use, useEffect, useState } from "react";
 
@@ -69,36 +69,39 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                   alt={"food"}
                   width={500}
                   height={500}
-                  className="w-full md:w-[156px] h-[156px] object-cover transition-transform duration-500 ease-in-out hover:scale-110 rounded-xl"
+                  className="w-full md:w-[156px] h-[156px] object-cover rounded-xl mt-2"
                 />
               </div>
               <div className="md:col-span-6">
                 <div className="flex flex-col justify-start items-start space-y-1 ml-2">
-                  <div className="flex justify-center items-center mt-3 md:mt-0">
+                  <div className="flex flex-col justify-center items-start mt-3 md:mt-0">
                     <span className="text-[28px] md:text-[32px] font-bold text-slate-800">
                       {product.restaurantName}
                     </span>
-                    <span className="mx-2">-</span>
-                    <span className="text-[22px] md:text-[28px] font-normal">{product.location}</span>
+                  <div className="flex justify-center items-center space-x-1 text-[16px]">
+                    <MapPin size={16} />
+                    <span className="mr-2 font-semibold">Location :</span>
+                    {product.location} 
                   </div>
-                  <div className="flex justify-center items-center space-x-1 text-[14px]">
+                  </div>
+                  <div className="flex justify-center items-center space-x-1 text-[16px]">
                     <Star size={14} className="mr-1 text-red-600" />
                     <span>
-                      <span className="mr-2 font-medium">Rating :</span>
+                      <span className="mr-2 font-semibold ">Rating :</span>
                       {product.rating}
                       <span className="ml-2">({product.ratingPersons}+)</span>
                     </span>
                   </div>
-                  <div className="flex justify-center items-center space-x-1 text-[14px]">
+                  <div className="flex justify-center items-center space-x-1 text-[16px]">
                     <Bike size={16} />
-                    <span className="mr-2 font-medium">Delivery Fee :</span>
+                    <span className="mr-2 font-semibold">Delivery Fee :</span>
                     {product.deliveryFee} <span className="ml-1">Taka</span>
                   </div>
-                  <div className="flex justify-center items-center space-x-1 text-[14px]">
+                  <div className="flex justify-center items-center space-x-1 text-[16px]">
                     <ChefHat size={16} />
-                    <span className="mr-2 font-medium">Cuisines :</span>
+                    <span className="mr-2 font-semibold">Cuisines :</span>
                     {product.cuisines.map((val, i) => (
-                      <div key={i} className="flex justify-center items-center">
+                      <div key={i} className="flex justify-center items-center ">
                         {val},
                       </div>
                     ))}
@@ -255,7 +258,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 </Modal>
                 {/* // End modal of selected food item */}
               </div>
-              <div className="hidden md:flex justify-end col-span-4    mt-16 ">
+              <div className="hidden md:flex justify-end items-start col-span-4 mt-16 ">
                 {/* //  cart option */}
                 <CartItemBox />
               </div>

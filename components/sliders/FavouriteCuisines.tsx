@@ -27,14 +27,14 @@ const settings = {
     {
       breakpoint: 1024, // below 1024px
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: 640, // below 640px
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
       },
     },
@@ -43,7 +43,7 @@ const settings = {
   return (
     <div className="w-full   rounded-md text-sm text-center mt-8 flex flex-col justify-center items-center">
         <div className="relative  text-slate-700 text-[24px] text-start ">
-                Favourite Cuisines
+                Favorite Cuisines
             </div>
       <div className="w-[90%]">
         <Slider {...settings}>
@@ -54,7 +54,7 @@ const settings = {
             className=" flex flex-col justify-center items-center w-full"
           >
             
-           <div className="relative  m-2 h-[110px] w-[130px] rounded-md bg-slate-200 shadow cursor-pointer">
+           <div className="relative  m-2 h-[100px] md:h-[110px] w-[100px] md:w-[130px] rounded-md bg-slate-200 shadow cursor-pointer">
             <div className=" absolute top-0 left-0 right-0 flex flex-col justify-center items-center py-1 ">
              <Image
               src={item.imageUrl} // Replace with your actual image path
