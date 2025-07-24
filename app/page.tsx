@@ -151,9 +151,9 @@ export default function Home() {
         <div className="w-full my-2">
           <DailyDeals />
         </div>
-        {/* <div className="w-full my-4">
+        <div className="w-full my-4">
                     <FavouriteCuisines />
-                </div> */}
+                </div>
         <div className="my-2  text-slate-700 text-[24px] text-start ml-2 ">Restaurants</div>
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-4 ">
           {filteredProducts.map((restaurant, i) => (

@@ -1,17 +1,24 @@
 // components/HeroRightSlider.tsx
 "use client";
-import { FavouriteCuisinesData } from "@/Constant";
+import { Cuisines, FavouriteCuisinesData } from "@/Constant";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import Slider from "react-slick";
 
 const FavouriteCuisines = () => {
+  const route =useRouter();
+  
+  const goToFoodCuisines = (id:number) => {
+    route.push(`/cuisines/${id}`);
+  };
+
 const settings = {
   dots: false,
   arrows: false,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 3000,
   speed: 600,
   slidesToShow: 6,
   slidesToScroll: 1,
@@ -33,37 +40,37 @@ const settings = {
     },
   ],
 };
-
-
-  
   return (
-    <div className="w-full   rounded-md text-sm text-center my-2">
-        <div className="relative my-2 w-full text-slate-700 text-[24px] text-start ml-2 ">
-                Favourite Cuisines Restaurants
+    <div className="w-full   rounded-md text-sm text-center mt-8 flex flex-col justify-center items-center">
+        <div className="relative  text-slate-700 text-[24px] text-start ">
+                Favourite Cuisines
             </div>
-      <Slider {...settings}>
-        {FavouriteCuisinesData?.map((item, index) => (
+      <div className="w-[90%]">
+        <Slider {...settings}>
+        {Cuisines?.map((item, index) => (
           <div
+          onClick={()=>goToFoodCuisines(item.id)}
             key={index}
-            className=" flex flex-col justify-center items-center space-y-1 w-full"
+            className=" flex flex-col justify-center items-center w-full"
           >
             
-           <div className="relative  m-2 h-[130px] w-[130px] rounded-md ">
-            <div className=" absolute top-0 left-0 right-0 flex flex-col justify-center items-center py-1">
+           <div className="relative  m-2 h-[110px] w-[130px] rounded-md bg-slate-200 shadow cursor-pointer">
+            <div className=" absolute top-0 left-0 right-0 flex flex-col justify-center items-center py-1 ">
              <Image
               src={item.imageUrl} // Replace with your actual image path
               alt="Your description"
-              width={100}
-              height={100}
-              className="rounded-full"
+              width={300}
+              height={300}
+              className="rounded-full h-[70px] w-[70px] bg-contain"
               // priority
             />
            </div>
-            <span className="absolute bottom-1 left-0 right-0 font-semibold text-base mt-6 text-slate-800">{item.title}</span>
+            <span className="absolute bottom-1 left-0 right-0 font-semibold text-base mt-2 text-slate-800">{item.CuisinesName}</span>
            </div>
           </div>
         ))}
       </Slider>
+      </div>
     </div>
   );
 };
