@@ -1,7 +1,9 @@
 import { IAvailableDeals, } from "@/Type";
 
 // All possible cuisines in the dataset for the filter UI
-export const allCuisines = ["Indian", "Grill", "Italian", "Fast Food", "Japanese", "American", "Seafood"];
+export const allCuisines = ["Biryani","Bangladeshi","Fast Food","Burger","Snacks","Traditional","Breakfast","Chicken","Pizza","Chinese","Sea Food","Dessert"];
+
+
 export const Old_restaurants = [
   {
     id: 1,
@@ -3216,13 +3218,13 @@ export const Restaurants = [
     deliveryFee: 40,
     deliveryTime: "25-45 min",
     distance: 5,
-    cuisines: ["Biryani", "Deshi"],
+    cuisines: ["Biryani", "Bangladeshi"],
     discountPercent: 15,
     minimumOrder: 200,
     isOpen: true,
-    imageUrl: "/myFood.jpg",
+    imageUrl: "/biryani/1.jpg",
     moreInfo: {
-      imageUrl: "/myFood.jpg",
+      imageUrl: "/biryani/1.jpg",
       fullLocation: "House 12, Road 11, Banani, Dhaka",
       aboutDeliveryFee: "Delivery fee varies with distance and time.",
       aboutMinimumOrder: "Minimum order amount is Tk 200.",
@@ -3245,7 +3247,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 900,
-        imageUrl: "/images/kacchi.jpg",
+       imageUrl: "/biryani/1.jpg",
         cartQuantity:0
       },
       {
@@ -3257,7 +3259,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 850,
-        imageUrl: "/images/chicken-biryani.jpg",
+         imageUrl: "/biryani/2.jpg",
         cartQuantity:0
       },
       {
@@ -3269,7 +3271,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 880,
-        imageUrl: "/images/beef-tehari.jpg",
+         imageUrl: "/biryani/3.jpg",
         cartQuantity:0
       },
       {
@@ -3281,7 +3283,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 820,
-        imageUrl: "/images/morog-polao.jpg",
+         imageUrl: "/biryani/4.jpg",
         cartQuantity:0
       },
       {
@@ -3293,7 +3295,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 300,
-        imageUrl: "/images/shami-kabab.jpg",
+        imageUrl: "/kabab.jpg",
         cartQuantity:0
       },
       {
@@ -3305,57 +3307,13 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 250,
-        imageUrl: "/images/firni.jpg",
+         imageUrl: "/firni.png",
         cartQuantity:0
       },
-      {
-        id: 107,
-        name: "Borhani",
-        description: "Spiced yogurt drink",
-        price: 30,
-        category: "Beverage",
-        isAvailable: true,
-        isVeg: true,
-        calories: 100,
-        imageUrl: "/images/borhani.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 108,
-        name: "Beef Rezala",
-        description: "Beef cooked in aromatic rezala gravy",
-        price: 280,
-        category: "Curry",
-        isAvailable: true,
-        isVeg: false,
-        calories: 600,
-        imageUrl: "/images/beef-rezala.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 109,
-        name: "Paratha",
-        description: "Crispy fried flatbread",
-        price: 20,
-        category: "Bread",
-        isAvailable: true,
-        isVeg: true,
-        calories: 200,
-        imageUrl: "/images/paratha.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 110,
-        name: "Mutton Curry",
-        description: "Slow-cooked spicy mutton",
-        price: 340,
-        category: "Curry",
-        isAvailable: true,
-        isVeg: false,
-        calories: 700,
-        imageUrl: "/images/mutton-curry.jpg",
-        cartQuantity:0
-      }
+      
+      
+     
+     
     ]
   },
   {
@@ -3371,9 +3329,9 @@ export const Restaurants = [
     discountPercent: 10,
     minimumOrder: 150,
     isOpen: true,
-    imageUrl: "/images/burger-bhoot.jpg",
+    imageUrl: "/burgers/3.jpg",
     moreInfo: {
-      imageUrl: "/images/burger-bhoot.jpg",
+      imageUrl: "/burgers/3.jpg",
       fullLocation: "Block D, Mirpur 12, Dhaka",
       aboutDeliveryFee: "Delivery charges may vary.",
       aboutMinimumOrder: "Minimum Tk 150 order required.",
@@ -3396,7 +3354,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 1100,
-        imageUrl: "/images/beef-burger.jpg",
+        imageUrl: "/burgers/1.jpg",
         cartQuantity:0
       },
       {
@@ -3408,7 +3366,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 950,
-        imageUrl: "/images/chicken-burger.jpg",
+        imageUrl: "/burgers/2.jpg",
         cartQuantity:0
       },
       {
@@ -3420,7 +3378,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 400,
-        imageUrl: "/images/fries.jpg",
+        imageUrl: "/fastFood/8.jpg",
         cartQuantity:0
       },
       {
@@ -3432,7 +3390,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 700,
-        imageUrl: "/images/grilled-wrap.jpg",
+        imageUrl: "/fastFood/11.jpg",
         cartQuantity:0
       },
       {
@@ -3444,7 +3402,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 350,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/fastFood/12.jpg",
         cartQuantity:0
       },
       {
@@ -3456,7 +3414,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 600,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/chickenFry/4.jpg",
         cartQuantity:0
       },
       {
@@ -3468,7 +3426,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 700,
-        imageUrl: "/images/onion-rings.jpg",
+                imageUrl: "/chickenFry/3.jpg",
         cartQuantity:0
       },
       {
@@ -3480,33 +3438,11 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 500,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/dessert/3.jpg",
         cartQuantity:0
       },
-      {
-        id: 209,
-        name: "Coke (Can)",
-        description: "Cold Coca-Cola in a can",
-        price: 40,
-        category: "Beverage",
-        isAvailable: true,
-        isVeg: true,
-        calories: 150,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 210,
-        name: "Chicken Nuggets",
-        description: "6 pcs crispy nuggets",
-        price: 190,
-        category: "Fast Food",
-        isAvailable: true,
-        isVeg: false,
-        calories: 500,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      }
+     
+      
     ]
   },
   {
@@ -3522,7 +3458,7 @@ export const Restaurants = [
     discountPercent: 20,
     minimumOrder: 100,
     isOpen: true,
-    imageUrl: "/images/shingara.jpg",
+    imageUrl: "/traditional/3.jpg",
     moreInfo: {
       imageUrl: "/images/shingara.jpg",
       fullLocation: "Opposite Gulshan Pink City, Gulshan 1",
@@ -3547,7 +3483,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 200,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/traditional/2.jpg",
         cartQuantity:0
       },
       {
@@ -3559,7 +3495,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 180,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/traditional/1.jpg",
         cartQuantity:0
       },
       {
@@ -3571,7 +3507,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 300,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/fastFood/9.jpg",
         cartQuantity:0
       },
       {
@@ -3583,7 +3519,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 250,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/breakFast/5.jpg",
         cartQuantity:0
       },
       {
@@ -3595,7 +3531,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 160,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/traditional/5.jpg",
         cartQuantity:0
       },
       {
@@ -3607,7 +3543,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 100,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/traditional/4.jpg",
         cartQuantity:0
       },
       {
@@ -3619,23 +3555,12 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 1800,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/traditional/6.jpg",
         cartQuantity:0
       },
+      
       {
         id: 308,
-        name: "Chicken Patties",
-        description: "Spiced chicken inside puff pastry",
-        price: 35,
-        category: "Snack",
-        isAvailable: true,
-        isVeg: false,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 309,
         name: "Milk Tea (Iced)",
         description: "Iced version of milk tea",
         price: 25,
@@ -3643,7 +3568,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 120,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/traditional/1.jpg",
         cartQuantity:0
       },
       {
@@ -3655,7 +3580,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 500,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/fastFood/7.jpg",
         cartQuantity:0
       }
     ]
@@ -3669,13 +3594,13 @@ export const Restaurants = [
     deliveryFee: 45,
     deliveryTime: "45-50 min",
     distance: 7,
-    cuisines: ["Bangladeshi", "Biriyani"],
+    cuisines: ["Bangladeshi", "Biryani"],
     discountPercent: 15,
     minimumOrder: 120,
     isOpen: true,
-    imageUrl: "/biriyaniDarbar.jpg",
+    imageUrl: "/biryani/4.jpg",
     moreInfo: {
-      imageUrl: "/biriyaniDarbar.jpg",
+      imageUrl: "/biryani/4.jpg",
       fullLocation: "House 7, Road 9, Block C, Mirpur-11",
       aboutDeliveryFee: "Delivery fee may vary depending on time and location.",
       aboutMinimumOrder: "Minimum order Tk 120.",
@@ -3698,7 +3623,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 950,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/biryani/9.jpg",
         cartQuantity:0
       },
       {
@@ -3710,7 +3635,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 720,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/biryani/10.jpg",
         cartQuantity:0
       },
       {
@@ -3722,7 +3647,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 850,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/biryani/11.jpg",
         cartQuantity:0
       },
       {
@@ -3734,7 +3659,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 790,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/biryani/4.jpg",
         cartQuantity:0
       },
       {
@@ -3746,7 +3671,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 380,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/kabab.jpg",
         cartQuantity:0
       },
       {
@@ -3758,31 +3683,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 407,
-        name: "Jali Kebab",
-        description: "Egg wrapped kebab (2 pcs)",
-        price: 120,
-        category: "Kebab",
-        isAvailable: true,
-        isVeg: false,
-        calories: 410,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 408,
-        name: "Plain Polao",
-        description: "Flavored rice with ghee & whole spices",
-        price: 100,
-        category: "Polao",
-        isAvailable: true,
-        isVeg: true,
-        calories: 600,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/firni.png",
         cartQuantity:0
       },
       {
@@ -3794,7 +3695,7 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: true,
         calories: 150,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/borhani.jpg",
         cartQuantity:0
       },
       {
@@ -3806,205 +3707,13 @@ export const Restaurants = [
         isAvailable: true,
         isVeg: false,
         calories: 500,
-        imageUrl: "/images/onion-rings.jpg",
+        imageUrl: "/fastFood/5.jpg",
         cartQuantity:0
       }
     ]
   },
-  {
-    id: 5,
-    restaurantName: "South Indian Express",
-    location: "Banani",
-    rating: 4.1,
-    ratingPersons: 170,
-    deliveryFee: 35,
-    deliveryTime: "35-40 min",
-    distance: 6,
-    cuisines: ["South Indian", "Vegetarian"],
-    discountPercent: 10,
-    minimumOrder: 80,
-    isOpen: true,
-    imageUrl: "/southIndianExpress.jpg",
-    moreInfo: {
-      imageUrl: "/southIndianExpress.jpg",
-      fullLocation: "House 11, Road 14, Banani",
-      aboutDeliveryFee: "Delivery fee may vary depending on time and location.",
-      aboutMinimumOrder: "Minimum order Tk 80.",
-      OpeningHours: [
-        "sunday - 8:00 AM - 10:00 PM",
-        "monday - 8:00 AM - 10:00 PM",
-        "Tuesday - 8:00 AM - 10:00 PM",
-        "Wednesday - 8:00 AM - 10:00 PM",
-        "Thursday - 8:00 AM - 10:00 PM",
-        "Friday - 2:00 PM - 11:00 PM"
-      ]
-    },
-    foods: [
-      {
-        id: 501,
-        name: "Plain Dosa",
-        description: "Crispy rice crepe served with chutney and sambar",
-        price: 90,
-        category: "Dosa",
-        isAvailable: true,
-        isVeg: true,
-        calories: 300,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 502,
-        name: "Masala Dosa",
-        description: "Stuffed with spiced potato filling",
-        price: 130,
-        category: "Dosa",
-        isAvailable: true,
-        isVeg: true,
-        calories: 420,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 503,
-        name: "Idli Sambar",
-        description: "Steamed rice cakes with sambar and chutney",
-        price: 100,
-        category: "Idli",
-        isAvailable: true,
-        isVeg: true,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 504,
-        name: "Vada Sambar",
-        description: "Fried lentil donuts served with sambar",
-        price: 110,
-        category: "Vada",
-        isAvailable: true,
-        isVeg: true,
-        calories: 350,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 505,
-        name: "Uttapam",
-        description: "Thick rice pancake with onions & chilies",
-        price: 120,
-        category: "Uttapam",
-        isAvailable: true,
-        isVeg: true,
-        calories: 330,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 506,
-        name: "Lemon Rice",
-        description: "Tangy rice with mustard seeds & curry leaves",
-        price: 100,
-        category: "Rice",
-        isAvailable: true,
-        isVeg: true,
-        calories: 300,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 507,
-        name: "Curd Rice",
-        description: "Yogurt-mixed rice, South Indian style",
-        price: 90,
-        category: "Rice",
-        isAvailable: true,
-        isVeg: true,
-        calories: 260,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 508,
-        name: "Filter Coffee",
-        description: "Traditional South Indian filter coffee",
-        price: 50,
-        category: "Drink",
-        isAvailable: true,
-        isVeg: true,
-        calories: 120,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 509,
-        name: "Vegetable Upma",
-        description: "Semolina porridge with vegetables",
-        price: 110,
-        category: "Breakfast",
-        isAvailable: true,
-        isVeg: true,
-        calories: 310,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 510,
-        name: "Pongal",
-        description: "Savory rice & lentil porridge",
-        price: 100,
-        category: "Breakfast",
-        isAvailable: true,
-        isVeg: true,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      }
-    ]
-  },
-  {
-  "id": 6,
-  "restaurantName": "Pitha Ghor",
-  "location": "Old Town",
-  "rating": 4.4,
-  "ratingPersons": 310,
-  "deliveryFee": 40,
-  "deliveryTime": "1-1.30 hours",
-  "distance": 8,
-  "cuisines": ["Traditional", "Snacks"],
-  "discountPercent": 10,
-  "minimumOrder": 100,
-  "isOpen": true,
-  "imageUrl": "/images/pitha-restaurant.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/pitha-restaurant.jpg",
-    "fullLocation": "House 11, Road 3, Sutrapur",
-    "aboutDeliveryFee": "Based on area and time.",
-    "aboutMinimumOrder": "Orders below Tk 100 not accepted.",
-    "OpeningHours": [
-      "sunday - 7:00 AM - 9:00 PM",
-      "monday - 7:00 AM - 9:00 PM",
-      "Tuesday - 7:00 AM - 9:00 PM",
-      "Wednesday - 7:00 AM - 9:00 PM",
-      "Thursday - 7:00 AM - 9:00 PM",
-      "Friday - 7:00 AM - 11:00 PM"
-    ]
-  },
-  "foods": [
-    { "id": 901, "name": "Puli Pitha", "description": "Sweet coconut stuffed rice pitha", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/puli.jpg","cartQuantity":0 },
-    { "id": 902, "name": "Patishapta", "description": "Coconut & jaggery stuffed pancake", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/patishapta.jpg","cartQuantity":0 },
-    { "id": 903, "name": "Chitoi Pitha", "description": "Steamed rice cake served with molasses", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/chitoi.jpg","cartQuantity":0 },
-    { "id": 904, "name": "Tel Pitha", "description": "Fried jaggery pitha", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/tel.jpg","cartQuantity":0 },
-    { "id": 905, "name": "Bhapa Pitha", "description": "Steamed rice cake with coconut & jaggery", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/bhapa.jpg","cartQuantity":0 },
-    { "id": 906, "name": "Dudh Chitoi", "description": "Chitoi pitha soaked in milk", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 210, "imageUrl": "/images/dudh-chitoi.jpg","cartQuantity":0 },
-    { "id": 907, "name": "Sada Pitha", "description": "Plain steamed rice pitha", "price": 15, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/sada.jpg","cartQuantity":0 },
-    { "id": 908, "name": "Shutki Chitoi", "description": "Chitoi with dry fish bharta", "price": 40, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 250, "imageUrl": "/images/shutki.jpg","cartQuantity":0 },
-    { "id": 909, "name": "Gur Puli", "description": "Rice pitha dipped in jaggery syrup", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/gur-puli.jpg","cartQuantity":0 },
-    { "id": 910, "name": "Chingri Pitha", "description": "Prawn stuffed fried pitha", "price": 45, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/chingri.jpg","cartQuantity":0 }
-  ]
-},
 {
-  "id": 7,
+  "id": 5,
   "restaurantName": "Deshi Doi-Chira",
   "location": "Mirpur",
   "rating": 4.0,
@@ -4016,9 +3725,9 @@ export const Restaurants = [
   "discountPercent": 5,
   "minimumOrder": 50,
   "isOpen": true,
-  "imageUrl": "/images/doi-chira.jpg",
+  "imageUrl": "/traditional/7.jpg",
   "moreInfo": {
-    "imageUrl": "/images/doi-chira.jpg",
+    "imageUrl": "/traditional/7.jpg",
     "fullLocation": "House 90, Mirpur 11",
     "aboutDeliveryFee": "Tk 30 flat in Mirpur area.",
     "aboutMinimumOrder": "Minimum order Tk 50.",
@@ -4032,335 +3741,891 @@ export const Restaurants = [
     ]
   },
   "foods": [
-    { "id": 1001, "name": "Doi-Chira", "description": "Flattened rice with yogurt & sugar", "price": 40, "category": "Traditional", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/doi-chira.jpg","cartQuantity":0 },
-    { "id": 1002, "name": "Muri-Makha", "description": "Spiced puffed rice mix", "price": 30, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/muri-makha.jpg","cartQuantity":0 },
-    { "id": 1003, "name": "Chira Bhuna", "description": "Fried chira with spices", "price": 35, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chira-bhuna.jpg","cartQuantity":0 },
-    { "id": 1004, "name": "Singara", "description": "Fried pastry stuffed with potato", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/singara.jpg","cartQuantity":0 },
-    { "id": 1005, "name": "Shingara (Beef)", "description": "Beef-filled singara", "price": 15, "category": "Snacks", "isAvailable": true, "isVeg": false, "calories": 130, "imageUrl": "/images/beef-singara.jpg","cartQuantity":0 },
-    { "id": 1006, "name": "Samosa", "description": "Triangular fried snack", "price": 12, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/samosa.jpg","cartQuantity":0 },
-    { "id": 1007, "name": "Piaju", "description": "Lentil fritters", "price": 8, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 110, "imageUrl": "/images/piaju.jpg","cartQuantity":0 },
-    { "id": 1008, "name": "Beguni", "description": "Fried eggplant slices", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/beguni.jpg","cartQuantity":0 },
-    { "id": 1009, "name": "Muri with Beguni", "description": "Muri combo with fried eggplant", "price": 25, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/muri-beguni.jpg","cartQuantity":0 },
-    { "id": 1010, "name": "Aloor Chop", "description": "Potato fritter", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/aloor-chop.jpg","cartQuantity":0 }
+    { "id": 1001, "name": "Doi-Chira", "description": "Flattened rice with yogurt & sugar", "price": 40, "category": "Traditional", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/traditional/8.jpg","cartQuantity":0 },
+    { "id": 1002, "name": "Singara", "description": "Fried pastry stuffed with potato", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/traditional/3.jpg","cartQuantity":0 },
+
+    { "id": 1003, "name": "Shingara (Beef)", "description": "Beef-filled singara", "price": 15, "category": "Snacks", "isAvailable": true, "isVeg": false, "calories": 130, "imageUrl": "/traditional/2.jpg","cartQuantity":0 },
+
+    { "id": 1004, "name": "Samosa", "description": "Triangular fried snack", "price": 12, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/traditional/4.jpg","cartQuantity":0 },
+
+    
   ]
 },
 {
-  "id": 8,
-  "restaurantName": "Puran Dhaka Vorta Ghar",
-  "location": "Narayanganj",
-  "rating": 4.1,
-  "ratingPersons": 290,
-  "deliveryFee": 35,
-  "deliveryTime": "28-40 min",
-  "distance": 3,
-  "cuisines": ["Vorta", "Traditional"],
-  "discountPercent": 10,
-  "minimumOrder": 80,
-  "isOpen": true,
-  "imageUrl": "/images/vorta-ghar.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/vorta-ghar.jpg",
-    "fullLocation": "Road 12, House 7, Narayanganj Sadar",
-    "aboutDeliveryFee": "Based on area and delivery timing.",
-    "aboutMinimumOrder": "Orders below Tk 80 are not accepted.",
-    "OpeningHours": [
-      "sunday - 10:00 AM - 8:00 PM",
-      "monday - 10:00 AM - 8:00 PM",
-      "Tuesday - 10:00 AM - 8:00 PM",
-      "Wednesday - 10:00 AM - 8:00 PM",
-      "Thursday - 10:00 AM - 8:00 PM",
-      "Friday - Closed"
-    ]
-  },
-  "foods": [
-    { "id": 901, "name": "Alu Vorta", "description": "Mashed potato with mustard oil & chili", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/alu-vorta.jpg","cartQuantity":0 },
-    { "id": 902, "name": "Shutki Vorta", "description": "Fermented fish mash", "price": 60, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 200, "imageUrl": "/images/shutki-vorta.jpg","cartQuantity":0 },
-    { "id": 903, "name": "Begun Vorta", "description": "Roasted eggplant mash", "price": 45, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/begun-vorta.jpg","cartQuantity":0 },
-    { "id": 904, "name": "Tomato Vorta", "description": "Spicy mashed tomato", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/tomato-vorta.jpg","cartQuantity":0 },
-    { "id": 905, "name": "Chingri Vorta", "description": "Spicy mashed shrimp", "price": 70, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 180, "imageUrl": "/images/chingri-vorta.jpg","cartQuantity":0 },
-    { "id": 906, "name": "Kacha Morich Vorta", "description": "Raw chili mash", "price": 30, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 50, "imageUrl": "/images/morich-vorta.jpg","cartQuantity":0 },
-    { "id": 907, "name": "Garlic Vorta", "description": "Spicy garlic mash", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 70, "imageUrl": "/images/garlic-vorta.jpg","cartQuantity":0 },
-    { "id": 908, "name": "Onion Vorta", "description": "Burnt onion mash", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/onion-vorta.jpg","cartQuantity":0 },
-    { "id": 909, "name": "Sutki Shutki Combo", "description": "Mixed mash platter", "price": 90, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/combo-vorta.jpg","cartQuantity":0 },
-    { "id": 910, "name": "Vorta Platter", "description": "5-item mash platter with rice", "price": 150, "category": "Combo", "isAvailable": true, "isVeg": false, "calories": 450, "imageUrl": "/images/vorta-platter.jpg","cartQuantity":0 }
-  ]
-},
-{
-  "id": 9,
-  "restaurantName": "Pasta Paradise",
-  "location": "Bashundhara",
-  "rating": 4.4,
-  "ratingPersons": 220,
-  "deliveryFee": 50,
-  "deliveryTime": "10-12 min",
-  "distance": 1,
-  "cuisines": ["Italian", "Continental"],
-  "discountPercent": 5,
-  "minimumOrder": 200,
-  "isOpen": true,
-  "imageUrl": "/images/pasta-paradise.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/pasta-paradise.jpg",
-    "fullLocation": "Block D, Road 5, Bashundhara R/A",
-    "aboutDeliveryFee": "Standard delivery applies for all orders.",
-    "aboutMinimumOrder": "Minimum Tk 200 required.",
-    "OpeningHours": [
-      "sunday - 11:00 AM - 11:00 PM",
-      "monday - 11:00 AM - 11:00 PM",
-      "Tuesday - 11:00 AM - 11:00 PM",
-      "Wednesday - 11:00 AM - 11:00 PM",
-      "Thursday - 11:00 AM - 11:00 PM",
-      "Friday - 1:00 PM - 12:00 AM"
-    ]
-  },
-  "foods": [
-    { "id": 1001, "name": "Spaghetti Carbonara", "description": "Creamy egg-based pasta with beef bacon", "price": 350, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 720, "imageUrl": "/images/carbonara.jpg","cartQuantity":0 },
-    { "id": 1002, "name": "Fettuccine Alfredo", "description": "Rich cheese sauce with grilled chicken", "price": 370, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 800, "imageUrl": "/images/alfredo.jpg","cartQuantity":0 },
-    { "id": 1003, "name": "Penne Arrabbiata", "description": "Spicy tomato-based pasta", "price": 290, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 600, "imageUrl": "/images/arrabbiata.jpg","cartQuantity":0 },
-    { "id": 1004, "name": "Chicken Lasagna", "description": "Layered pasta with chicken and cheese", "price": 400, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 850, "imageUrl": "/images/lasagna.jpg","cartQuantity":0 },
-    { "id": 1005, "name": "Beef Macaroni", "description": "Minced beef with elbow macaroni", "price": 320, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 700, "imageUrl": "/images/macaroni.jpg","cartQuantity":0 },
-    { "id": 1006, "name": "Pasta Bolognese", "description": "Traditional Italian meat sauce pasta", "price": 350, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 780, "imageUrl": "/images/bolognese.jpg","cartQuantity":0 },
-    { "id": 1007, "name": "Cheesy Pasta Bake", "description": "Baked pasta with 3 cheeses", "price": 370, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 840, "imageUrl": "/images/pasta-bake.jpg","cartQuantity":0 },
-    { "id": 1008, "name": "Mushroom Penne", "description": "Creamy mushroom with penne", "price": 300, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 650, "imageUrl": "/images/mushroom-penne.jpg","cartQuantity":0 },
-    { "id": 1009, "name": "Seafood Pasta", "description": "Mixed seafood in garlic sauce", "price": 420, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 760, "imageUrl": "/images/seafood-pasta.jpg","cartQuantity":0 },
-    { "id": 1010, "name": "Spinach Ravioli", "description": "Stuffed ravioli with spinach and cheese", "price": 380, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 690, "imageUrl": "/images/ravioli.jpg","cartQuantity":0 }
-  ]
-},
-{
-  "id": 10,
-  "restaurantName": "Sylhet Sweets & Snacks",
-  "location": "Mirpur",
-  "rating": 4.1,
-  "ratingPersons": 180,
-  "deliveryFee": 30,
-  "deliveryTime": "2-3 hours",
-  "distance": 12,
-  "cuisines": ["Sweets", "Snacks"],
-  "discountPercent": 5,
-  "minimumOrder": 100,
-  "isOpen": true,
-  "imageUrl": "/images/sylhet-sweets.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/sylhet-sweets.jpg",
-    "fullLocation": "House 45, Road 3, Section 10, Mirpur",
-    "aboutDeliveryFee": "Delivery fee depends on distance.",
-    "aboutMinimumOrder": "Minimum order is Tk 100.",
-    "OpeningHours": [
-      "sunday - 08:00 AM - 10:00 PM",
-      "monday - 08:00 AM - 10:00 PM",
-      "Tuesday - 08:00 AM - 10:00 PM",
-      "Wednesday - 08:00 AM - 10:00 PM",
-      "Thursday - 08:00 AM - 10:00 PM",
-      "Friday - 02:00 PM - 11:00 PM"
-    ]
-  },
-  "foods": [
-    { "id": 1101, "name": "Rosogolla", "description": "Soft syrupy balls", "price": 120, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 250, "imageUrl": "/images/rosogolla.jpg","cartQuantity":0 },
-    { "id": 1102, "name": "Sandesh", "description": "Sweet milk-based dessert", "price": 100, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/sandesh.jpg","cartQuantity":0 },
-    { "id": 1103, "name": "Chomchom", "description": "Traditional syrupy sweet", "price": 130, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 300, "imageUrl": "/images/chomchom.jpg","cartQuantity":0 },
-    { "id": 1104, "name": "Motichoor Laddu", "description": "Sweet laddus made from boondi", "price": 90, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 240, "imageUrl": "/images/laddu.jpg","cartQuantity":0 },
-    { "id": 1105, "name": "Nimki", "description": "Crispy salty snack", "price": 60, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/nimki.jpg","cartQuantity":0 },
-    { "id": 1106, "name": "Chanachur Mix", "description": "Spicy snack mix", "price": 80, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chanachur.jpg","cartQuantity":0 },
-    { "id": 1107, "name": "Peda", "description": "Milk sweet", "price": 90, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/peda.jpg","cartQuantity":0 },
-    { "id": 1108, "name": "Balushahi", "description": "Fried flaky dessert", "price": 110, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 280, "imageUrl": "/images/balushahi.jpg","cartQuantity":0 },
-    { "id": 1109, "name": "Khaja", "description": "Layered sweet", "price": 95, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 230, "imageUrl": "/images/khaja.jpg","cartQuantity":0 },
-    { "id": 1110, "name": "Jilapi", "description": "Deep-fried syrupy spiral", "price": 70, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/jilapi.jpg","cartQuantity":0 }
-  ]
-},
-{
-  "id": 11,
-  "restaurantName": "Nawab Curry & Grill",
-  "location": "Gulshan",
-  "rating": 4.4,
-  "ratingPersons": 370,
-  "deliveryFee": 60,
-  "deliveryTime": "20-30 min",
-  "distance": 3,
-  "cuisines": ["Curry", "Grill"],
-  "discountPercent": 12,
-  "minimumOrder": 300,
-  "isOpen": true,
-  "imageUrl": "/images/nawab-curry.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/nawab-curry.jpg",
-    "fullLocation": "House 7A, Road 105, Gulshan-2",
-    "aboutDeliveryFee": "Delivery fee varies by area and traffic.",
-    "aboutMinimumOrder": "Minimum order Tk 300.",
-    "OpeningHours": [
-      "sunday - 11:00 AM - 11:00 PM",
-      "monday - 11:00 AM - 11:00 PM",
-      "Tuesday - 11:00 AM - 11:00 PM",
-      "Wednesday - 11:00 AM - 11:00 PM",
-      "Thursday - 11:00 AM - 11:00 PM",
-      "Friday - 01:00 PM - 11:30 PM"
-    ]
-  },
-  "foods": [
-    { "id": 1201, "name": "Mutton Curry", "description": "Slow-cooked mutton with rich spices", "price": 420, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 850, "imageUrl": "/images/mutton-curry.jpg","cartQuantity":0 },
-    { "id": 1202, "name": "Chicken Rezala", "description": "Mild creamy chicken curry", "price": 350, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 700, "imageUrl": "/images/rezala.jpg","cartQuantity":0 },
-    { "id": 1203, "name": "Beef Korma", "description": "Beef cooked in ghee and spices", "price": 460, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 900, "imageUrl": "/images/beef-korma.jpg","cartQuantity":0 },
-    { "id": 1204, "name": "Grilled Chicken", "description": "Smoky grilled half chicken", "price": 300, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 600, "imageUrl": "/images/grilled-chicken.jpg","cartQuantity":0 },
-    { "id": 1205, "name": "Seekh Kebab", "description": "Skewered minced meat", "price": 250, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 500, "imageUrl": "/images/seekh-kebab.jpg","cartQuantity":0 },
-    { "id": 1206, "name": "Paratha", "description": "Buttery flatbread", "price": 30, "category": "Bread", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/paratha.jpg","cartQuantity":0 },
-    { "id": 1207, "name": "Plain Rice", "description": "Steamed basmati rice", "price": 60, "category": "Rice", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/plain-rice.jpg","cartQuantity":0 },
-    { "id": 1208, "name": "Beef Bhuna", "description": "Dry spiced beef curry", "price": 400, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 800, "imageUrl": "/images/beef-bhuna.jpg","cartQuantity":0 },
-    { "id": 1209, "name": "Mixed Grill Platter", "description": "Kebab, chicken, beef in one plate", "price": 550, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 950, "imageUrl": "/images/mixed-grill.jpg","cartQuantity":0 },
-    { "id": 1210, "name": "Chicken Curry", "description": "Home-style chicken with potatoes", "price": 340, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 680, "imageUrl": "/images/chicken-curry.jpg","cartQuantity":0 }
-  ]
-},
-{
-  id: 12,
-  restaurantName: "Rangdhanu Vorta Ghar",
-  location: "Mirpur",
-  rating: 4.7,
-  ratingPersons: 490,
-  deliveryFee: 40,
-  deliveryTime: "15-20 min",
-  distance: 1,
-  cuisines: ["Traditional", "Deshi"],
-  discountPercent: 15,
-  minimumOrder: 100,
+  id: 6,
+  restaurantName: "Breakfast Delight",
+  location: "Dhanmondi",
+  rating: 4.5,
+  ratingPersons: 280,
+  deliveryFee: 30,
+  deliveryTime: "20-35 min",
+  distance: 3.5,
+  cuisines: ["Breakfast", "Bangladeshi"],
+  discountPercent: 10,
+  minimumOrder: 150,
   isOpen: true,
-  imageUrl: "/images/rangdhanu-vorta-ghar.jpg",
+  imageUrl: "/breakFast/1.jpg",
   moreInfo: {
-    imageUrl: "/images/rangdhanu-vorta-ghar.jpg",
-    fullLocation: "House 60, Road 11, Mirpur-12, Dhaka",
-    aboutDeliveryFee: "Delivery fee is calculated based on distance.",
-    aboutMinimumOrder: "Minimum order amount is Tk 100.",
+    imageUrl: "/breakFast/1.jpg",
+    fullLocation: "House 8, Road 10A, Dhanmondi, Dhaka",
+    aboutDeliveryFee: "Delivery fee may vary depending on time and location.",
+    aboutMinimumOrder: "Minimum order is Tk 150 for delivery.",
     OpeningHours: [
-      "sunday - 09:30 AM - 09:30 PM",
-      "monday - 09:30 AM - 09:30 PM",
-      "Tuesday - 09:30 AM - 09:30 PM",
-      "Wednesday - 09:30 AM - 09:30 PM",
-      "Thursday - 09:30 AM - 09:30 PM",
-      "Friday - 01:00 PM - 10:00 PM"
+      "sunday - 07:00 AM - 12:00 PM",
+      "monday - 07:00 AM - 12:00 PM",
+      "tuesday - 07:00 AM - 12:00 PM",
+      "wednesday - 07:00 AM - 12:00 PM",
+      "thursday - 07:00 AM - 12:00 PM",
+      "friday - 08:00 AM - 01:00 PM"
     ]
   },
   foods: [
     {
-      id: 1201,
-      name: "Shutki Vorta",
-      description: "Spicy mashed dried fish with mustard oil and chili",
-      price: 80,
-      category: "Vorta",
+      id: 201,
+      name: "Paratha with Egg Curry",
+      description: "Flaky paratha served with spicy egg curry",
+      price: 90,
+      category: "Breakfast",
       isAvailable: true,
       isVeg: false,
-      calories: 150,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
+      calories: 400,
+      imageUrl: "/breakFast/3.jpg",
+      cartQuantity: 0
     },
     {
-      id: 1202,
-      name: "Aloo Vorta",
-      description: "Mashed potato with mustard oil, onion, and chili",
-      price: 50,
-      category: "Vorta",
-      isAvailable: true,
-      isVeg: true,
-      calories: 120,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1203,
-      name: "Begun Vorta",
-      description: "Smoky eggplant mash with mustard and garlic",
+      id: 202,
+      name: "Chotpoti with Egg",
+      description: "Tangy chotpoti served with boiled egg",
       price: 60,
-      category: "Vorta",
+      category: "Breakfast",
       isAvailable: true,
       isVeg: true,
-      calories: 130,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
+      calories: 300,
+      imageUrl: "/breakFast/4.jpg",
+      cartQuantity: 0
     },
     {
-      id: 1204,
-      name: "Tomato Vorta",
-      description: "Tangy tomato mash with garlic and mustard seeds",
-      price: 55,
-      category: "Vorta",
-      isAvailable: true,
-      isVeg: true,
-      calories: 110,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1205,
-      name: "Pui Shaak Bhuna",
-      description: "Stir-fried Malabar spinach with garlic",
-      price: 70,
-      category: "Vegetable",
-      isAvailable: true,
-      isVeg: true,
-      calories: 180,
-     imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1206,
-      name: "Shutki Bhuna",
-      description: "Dry fish curry with onion, garlic, and green chili",
-      price: 120,
-      category: "Fish",
+      id: 203,
+      name: "Khichuri with Beef",
+      description: "Moist khichuri served with flavorful beef curry",
+      price: 160,
+      category: "Breakfast",
       isAvailable: true,
       isVeg: false,
-      calories: 250,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
+      calories: 700,
+      imageUrl: "/biryani/11.jpg",
+      cartQuantity: 0
     },
     {
-      id: 1207,
-      name: "Daal",
-      description: "Traditional lentil soup with fried garlic and chili",
-      price: 40,
-      category: "Lentils",
+      id: 204,
+      name: "Shemai",
+      description: "Sweet milk-based vermicelli dessert",
+      price: 50,
+      category: "Dessert",
+      isAvailable: true,
+      isVeg: true,
+      calories: 220,
+      imageUrl: "/firni.png",
+      cartQuantity: 0
+    },
+    {
+      id: 205,
+      name: "Milk Tea",
+      description: "Traditional milk tea served hot",
+      price: 25,
+      category: "Beverage",
+      isAvailable: true,
+      isVeg: true,
+      calories: 100,
+      imageUrl: "/traditional/1.jpg",
+      cartQuantity: 0
+    }
+  ]
+},
+{
+  id: 7,
+  restaurantName: "FastFood Junction",
+  location: "Uttara",
+  rating: 4.3,
+  ratingPersons: 410,
+  deliveryFee: 50,
+  deliveryTime: "20-30 min",
+  distance: 6,
+  cuisines: ["Fast Food", "Snacks"],
+  discountPercent: 20,
+  minimumOrder: 180,
+  isOpen: true,
+  imageUrl: "/fastFood/2.jpg",
+  moreInfo: {
+    imageUrl: "/fastFood/2.jpg",
+    fullLocation: "Plot 15, Sector 10, Uttara, Dhaka",
+    aboutDeliveryFee: "Delivery fee is based on area coverage.",
+    aboutMinimumOrder: "Minimum order amount is Tk 180.",
+    OpeningHours: [
+      "sunday - 11:00 AM - 11:00 PM",
+      "monday - 11:00 AM - 11:00 PM",
+      "tuesday - 11:00 AM - 11:00 PM",
+      "wednesday - 11:00 AM - 11:00 PM",
+      "thursday - 11:00 AM - 11:00 PM",
+      "friday - 02:00 PM - 12:00 AM"
+    ]
+  },
+  foods: [
+    {
+      id: 301,
+      name: "Zinger Burger",
+      description: "Crispy chicken burger with lettuce and mayo",
+      price: 220,
+      category: "Burger",
+      isAvailable: true,
+      isVeg: false,
+      calories: 600,
+      imageUrl: "/burgers/7.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 302,
+      name: "French Fries",
+      description: "Golden fried potato sticks served with ketchup",
+      price: 80,
+      category: "Snacks",
+      isAvailable: true,
+      isVeg: true,
+      calories: 350,
+      imageUrl: "/fastFood/8.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 303,
+      name: "Chicken Nuggets",
+      description: "Crunchy chicken bites served with dip",
+      price: 150,
+      category: "Snacks",
+      isAvailable: true,
+      isVeg: false,
+      calories: 400,
+      imageUrl: "/chickenFry/5.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 304,
+      name: "Grilled Sandwich",
+      description: "Toasted sandwich with chicken and cheese",
+      price: 180,
+      category: "Fast Food",
+      isAvailable: true,
+      isVeg: false,
+      calories: 450,
+      imageUrl: "/kabab.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 305,
+      name: "Soft Drink",
+      description: "Chilled carbonated soft drink (Coke/Pepsi)",
+      price: 30,
+      category: "Drinks",
       isAvailable: true,
       isVeg: true,
       calories: 150,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
+      imageUrl: "/borhani.jpg",
+      cartQuantity: 0
+    },
+   
+  ]
+},
+{
+  id: 8,
+  restaurantName: "Chicken Blast",
+  location: "Dhanmondi",
+  rating: 4.5,
+  ratingPersons: 280,
+  deliveryFee: 35,
+  deliveryTime: "20-30 min",
+  distance: 3,
+  cuisines: ["Chicken", "FastFood","Pizza"],
+  discountPercent: 12,
+  minimumOrder: 180,
+  isOpen: true,
+  imageUrl: "/chickenFry/2.jpg",
+  moreInfo: {
+    imageUrl: "/chickenFry/2.jpg",
+    fullLocation: "Road 6A, Dhanmondi, Dhaka",
+    aboutDeliveryFee: "Delivery fees depend on your area.",
+    aboutMinimumOrder: "Minimum Tk 180 order required.",
+    OpeningHours: [
+      "sunday - 11:00 AM - 11:00 PM",
+      "monday - 11:00 AM - 11:00 PM",
+      "tuesday - 11:00 AM - 11:00 PM",
+      "wednesday - 11:00 AM - 11:00 PM",
+      "thursday - 11:00 AM - 11:00 PM",
+      "friday - 01:00 PM - 12:00 AM"
+    ]
+  },
+  foods: [
+    {
+      id: 301,
+      name: "Crispy Fried Chicken",
+      description: "3 pieces of juicy, crispy fried chicken",
+      price: 320,
+      category: "ChickenFry",
+      isAvailable: true,
+      isVeg: false,
+      calories: 900,
+      imageUrl: "/chickenFry/3.jpg",
+      cartQuantity: 0
     },
     {
-      id: 1208,
-      name: "Plain Rice",
-      description: "Steamed white rice",
-      price: 30,
-      category: "Staple",
+      id: 302,
+      name: "Hot Wings",
+      description: "6 spicy chicken wings",
+      price: 260,
+      category: "Chicken Fry",
+      isAvailable: true,
+      isVeg: false,
+      calories: 620,
+      imageUrl: "/chickenFry/4.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 303,
+      name: "Chicken Popcorn",
+      description: "Bite-sized crispy chicken",
+      price: 200,
+      category: "Appetizer",
+      isAvailable: true,
+      isVeg: false,
+      calories: 500,
+      imageUrl: "/chickenFry/1.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 304,
+      name: "Coleslaw",
+      description: "Fresh creamy coleslaw",
+      price: 80,
+      category: "Sides",
       isAvailable: true,
       isVeg: true,
       calories: 200,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
+      imageUrl: "/fastFood/5.jpg",
+      cartQuantity: 0
     },
     {
-      id: 1209,
-      name: "Hilsha Fry",
-      description: "Crispy fried Ilish fish with mustard touch",
-      price: 250,
-      category: "Fish",
-      isAvailable: true,
-      isVeg: false,
-      calories: 380,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1210,
-      name: "Korola Bhaji",
-      description: "Fried bitter gourd slices with onion",
-      price: 60,
-      category: "Vegetable",
+      id: 305,
+      name: "Margherita Pizza",
+      description: "Classic cheese and tomato pizza",
+      price: 500,
+      category: "Pizza",
       isAvailable: true,
       isVeg: true,
-      calories: 130,
-      imageUrl: "/images/onion-rings.jpg",
-      cartQuantity:0
-      
+      calories: 850,
+      imageUrl: "/pizza/2.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 306,
+      name: "Pepperoni Pizza",
+      description: "Loaded with spicy pepperoni slices",
+      price: 580,
+      category: "Pizza",
+      isAvailable: true,
+      isVeg: false,
+      calories: 950,
+      imageUrl: "/pizza/3.jpg",
+      cartQuantity: 0
+    },
+  ]
+},
+{
+  id: 9,
+  restaurantName: "Pizza Bite",
+  location: "Uttara",
+  rating: 4.7,
+  ratingPersons: 350,
+  deliveryFee: 50,
+  deliveryTime: "30-45 min",
+  distance: 6,
+  cuisines: ["Chicken", "Fast Food","Pizza"],
+  discountPercent: 20,
+  minimumOrder: 250,
+  isOpen: true,
+  imageUrl: "/pizza/2.jpg",
+  moreInfo: {
+    imageUrl: "/pizza/2.jpg",
+    fullLocation: "Sector 4, Uttara, Dhaka",
+    aboutDeliveryFee: "Free delivery on orders over Tk 500.",
+    aboutMinimumOrder: "Minimum Tk 250 order required.",
+    OpeningHours: [
+      "sunday - 12:00 PM - 11:30 PM",
+      "monday - 12:00 PM - 11:30 PM",
+      "tuesday - 12:00 PM - 11:30 PM",
+      "wednesday - 12:00 PM - 11:30 PM",
+      "thursday - 12:00 PM - 11:30 PM",
+      "friday - 02:00 PM - 12:30 AM"
+    ]
+  },
+  foods: [
+    {
+      id: 401,
+      name: "Margherita Pizza",
+      description: "Classic cheese and tomato pizza",
+      price: 500,
+      category: "Pizza",
+      isAvailable: true,
+      isVeg: true,
+      calories: 850,
+      imageUrl: "/pizza/1.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 402,
+      name: "Pepperoni Pizza",
+      description: "Loaded with spicy pepperoni slices",
+      price: 580,
+      category: "Pizza",
+      isAvailable: true,
+      isVeg: false,
+      calories: 950,
+      imageUrl: "/pizza/3.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 403,
+      name: "BBQ Chicken Pizza",
+      description: "Grilled chicken with smoky BBQ sauce",
+      price: 620,
+      category: "Pizza",
+      isAvailable: true,
+      isVeg: false,
+      calories: 1000,
+      imageUrl: "/pizza/4.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 404,
+      name: "Garlic Bread",
+      description: "Toasted bread with garlic butter",
+      price: 160,
+      category: "Sides",
+      isAvailable: true,
+      isVeg: true,
+      calories: 300,
+      imageUrl: "/fastFood/9.jpg",
+      cartQuantity: 0
+    }
+  ]
+},
+{
+  id: 10,
+  restaurantName: "Snack World",
+  location: "Mohammadpur",
+  rating: 4.3,
+  ratingPersons: 190,
+  deliveryFee: 25,
+  deliveryTime: "15-20 min",
+  distance: 2.5,
+  cuisines: ["Chicken", "FastFood","Pizza"],
+  discountPercent: 8,
+  minimumOrder: 120,
+  isOpen: true,
+  imageUrl: "/fastFood/3.jpg",
+  moreInfo: {
+    imageUrl: "/fastFood/3.jpg",
+    fullLocation: "Asad Gate, Mohammadpur, Dhaka",
+    aboutDeliveryFee: "Delivery fee Tk 25 for all orders.",
+    aboutMinimumOrder: "Minimum Tk 120 order required.",
+    OpeningHours: [
+      "sunday - 01:00 PM - 10:00 PM",
+      "monday - 01:00 PM - 10:00 PM",
+      "tuesday - 01:00 PM - 10:00 PM",
+      "wednesday - 01:00 PM - 10:00 PM",
+      "thursday - 01:00 PM - 10:00 PM",
+      "friday - 03:00 PM - 11:00 PM"
+    ]
+  },
+  foods: [
+    {
+      id: 501,
+      name: "Veggie Sandwich",
+      description: "Loaded sandwich with fresh veggies",
+      price: 180,
+      category: "Fast Food",
+      isAvailable: true,
+      isVeg: true,
+      calories: 450,
+      imageUrl: "/traditional/5.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 502,
+      name: "Chicken Nuggets",
+      description: "Crispy chicken nuggets (6 pcs)",
+      price: 200,
+      category: "Fast Food",
+      isAvailable: true,
+      isVeg: false,
+      calories: 520,
+      imageUrl: "/chickenFry/5.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 503,
+      name: "Mozzarella Sticks",
+      description: "Cheesy mozzarella sticks (5 pcs)",
+      price: 220,
+      category: "Appetizer",
+      isAvailable: true,
+      isVeg: true,
+      calories: 550,
+      imageUrl: "/fastFood/7.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 504,
+      name: "BBQ Chicken Pizza",
+      description: "Grilled chicken with smoky BBQ sauce",
+      price: 620,
+      category: "Pizza",
+      isAvailable: true,
+      isVeg: false,
+      calories: 1000,
+      imageUrl: "/pizza/1.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 505,
+      name: "Garlic Bread",
+      description: "Toasted bread with garlic butter",
+      price: 160,
+      category: "Sides",
+      isAvailable: true,
+      isVeg: true,
+      calories: 300,
+      imageUrl: "/fastFood/9.jpg",
+      cartQuantity: 0
+    }
+  ]
+},
+{
+  id: 11,
+  restaurantName: "Chinese Dragon",
+  location: "Uttara",
+  rating: 4.5,
+  ratingPersons: 280,
+  deliveryFee: 35,
+  deliveryTime: "30-40 min",
+  distance: 4,
+  cuisines: ["Chinese", "Sea Food"],
+  discountPercent: 12,
+  minimumOrder: 200,
+  isOpen: true,
+  imageUrl: "/chineseFood/1.jpg",
+  moreInfo: {
+    imageUrl: "/chineseFood/1.jpg",
+    fullLocation: "Sector 7, Uttara, Dhaka",
+    aboutDeliveryFee: "Delivery charges may vary based on distance.",
+    aboutMinimumOrder: "Minimum Tk 200 order required.",
+    OpeningHours: [
+      "sunday - 11:30 AM - 10:30 PM",
+      "monday - 11:30 AM - 10:30 PM",
+      "tuesday - 11:30 AM - 10:30 PM",
+      "wednesday - 11:30 AM - 10:30 PM",
+      "thursday - 11:30 AM - 10:30 PM",
+      "friday - 01:00 PM - 11:30 PM"
+    ]
+  },
+  foods: [
+    {
+      id: 301,
+      name: "Chicken Chow Mein",
+      description: "Stir-fried noodles with chicken and vegetables",
+      price: 280,
+      category: "Noodles",
+      isAvailable: true,
+      isVeg: false,
+      calories: 650,
+      imageUrl: "/chineseFood/2.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 302,
+      name: "Sweet and Sour Chicken",
+      description: "Crispy chicken in tangy sauce",
+      price: 320,
+      category: "Main Course",
+      isAvailable: true,
+      isVeg: false,
+      calories: 750,
+      imageUrl: "/chineseFood/3.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 303,
+      name: "Egg Fried Rice",
+      description: "Fried rice with scrambled egg & veggies",
+      price: 200,
+      category: "Rice",
+      isAvailable: true,
+      isVeg: false,
+      calories: 550,
+      imageUrl: "/chineseFood/7.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 304,
+      name: "Veg Spring Rolls",
+      description: "4 pcs deep-fried crispy rolls",
+      price: 140,
+      category: "Appetizer",
+      isAvailable: true,
+      isVeg: true,
+      calories: 400,
+      imageUrl: "/chineseFood/5.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 305,
+      name: "Grilled Prawn Skewers",
+      description: "6 pcs jumbo prawns grilled in garlic butter",
+      price: 480,
+      category: "Grill",
+      isAvailable: true,
+      isVeg: false,
+      calories: 600,
+      imageUrl: "/seaFood/2.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 306,
+      name: "Fish & Chips",
+      description: "Crispy battered fish with fries",
+      price: 420,
+      category: "Main Course",
+      isAvailable: true,
+      isVeg: false,
+      calories: 950,
+      imageUrl: "/seaFood/5.jpg",
+      cartQuantity: 0
+    }
+  ]
+},
+{
+  id: 12,
+  restaurantName: "Ocean Bites",
+  location: "Dhanmondi",
+  rating: 4.3,
+  ratingPersons: 190,
+  deliveryFee: 45,
+  deliveryTime: "35-50 min",
+  distance: 5,
+  cuisines: ["Chinese", "Sea Food"],
+  discountPercent: 8,
+  minimumOrder: 250,
+  isOpen: true,
+  imageUrl: "/seaFood/1.jpg",
+  moreInfo: {
+    imageUrl: "/seaFood/1.jpg",
+    fullLocation: "Road 10, Dhanmondi, Dhaka",
+    aboutDeliveryFee: "Delivery charges depend on location.",
+    aboutMinimumOrder: "Minimum Tk 250 order required.",
+    OpeningHours: [
+      "sunday - 01:00 PM - 11:00 PM",
+      "monday - 01:00 PM - 11:00 PM",
+      "tuesday - 01:00 PM - 11:00 PM",
+      "wednesday - 01:00 PM - 11:00 PM",
+      "thursday - 01:00 PM - 11:00 PM",
+      "friday - 02:00 PM - 12:00 AM"
+    ]
+  },
+  foods: [
+    {
+      id: 401,
+      name: "Grilled Prawn Skewers",
+      description: "6 pcs jumbo prawns grilled in garlic butter",
+      price: 480,
+      category: "Grill",
+      isAvailable: true,
+      isVeg: false,
+      calories: 600,
+      imageUrl: "/seaFood/2.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 402,
+      name: "Fish & Chips",
+      description: "Crispy battered fish with fries",
+      price: 420,
+      category: "Main Course",
+      isAvailable: true,
+      isVeg: false,
+      calories: 950,
+      imageUrl: "/seaFood/3.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 403,
+      name: "seaFood Fried Rice",
+      description: "Fried rice with shrimp, squid, and crab",
+      price: 350,
+      category: "Rice",
+      isAvailable: true,
+      isVeg: false,
+      calories: 720,
+      imageUrl: "/seaFood/4.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 404,
+      name: "Calamari Rings",
+      description: "Crispy fried squid rings with dip",
+      price: 260,
+      category: "Appetizer",
+      isAvailable: true,
+      isVeg: false,
+      calories: 480,
+      imageUrl: "/seaFood/5.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 405,
+      name: "Chicken Chow Mein",
+      description: "Stir-fried noodles with chicken and vegetables",
+      price: 280,
+      category: "Noodles",
+      isAvailable: true,
+      isVeg: false,
+      calories: 650,
+      imageUrl: "/chineseFood/2.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 406,
+      name: "Sweet and Sour Chicken",
+      description: "Crispy chicken in tangy sauce",
+      price: 320,
+      category: "Main Course",
+      isAvailable: true,
+      isVeg: false,
+      calories: 750,
+      imageUrl: "/chineseFood/3.jpg",
+      cartQuantity: 0
+    }
+  ]
+},
+{
+  id: 13,
+  restaurantName: "Wok Express",
+  location: "Bashundhara",
+  rating: 4.2,
+  ratingPersons: 150,
+  deliveryFee: 25,
+  deliveryTime: "20-30 min",
+  distance: 3,
+  cuisines: ["Chinese", "Sea Food"],
+  discountPercent: 15,
+  minimumOrder: 180,
+  isOpen: true,
+  imageUrl: "/chineseFood/6.jpg",
+  moreInfo: {
+    imageUrl: "/chineseFood/6.jpg",
+    fullLocation: "Block C, Bashundhara R/A, Dhaka",
+    aboutDeliveryFee: "Flat Tk 25 inside Bashundhara.",
+    aboutMinimumOrder: "Minimum Tk 180 order required.",
+    OpeningHours: [
+      "sunday - 12:00 PM - 10:00 PM",
+      "monday - 12:00 PM - 10:00 PM",
+      "tuesday - 12:00 PM - 10:00 PM",
+      "wednesday - 12:00 PM - 10:00 PM",
+      "thursday - 12:00 PM - 10:00 PM",
+      "friday - 01:00 PM - 11:00 PM"
+    ]
+  },
+  foods: [
+    {
+      id: 501,
+      name: "Kung Pao Chicken",
+      description: "Spicy stir-fried chicken with peanuts",
+      price: 340,
+      category: "Main Course",
+      isAvailable: true,
+      isVeg: false,
+      calories: 800,
+      imageUrl: "/biryani/8.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 502,
+      name: "Thai Basil Fried Rice",
+      description: "Fried rice with chicken and basil leaves",
+      price: 290,
+      category: "Rice",
+      isAvailable: true,
+      isVeg: false,
+      calories: 650,
+      imageUrl: "/biryani/3.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 503,
+      name: "Vegetable Dumplings",
+      description: "Steamed veg momo with soy dip",
+      price: 180,
+      category: "Appetizer",
+      isAvailable: true,
+      isVeg: true,
+      calories: 350,
+      imageUrl: "/chineseFood/1.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 504,
+      name: "Hot & Sour Soup",
+      description: "Spicy tangy soup with mushrooms and tofu",
+      price: 160,
+      category: "Soup",
+      isAvailable: true,
+      isVeg: true,
+      calories: 200,
+      imageUrl: "/Soup.jpg",
+      cartQuantity: 0
+    }
+  ]
+},
+{
+  id: 14,
+  restaurantName: "Sweet Treats",
+  location: "Gulshan",
+  rating: 4.7,
+  ratingPersons: 180,
+  deliveryFee: 25,
+  deliveryTime: "15-20 min",
+  distance: 1.5,
+  cuisines: ["Dessert"],
+  discountPercent: 5,
+  minimumOrder: 100,
+  isOpen: true,
+  imageUrl: "/dessert/6.jpg",
+  moreInfo: {
+    imageUrl: "/dessert/6.jpg",
+    fullLocation: "Road 23, Gulshan 2, Dhaka",
+    aboutDeliveryFee: "Affordable delivery within 2km.",
+    aboutMinimumOrder: "Minimum Tk 100 order required.",
+    OpeningHours: [
+      "sunday - 11:00 AM - 10:00 PM",
+      "monday - 11:00 AM - 10:00 PM",
+      "tuesday - 11:00 AM - 10:00 PM",
+      "wednesday - 11:00 AM - 10:00 PM",
+      "thursday - 11:00 AM - 10:00 PM",
+      "friday - 03:00 PM - 11:00 PM"
+    ]
+  },
+  foods: [
+    {
+      id: 501,
+      name: "Classic Brownie",
+      description: "Fudgy chocolate brownie with a crisp top",
+      price: 160,
+      category: "Dessert",
+      isAvailable: true,
+      isVeg: true,
+      calories: 480,
+      imageUrl: "/dessert/1.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 502,
+      name: "Strawberry Cheesecake",
+      description: "Creamy cheesecake topped with strawberry sauce",
+      price: 220,
+      category: "Dessert",
+      isAvailable: true,
+      isVeg: true,
+      calories: 530,
+      imageUrl: "/dessert/2.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 503,
+      name: "Oreo Sundae",
+      description: "Vanilla ice cream topped with crushed Oreos and chocolate syrup",
+      price: 190,
+      category: "Dessert",
+      isAvailable: true,
+      isVeg: true,
+      calories: 450,
+      imageUrl: "/dessert/4.jpg",
+      cartQuantity: 0
+    }
+  ]
+},
+{
+  id: 15,
+  restaurantName: "Dessert Den",
+  location: "Dhanmondi",
+  rating: 4.5,
+  ratingPersons: 240,
+  deliveryFee: 35,
+  deliveryTime: "20-30 min",
+  distance: 3,
+  cuisines: ["Dessert"],
+  discountPercent: 12,
+  minimumOrder: 120,
+  isOpen: true,
+  imageUrl: "/dessert/3.jpg",
+  moreInfo: {
+    imageUrl: "/dessert/3.jpg",
+    fullLocation: "House 10, Road 5A, Dhanmondi, Dhaka",
+    aboutDeliveryFee: "Delivery fee depends on distance.",
+    aboutMinimumOrder: "Minimum Tk 120 order required.",
+    OpeningHours: [
+      "sunday - 12:00 PM - 10:00 PM",
+      "monday - 12:00 PM - 10:00 PM",
+      "tuesday - 12:00 PM - 10:00 PM",
+      "wednesday - 12:00 PM - 10:00 PM",
+      "thursday - 12:00 PM - 10:00 PM",
+      "friday - 03:00 PM - 11:00 PM"
+    ]
+  },
+  foods: [
+    {
+      id: 601,
+      name: "Chocolate Mousse Cup",
+      description: "Rich and airy dark chocolate mousse in a cup",
+      price: 200,
+      category: "Dessert",
+      isAvailable: true,
+      isVeg: true,
+      calories: 420,
+      imageUrl: "/dessert/5.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 602,
+      name: "Red Velvet Slice",
+      description: "Moist red velvet cake with cream cheese frosting",
+      price: 210,
+      category: "Dessert",
+      isAvailable: true,
+      isVeg: true,
+      calories: 460,
+      imageUrl: "/dessert/4.jpg",
+      cartQuantity: 0
+    },
+    {
+      id: 603,
+      name: "Mango Pudding",
+      description: "Smooth and fruity mango-flavored chilled pudding",
+      price: 170,
+      category: "Dessert",
+      isAvailable: true,
+      isVeg: true,
+      calories: 390,
+      imageUrl: "/dessert/1.jpg",
+      cartQuantity: 0
     }
   ]
 }
-
 
 ];
 
@@ -4370,7 +4635,7 @@ export const Cuisines = [
   {
    id: 1,
     CuisinesName:"Biriyani",
-    imageUrl: "/myFood.jpg",
+    imageUrl: "/biryani/1.jpg",
     restaurantsData:[
       {
     id: 1,
@@ -4381,149 +4646,143 @@ export const Cuisines = [
     deliveryFee: 40,
     deliveryTime: "25-45 min",
     distance: 5,
-    cuisines: ["Biryani", "Deshi"],
+    cuisines: ["Biryani", "Deshi","Dessert"],
     discountPercent: 15,
     minimumOrder: 200,
     isOpen: true,
-    imageUrl: "/myFood.jpg",
-    moreInfo: {
-      imageUrl: "/myFood.jpg",
-      fullLocation: "House 12, Road 11, Banani, Dhaka",
-      aboutDeliveryFee: "Delivery fee varies with distance and time.",
-      aboutMinimumOrder: "Minimum order amount is Tk 200.",
-      OpeningHours: [
-        "sunday - 10:00 AM - 10:00 PM",
-        "monday - 10:00 AM - 10:00 PM",
-        "tuesday - 10:00 AM - 10:00 PM",
-        "wednesday - 10:00 AM - 10:00 PM",
-        "thursday - 10:00 AM - 10:00 PM",
-        "friday - 01:00 PM - 11:00 PM"
-      ]
-    },
-    foods: [
-      {
-        id: 101,
-        name: "Kacchi Biryani",
-        description: "Mutton kacchi with fragrant rice and potatoes",
-        price: 350,
-        category: "Biryani",
-        isAvailable: true,
-        isVeg: false,
-        calories: 900,
-        imageUrl: "/images/kacchi.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 102,
-        name: "Chicken Biryani",
-        description: "Tender chicken with long-grain rice",
-        price: 280,
-        category: "Biryani",
-        isAvailable: true,
-        isVeg: false,
-        calories: 850,
-        imageUrl: "/images/chicken-biryani.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 103,
-        name: "Beef Tehari",
-        description: "Spicy beef tehari made in Dhakaiya style",
-        price: 300,
-        category: "Rice",
-        isAvailable: true,
-        isVeg: false,
-        calories: 880,
-        imageUrl: "/images/beef-tehari.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 104,
-        name: "Morog Polao",
-        description: "Delicate polao with chicken, egg and spices",
-        price: 320,
-        category: "Rice",
-        isAvailable: true,
-        isVeg: false,
-        calories: 820,
-        imageUrl: "/images/morog-polao.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 105,
-        name: "Shami Kabab",
-        description: "Mutton kabab with lentils",
-        price: 90,
-        category: "Appetizer",
-        isAvailable: true,
-        isVeg: false,
-        calories: 300,
-        imageUrl: "/images/shami-kabab.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 106,
-        name: "Firni",
-        description: "Traditional dessert made with milk and rice",
-        price: 60,
-        category: "Dessert",
-        isAvailable: true,
-        isVeg: true,
-        calories: 250,
-        imageUrl: "/images/firni.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 107,
-        name: "Borhani",
-        description: "Spiced yogurt drink",
-        price: 30,
-        category: "Beverage",
-        isAvailable: true,
-        isVeg: true,
-        calories: 100,
-        imageUrl: "/images/borhani.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 108,
-        name: "Beef Rezala",
-        description: "Beef cooked in aromatic rezala gravy",
-        price: 280,
-        category: "Curry",
-        isAvailable: true,
-        isVeg: false,
-        calories: 600,
-        imageUrl: "/images/beef-rezala.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 109,
-        name: "Paratha",
-        description: "Crispy fried flatbread",
-        price: 20,
-        category: "Bread",
-        isAvailable: true,
-        isVeg: true,
-        calories: 200,
-        imageUrl: "/images/paratha.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 110,
-        name: "Mutton Curry",
-        description: "Slow-cooked spicy mutton",
-        price: 340,
-        category: "Curry",
-        isAvailable: true,
-        isVeg: false,
-        calories: 700,
-        imageUrl: "/images/mutton-curry.jpg",
-        cartQuantity:0
-      }
-    ]
+    imageUrl: "/biryani/1.jpg",
+
   },
   {
+     id: 4,
+    restaurantName: "Biriyani Darbar",
+    location: "Mirpur",
+    rating: 4.5,
+    ratingPersons: 300,
+    deliveryFee: 45,
+    deliveryTime: "45-50 min",
+    distance: 7,
+    cuisines: ["Bangladeshi", "Biriyani"],
+    discountPercent: 15,
+    minimumOrder: 120,
+    isOpen: true,
+    imageUrl: "/biryani/4.jpg",
+  },
+
+    ]
+// end 1
+  },
+  {
+    id: 2,
+    CuisinesName:"Chicken",
+    imageUrl: "/myFood.jpg",
+    restaurantsData:[  {
+  id: 8,
+  restaurantName: "Chicken Blast",
+  location: "Dhanmondi",
+  rating: 4.5,
+  ratingPersons: 280,
+  deliveryFee: 35,
+  deliveryTime: "20-30 min",
+  distance: 3,
+  cuisines: ["Chicken", "FastFood","Pizza"],
+  discountPercent: 12,
+  minimumOrder: 180,
+  isOpen: true,
+  imageUrl: "/chickenFry/2.jpg",
+  },
+  {
+id: 10,
+  restaurantName: "Snack World",
+  location: "Mohammadpur",
+  rating: 4.3,
+  ratingPersons: 190,
+  deliveryFee: 25,
+  deliveryTime: "15-20 min",
+  distance: 2.5,
+  cuisines: ["Chicken", "FastFood","Pizza"],
+  discountPercent: 8,
+  minimumOrder: 120,
+  isOpen: true,
+  imageUrl: "/fastFood/3.jpg",
+},
+{
+ id: 11,
+  restaurantName: "Chinese Dragon",
+  location: "Uttara",
+  rating: 4.5,
+  ratingPersons: 280,
+  deliveryFee: 35,
+  deliveryTime: "30-40 min",
+  distance: 4,
+  cuisines: ["Chinese", "SeaFood"],
+  discountPercent: 12,
+  minimumOrder: 200,
+  isOpen: true,
+  imageUrl: "/chineseFood/1.jpg",
+},]
+// End 2
+  },
+  {
+    id: 3,
+    CuisinesName:"Pizza",
+    imageUrl: "/myFood.jpg",
+    restaurantsData:[
+        {
+   id: 9,
+  restaurantName: "Pizza Bite",
+  location: "Uttara",
+  rating: 4.7,
+  ratingPersons: 350,
+  deliveryFee: 50,
+  deliveryTime: "30-45 min",
+  distance: 6,
+  cuisines: ["Chicken", "FastFood","Pizza"],
+  discountPercent: 20,
+  minimumOrder: 250,
+  isOpen: true,
+  imageUrl: "/pizza/2.jpg",
+  },
+  {
+  id: 10,
+  restaurantName: "Snack World",
+  location: "Mohammadpur",
+  rating: 4.3,
+  ratingPersons: 190,
+  deliveryFee: 25,
+  deliveryTime: "15-20 min",
+  distance: 2.5,
+  cuisines: ["Chicken", "FastFood","Pizza"],
+  discountPercent: 8,
+  minimumOrder: 120,
+  isOpen: true,
+  imageUrl: "/fastFood/3.jpg",
+},
+{
+id: 8,
+  restaurantName: "Chicken Blast",
+  location: "Dhanmondi",
+  rating: 4.5,
+  ratingPersons: 280,
+  deliveryFee: 35,
+  deliveryTime: "20-30 min",
+  distance: 3,
+  cuisines: ["Chicken", "FastFood","Pizza"],
+  discountPercent: 12,
+  minimumOrder: 180,
+  isOpen: true,
+  imageUrl: "/chickenFry/2.jpg",
+},
+    ]
+  },
+// End 3
+
+  {
+    id: 4,
+    CuisinesName:"Fast Food",
+    imageUrl: "/myFood.jpg",
+    restaurantsData:[
+      {
     id: 2,
     restaurantName: "Burger Bhoot",
     location: "Mirpur",
@@ -4536,1302 +4795,99 @@ export const Cuisines = [
     discountPercent: 10,
     minimumOrder: 150,
     isOpen: true,
-    imageUrl: "/images/burger-bhoot.jpg",
-    moreInfo: {
-      imageUrl: "/images/burger-bhoot.jpg",
-      fullLocation: "Block D, Mirpur 12, Dhaka",
-      aboutDeliveryFee: "Delivery charges may vary.",
-      aboutMinimumOrder: "Minimum Tk 150 order required.",
-      OpeningHours: [
-        "sunday - 12:00 PM - 11:00 PM",
-        "monday - 12:00 PM - 11:00 PM",
-        "tuesday - 12:00 PM - 11:00 PM",
-        "wednesday - 12:00 PM - 11:00 PM",
-        "thursday - 12:00 PM - 11:00 PM",
-        "friday - 02:00 PM - 12:00 AM"
-      ]
-    },
-    foods: [
-      {
-        id: 201,
-        name: "Beef Monster Burger",
-        description: "Double beef patty with cheese & BBQ sauce",
-        price: 420,
-        category: "Burger",
-        isAvailable: true,
-        isVeg: false,
-        calories: 1100,
-        imageUrl: "/images/beef-burger.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 202,
-        name: "Chicken Cheese Burger",
-        description: "Crispy chicken with cheddar cheese",
-        price: 350,
-        category: "Burger",
-        isAvailable: true,
-        isVeg: false,
-        calories: 950,
-        imageUrl: "/images/chicken-burger.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 203,
-        name: "French Fries",
-        description: "Crispy potato fries",
-        price: 120,
-        category: "Sides",
-        isAvailable: true,
-        isVeg: true,
-        calories: 400,
-        imageUrl: "/images/fries.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 204,
-        name: "Grilled Chicken Wrap",
-        description: "Soft tortilla filled with grilled chicken",
-        price: 280,
-        category: "Wrap",
-        isAvailable: true,
-        isVeg: false,
-        calories: 700,
-        imageUrl: "/images/grilled-wrap.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 205,
-        name: "Onion Rings",
-        description: "Fried crispy onion rings",
-        price: 140,
-        category: "Sides",
-        isAvailable: true,
-        isVeg: true,
-        calories: 350,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 206,
-        name: "Spicy Chicken Wings",
-        description: "6 pcs hot chicken wings",
-        price: 260,
-        category: "Appetizer",
-        isAvailable: true,
-        isVeg: false,
-        calories: 600,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 207,
-        name: "Cheesy Beef Nachos",
-        description: "Loaded nachos with minced beef and cheese",
-        price: 300,
-        category: "Appetizer",
-        isAvailable: true,
-        isVeg: false,
-        calories: 700,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 208,
-        name: "Choco Lava Cake",
-        description: "Hot molten chocolate cake",
-        price: 180,
-        category: "Dessert",
-        isAvailable: true,
-        isVeg: true,
-        calories: 500,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 209,
-        name: "Coke (Can)",
-        description: "Cold Coca-Cola in a can",
-        price: 40,
-        category: "Beverage",
-        isAvailable: true,
-        isVeg: true,
-        calories: 150,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 210,
-        name: "Chicken Nuggets",
-        description: "6 pcs crispy nuggets",
-        price: 190,
-        category: "Fast Food",
-        isAvailable: true,
-        isVeg: false,
-        calories: 500,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      }
+    imageUrl: "/burgers/3.jpg",
+},
+{
+    id: 7,
+    restaurantName: "FastFood Junction",
+  location: "Uttara",
+  rating: 4.3,
+  ratingPersons: 410,
+  deliveryFee: 50,
+  deliveryTime: "20-30 min",
+  distance: 6,
+  cuisines: ["Fast Food", "Snacks"],
+  discountPercent: 20,
+  minimumOrder: 180,
+  isOpen: true,
+  imageUrl: "/fastFood/2.jpg",
+},
     ]
   },
+// End 4
 
-    ]
-// end 1
-  },
-  {
-    id: 2,
-    CuisinesName:"Chicken",
-    imageUrl: "/myFood.jpg",
-    restaurantsData:[  {
-    id: 5,
-    restaurantName: "South Indian Express",
-    location: "Banani",
-    rating: 4.1,
-    ratingPersons: 170,
-    deliveryFee: 35,
-    deliveryTime: "35-40 min",
-    distance: 6,
-    cuisines: ["South Indian", "Vegetarian"],
-    discountPercent: 10,
-    minimumOrder: 80,
-    isOpen: true,
-    imageUrl: "/southIndianExpress.jpg",
-    moreInfo: {
-      imageUrl: "/southIndianExpress.jpg",
-      fullLocation: "House 11, Road 14, Banani",
-      aboutDeliveryFee: "Delivery fee may vary depending on time and location.",
-      aboutMinimumOrder: "Minimum order Tk 80.",
-      OpeningHours: [
-        "sunday - 8:00 AM - 10:00 PM",
-        "monday - 8:00 AM - 10:00 PM",
-        "Tuesday - 8:00 AM - 10:00 PM",
-        "Wednesday - 8:00 AM - 10:00 PM",
-        "Thursday - 8:00 AM - 10:00 PM",
-        "Friday - 2:00 PM - 11:00 PM"
-      ]
-    },
-    foods: [
-      {
-        id: 501,
-        name: "Plain Dosa",
-        description: "Crispy rice crepe served with chutney and sambar",
-        price: 90,
-        category: "Dosa",
-        isAvailable: true,
-        isVeg: true,
-        calories: 300,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 502,
-        name: "Masala Dosa",
-        description: "Stuffed with spiced potato filling",
-        price: 130,
-        category: "Dosa",
-        isAvailable: true,
-        isVeg: true,
-        calories: 420,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 503,
-        name: "Idli Sambar",
-        description: "Steamed rice cakes with sambar and chutney",
-        price: 100,
-        category: "Idli",
-        isAvailable: true,
-        isVeg: true,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 504,
-        name: "Vada Sambar",
-        description: "Fried lentil donuts served with sambar",
-        price: 110,
-        category: "Vada",
-        isAvailable: true,
-        isVeg: true,
-        calories: 350,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 505,
-        name: "Uttapam",
-        description: "Thick rice pancake with onions & chilies",
-        price: 120,
-        category: "Uttapam",
-        isAvailable: true,
-        isVeg: true,
-        calories: 330,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 506,
-        name: "Lemon Rice",
-        description: "Tangy rice with mustard seeds & curry leaves",
-        price: 100,
-        category: "Rice",
-        isAvailable: true,
-        isVeg: true,
-        calories: 300,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 507,
-        name: "Curd Rice",
-        description: "Yogurt-mixed rice, South Indian style",
-        price: 90,
-        category: "Rice",
-        isAvailable: true,
-        isVeg: true,
-        calories: 260,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 508,
-        name: "Filter Coffee",
-        description: "Traditional South Indian filter coffee",
-        price: 50,
-        category: "Drink",
-        isAvailable: true,
-        isVeg: true,
-        calories: 120,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 509,
-        name: "Vegetable Upma",
-        description: "Semolina porridge with vegetables",
-        price: 110,
-        category: "Breakfast",
-        isAvailable: true,
-        isVeg: true,
-        calories: 310,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 510,
-        name: "Pongal",
-        description: "Savory rice & lentil porridge",
-        price: 100,
-        category: "Breakfast",
-        isAvailable: true,
-        isVeg: true,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      }
-    ]
-  },
-  {
-  "id": 6,
-  "restaurantName": "Pitha Ghor",
-  "location": "Old Town",
-  "rating": 4.4,
-  "ratingPersons": 310,
-  "deliveryFee": 40,
-  "deliveryTime": "1-1.30 hours",
-  "distance": 8,
-  "cuisines": ["Traditional", "Snacks"],
-  "discountPercent": 10,
-  "minimumOrder": 100,
-  "isOpen": true,
-  "imageUrl": "/images/pitha-restaurant.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/pitha-restaurant.jpg",
-    "fullLocation": "House 11, Road 3, Sutrapur",
-    "aboutDeliveryFee": "Based on area and time.",
-    "aboutMinimumOrder": "Orders below Tk 100 not accepted.",
-    "OpeningHours": [
-      "sunday - 7:00 AM - 9:00 PM",
-      "monday - 7:00 AM - 9:00 PM",
-      "Tuesday - 7:00 AM - 9:00 PM",
-      "Wednesday - 7:00 AM - 9:00 PM",
-      "Thursday - 7:00 AM - 9:00 PM",
-      "Friday - 7:00 AM - 11:00 PM"
-    ]
-  },
-  "foods": [
-    { "id": 901, "name": "Puli Pitha", "description": "Sweet coconut stuffed rice pitha", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/puli.jpg","cartQuantity":0 },
-    { "id": 902, "name": "Patishapta", "description": "Coconut & jaggery stuffed pancake", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/patishapta.jpg","cartQuantity":0 },
-    { "id": 903, "name": "Chitoi Pitha", "description": "Steamed rice cake served with molasses", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/chitoi.jpg","cartQuantity":0 },
-    { "id": 904, "name": "Tel Pitha", "description": "Fried jaggery pitha", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/tel.jpg","cartQuantity":0 },
-    { "id": 905, "name": "Bhapa Pitha", "description": "Steamed rice cake with coconut & jaggery", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/bhapa.jpg","cartQuantity":0 },
-    { "id": 906, "name": "Dudh Chitoi", "description": "Chitoi pitha soaked in milk", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 210, "imageUrl": "/images/dudh-chitoi.jpg","cartQuantity":0 },
-    { "id": 907, "name": "Sada Pitha", "description": "Plain steamed rice pitha", "price": 15, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/sada.jpg","cartQuantity":0 },
-    { "id": 908, "name": "Shutki Chitoi", "description": "Chitoi with dry fish bharta", "price": 40, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 250, "imageUrl": "/images/shutki.jpg","cartQuantity":0 },
-    { "id": 909, "name": "Gur Puli", "description": "Rice pitha dipped in jaggery syrup", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/gur-puli.jpg","cartQuantity":0 },
-    { "id": 910, "name": "Chingri Pitha", "description": "Prawn stuffed fried pitha", "price": 45, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/chingri.jpg","cartQuantity":0 }
-  ]
-},
-{
-  "id": 7,
-  "restaurantName": "Deshi Doi-Chira",
-  "location": "Mirpur",
-  "rating": 4.0,
-  "ratingPersons": 150,
-  "deliveryFee": 30,
-  "deliveryTime": "17-25 min",
-  "distance": 2,
-  "cuisines": ["Traditional", "Snacks"],
-  "discountPercent": 5,
-  "minimumOrder": 50,
-  "isOpen": true,
-  "imageUrl": "/images/doi-chira.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/doi-chira.jpg",
-    "fullLocation": "House 90, Mirpur 11",
-    "aboutDeliveryFee": "Tk 30 flat in Mirpur area.",
-    "aboutMinimumOrder": "Minimum order Tk 50.",
-    "OpeningHours": [
-      "sunday - 7:00 AM - 11:00 PM",
-      "monday - 7:00 AM - 11:00 PM",
-      "Tuesday - 7:00 AM - 11:00 PM",
-      "Wednesday - 7:00 AM - 11:00 PM",
-      "Thursday - 7:00 AM - 11:00 PM",
-      "Friday - 7:00 AM - 11:30 PM"
-    ]
-  },
-  "foods": [
-    { "id": 1001, "name": "Doi-Chira", "description": "Flattened rice with yogurt & sugar", "price": 40, "category": "Traditional", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/doi-chira.jpg","cartQuantity":0 },
-    { "id": 1002, "name": "Muri-Makha", "description": "Spiced puffed rice mix", "price": 30, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/muri-makha.jpg","cartQuantity":0 },
-    { "id": 1003, "name": "Chira Bhuna", "description": "Fried chira with spices", "price": 35, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chira-bhuna.jpg","cartQuantity":0 },
-    { "id": 1004, "name": "Singara", "description": "Fried pastry stuffed with potato", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/singara.jpg","cartQuantity":0 },
-    { "id": 1005, "name": "Shingara (Beef)", "description": "Beef-filled singara", "price": 15, "category": "Snacks", "isAvailable": true, "isVeg": false, "calories": 130, "imageUrl": "/images/beef-singara.jpg","cartQuantity":0 },
-    { "id": 1006, "name": "Samosa", "description": "Triangular fried snack", "price": 12, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/samosa.jpg","cartQuantity":0 },
-    { "id": 1007, "name": "Piaju", "description": "Lentil fritters", "price": 8, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 110, "imageUrl": "/images/piaju.jpg","cartQuantity":0 },
-    { "id": 1008, "name": "Beguni", "description": "Fried eggplant slices", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/beguni.jpg","cartQuantity":0 },
-    { "id": 1009, "name": "Muri with Beguni", "description": "Muri combo with fried eggplant", "price": 25, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/muri-beguni.jpg","cartQuantity":0 },
-    { "id": 1010, "name": "Aloor Chop", "description": "Potato fritter", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/aloor-chop.jpg","cartQuantity":0 }
-  ]
-},
-{
-  "id": 8,
-  "restaurantName": "Puran Dhaka Vorta Ghar",
-  "location": "Narayanganj",
-  "rating": 4.1,
-  "ratingPersons": 290,
-  "deliveryFee": 35,
-  "deliveryTime": "28-40 min",
-  "distance": 3,
-  "cuisines": ["Vorta", "Traditional"],
-  "discountPercent": 10,
-  "minimumOrder": 80,
-  "isOpen": true,
-  "imageUrl": "/images/vorta-ghar.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/vorta-ghar.jpg",
-    "fullLocation": "Road 12, House 7, Narayanganj Sadar",
-    "aboutDeliveryFee": "Based on area and delivery timing.",
-    "aboutMinimumOrder": "Orders below Tk 80 are not accepted.",
-    "OpeningHours": [
-      "sunday - 10:00 AM - 8:00 PM",
-      "monday - 10:00 AM - 8:00 PM",
-      "Tuesday - 10:00 AM - 8:00 PM",
-      "Wednesday - 10:00 AM - 8:00 PM",
-      "Thursday - 10:00 AM - 8:00 PM",
-      "Friday - Closed"
-    ]
-  },
-  "foods": [
-    { "id": 901, "name": "Alu Vorta", "description": "Mashed potato with mustard oil & chili", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/alu-vorta.jpg","cartQuantity":0 },
-    { "id": 902, "name": "Shutki Vorta", "description": "Fermented fish mash", "price": 60, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 200, "imageUrl": "/images/shutki-vorta.jpg","cartQuantity":0 },
-    { "id": 903, "name": "Begun Vorta", "description": "Roasted eggplant mash", "price": 45, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/begun-vorta.jpg","cartQuantity":0 },
-    { "id": 904, "name": "Tomato Vorta", "description": "Spicy mashed tomato", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/tomato-vorta.jpg","cartQuantity":0 },
-    { "id": 905, "name": "Chingri Vorta", "description": "Spicy mashed shrimp", "price": 70, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 180, "imageUrl": "/images/chingri-vorta.jpg","cartQuantity":0 },
-    { "id": 906, "name": "Kacha Morich Vorta", "description": "Raw chili mash", "price": 30, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 50, "imageUrl": "/images/morich-vorta.jpg","cartQuantity":0 },
-    { "id": 907, "name": "Garlic Vorta", "description": "Spicy garlic mash", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 70, "imageUrl": "/images/garlic-vorta.jpg","cartQuantity":0 },
-    { "id": 908, "name": "Onion Vorta", "description": "Burnt onion mash", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/onion-vorta.jpg","cartQuantity":0 },
-    { "id": 909, "name": "Sutki Shutki Combo", "description": "Mixed mash platter", "price": 90, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/combo-vorta.jpg","cartQuantity":0 },
-    { "id": 910, "name": "Vorta Platter", "description": "5-item mash platter with rice", "price": 150, "category": "Combo", "isAvailable": true, "isVeg": false, "calories": 450, "imageUrl": "/images/vorta-platter.jpg","cartQuantity":0 }
-  ]
-},]
-// End 2
-  },
-  {
-    id: 3,
-    CuisinesName:"Pizza",
-    imageUrl: "/myFood.jpg",
-    restaurantsData:[
-        {
-    id: 5,
-    restaurantName: "South Indian Express",
-    location: "Banani",
-    rating: 4.1,
-    ratingPersons: 170,
-    deliveryFee: 35,
-    deliveryTime: "35-40 min",
-    distance: 6,
-    cuisines: ["South Indian", "Vegetarian"],
-    discountPercent: 10,
-    minimumOrder: 80,
-    isOpen: true,
-    imageUrl: "/southIndianExpress.jpg",
-    moreInfo: {
-      imageUrl: "/southIndianExpress.jpg",
-      fullLocation: "House 11, Road 14, Banani",
-      aboutDeliveryFee: "Delivery fee may vary depending on time and location.",
-      aboutMinimumOrder: "Minimum order Tk 80.",
-      OpeningHours: [
-        "sunday - 8:00 AM - 10:00 PM",
-        "monday - 8:00 AM - 10:00 PM",
-        "Tuesday - 8:00 AM - 10:00 PM",
-        "Wednesday - 8:00 AM - 10:00 PM",
-        "Thursday - 8:00 AM - 10:00 PM",
-        "Friday - 2:00 PM - 11:00 PM"
-      ]
-    },
-    foods: [
-      {
-        id: 501,
-        name: "Plain Dosa",
-        description: "Crispy rice crepe served with chutney and sambar",
-        price: 90,
-        category: "Dosa",
-        isAvailable: true,
-        isVeg: true,
-        calories: 300,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 502,
-        name: "Masala Dosa",
-        description: "Stuffed with spiced potato filling",
-        price: 130,
-        category: "Dosa",
-        isAvailable: true,
-        isVeg: true,
-        calories: 420,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 503,
-        name: "Idli Sambar",
-        description: "Steamed rice cakes with sambar and chutney",
-        price: 100,
-        category: "Idli",
-        isAvailable: true,
-        isVeg: true,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 504,
-        name: "Vada Sambar",
-        description: "Fried lentil donuts served with sambar",
-        price: 110,
-        category: "Vada",
-        isAvailable: true,
-        isVeg: true,
-        calories: 350,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 505,
-        name: "Uttapam",
-        description: "Thick rice pancake with onions & chilies",
-        price: 120,
-        category: "Uttapam",
-        isAvailable: true,
-        isVeg: true,
-        calories: 330,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 506,
-        name: "Lemon Rice",
-        description: "Tangy rice with mustard seeds & curry leaves",
-        price: 100,
-        category: "Rice",
-        isAvailable: true,
-        isVeg: true,
-        calories: 300,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 507,
-        name: "Curd Rice",
-        description: "Yogurt-mixed rice, South Indian style",
-        price: 90,
-        category: "Rice",
-        isAvailable: true,
-        isVeg: true,
-        calories: 260,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 508,
-        name: "Filter Coffee",
-        description: "Traditional South Indian filter coffee",
-        price: 50,
-        category: "Drink",
-        isAvailable: true,
-        isVeg: true,
-        calories: 120,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 509,
-        name: "Vegetable Upma",
-        description: "Semolina porridge with vegetables",
-        price: 110,
-        category: "Breakfast",
-        isAvailable: true,
-        isVeg: true,
-        calories: 310,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 510,
-        name: "Pongal",
-        description: "Savory rice & lentil porridge",
-        price: 100,
-        category: "Breakfast",
-        isAvailable: true,
-        isVeg: true,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      }
-    ]
-  },
-  {
-  "id": 6,
-  "restaurantName": "Pitha Ghor",
-  "location": "Old Town",
-  "rating": 4.4,
-  "ratingPersons": 310,
-  "deliveryFee": 40,
-  "deliveryTime": "1-1.30 hours",
-  "distance": 8,
-  "cuisines": ["Traditional", "Snacks"],
-  "discountPercent": 10,
-  "minimumOrder": 100,
-  "isOpen": true,
-  "imageUrl": "/images/pitha-restaurant.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/pitha-restaurant.jpg",
-    "fullLocation": "House 11, Road 3, Sutrapur",
-    "aboutDeliveryFee": "Based on area and time.",
-    "aboutMinimumOrder": "Orders below Tk 100 not accepted.",
-    "OpeningHours": [
-      "sunday - 7:00 AM - 9:00 PM",
-      "monday - 7:00 AM - 9:00 PM",
-      "Tuesday - 7:00 AM - 9:00 PM",
-      "Wednesday - 7:00 AM - 9:00 PM",
-      "Thursday - 7:00 AM - 9:00 PM",
-      "Friday - 7:00 AM - 11:00 PM"
-    ]
-  },
-  "foods": [
-    { "id": 901, "name": "Puli Pitha", "description": "Sweet coconut stuffed rice pitha", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/puli.jpg","cartQuantity":0 },
-    { "id": 902, "name": "Patishapta", "description": "Coconut & jaggery stuffed pancake", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/patishapta.jpg","cartQuantity":0 },
-    { "id": 903, "name": "Chitoi Pitha", "description": "Steamed rice cake served with molasses", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/chitoi.jpg","cartQuantity":0 },
-    { "id": 904, "name": "Tel Pitha", "description": "Fried jaggery pitha", "price": 20, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/tel.jpg","cartQuantity":0 },
-    { "id": 905, "name": "Bhapa Pitha", "description": "Steamed rice cake with coconut & jaggery", "price": 25, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/bhapa.jpg","cartQuantity":0 },
-    { "id": 906, "name": "Dudh Chitoi", "description": "Chitoi pitha soaked in milk", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 210, "imageUrl": "/images/dudh-chitoi.jpg","cartQuantity":0 },
-    { "id": 907, "name": "Sada Pitha", "description": "Plain steamed rice pitha", "price": 15, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/sada.jpg","cartQuantity":0 },
-    { "id": 908, "name": "Shutki Chitoi", "description": "Chitoi with dry fish bharta", "price": 40, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 250, "imageUrl": "/images/shutki.jpg","cartQuantity":0 },
-    { "id": 909, "name": "Gur Puli", "description": "Rice pitha dipped in jaggery syrup", "price": 30, "category": "Pitha", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/gur-puli.jpg","cartQuantity":0 },
-    { "id": 910, "name": "Chingri Pitha", "description": "Prawn stuffed fried pitha", "price": 45, "category": "Pitha", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/chingri.jpg","cartQuantity":0 }
-  ]
-},
-{
-  "id": 7,
-  "restaurantName": "Deshi Doi-Chira",
-  "location": "Mirpur",
-  "rating": 4.0,
-  "ratingPersons": 150,
-  "deliveryFee": 30,
-  "deliveryTime": "17-25 min",
-  "distance": 2,
-  "cuisines": ["Traditional", "Snacks"],
-  "discountPercent": 5,
-  "minimumOrder": 50,
-  "isOpen": true,
-  "imageUrl": "/images/doi-chira.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/doi-chira.jpg",
-    "fullLocation": "House 90, Mirpur 11",
-    "aboutDeliveryFee": "Tk 30 flat in Mirpur area.",
-    "aboutMinimumOrder": "Minimum order Tk 50.",
-    "OpeningHours": [
-      "sunday - 7:00 AM - 11:00 PM",
-      "monday - 7:00 AM - 11:00 PM",
-      "Tuesday - 7:00 AM - 11:00 PM",
-      "Wednesday - 7:00 AM - 11:00 PM",
-      "Thursday - 7:00 AM - 11:00 PM",
-      "Friday - 7:00 AM - 11:30 PM"
-    ]
-  },
-  "foods": [
-    { "id": 1001, "name": "Doi-Chira", "description": "Flattened rice with yogurt & sugar", "price": 40, "category": "Traditional", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/doi-chira.jpg","cartQuantity":0 },
-    { "id": 1002, "name": "Muri-Makha", "description": "Spiced puffed rice mix", "price": 30, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/muri-makha.jpg","cartQuantity":0 },
-    { "id": 1003, "name": "Chira Bhuna", "description": "Fried chira with spices", "price": 35, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chira-bhuna.jpg","cartQuantity":0 },
-    { "id": 1004, "name": "Singara", "description": "Fried pastry stuffed with potato", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/singara.jpg","cartQuantity":0 },
-    { "id": 1005, "name": "Shingara (Beef)", "description": "Beef-filled singara", "price": 15, "category": "Snacks", "isAvailable": true, "isVeg": false, "calories": 130, "imageUrl": "/images/beef-singara.jpg","cartQuantity":0 },
-    { "id": 1006, "name": "Samosa", "description": "Triangular fried snack", "price": 12, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/samosa.jpg","cartQuantity":0 },
-    { "id": 1007, "name": "Piaju", "description": "Lentil fritters", "price": 8, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 110, "imageUrl": "/images/piaju.jpg","cartQuantity":0 },
-    { "id": 1008, "name": "Beguni", "description": "Fried eggplant slices", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/beguni.jpg","cartQuantity":0 },
-    { "id": 1009, "name": "Muri with Beguni", "description": "Muri combo with fried eggplant", "price": 25, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/muri-beguni.jpg","cartQuantity":0 },
-    { "id": 1010, "name": "Aloor Chop", "description": "Potato fritter", "price": 10, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 100, "imageUrl": "/images/aloor-chop.jpg","cartQuantity":0 }
-  ]
-},
-{
-  "id": 8,
-  "restaurantName": "Puran Dhaka Vorta Ghar",
-  "location": "Narayanganj",
-  "rating": 4.1,
-  "ratingPersons": 290,
-  "deliveryFee": 35,
-  "deliveryTime": "28-40 min",
-  "distance": 3,
-  "cuisines": ["Vorta", "Traditional"],
-  "discountPercent": 10,
-  "minimumOrder": 80,
-  "isOpen": true,
-  "imageUrl": "/images/vorta-ghar.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/vorta-ghar.jpg",
-    "fullLocation": "Road 12, House 7, Narayanganj Sadar",
-    "aboutDeliveryFee": "Based on area and delivery timing.",
-    "aboutMinimumOrder": "Orders below Tk 80 are not accepted.",
-    "OpeningHours": [
-      "sunday - 10:00 AM - 8:00 PM",
-      "monday - 10:00 AM - 8:00 PM",
-      "Tuesday - 10:00 AM - 8:00 PM",
-      "Wednesday - 10:00 AM - 8:00 PM",
-      "Thursday - 10:00 AM - 8:00 PM",
-      "Friday - Closed"
-    ]
-  },
-  "foods": [
-    { "id": 901, "name": "Alu Vorta", "description": "Mashed potato with mustard oil & chili", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/alu-vorta.jpg","cartQuantity":0 },
-    { "id": 902, "name": "Shutki Vorta", "description": "Fermented fish mash", "price": 60, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 200, "imageUrl": "/images/shutki-vorta.jpg","cartQuantity":0 },
-    { "id": 903, "name": "Begun Vorta", "description": "Roasted eggplant mash", "price": 45, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 90, "imageUrl": "/images/begun-vorta.jpg","cartQuantity":0 },
-    { "id": 904, "name": "Tomato Vorta", "description": "Spicy mashed tomato", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/tomato-vorta.jpg","cartQuantity":0 },
-    { "id": 905, "name": "Chingri Vorta", "description": "Spicy mashed shrimp", "price": 70, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 180, "imageUrl": "/images/chingri-vorta.jpg","cartQuantity":0 },
-    { "id": 906, "name": "Kacha Morich Vorta", "description": "Raw chili mash", "price": 30, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 50, "imageUrl": "/images/morich-vorta.jpg","cartQuantity":0 },
-    { "id": 907, "name": "Garlic Vorta", "description": "Spicy garlic mash", "price": 40, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 70, "imageUrl": "/images/garlic-vorta.jpg","cartQuantity":0 },
-    { "id": 908, "name": "Onion Vorta", "description": "Burnt onion mash", "price": 35, "category": "Vorta", "isAvailable": true, "isVeg": true, "calories": 60, "imageUrl": "/images/onion-vorta.jpg","cartQuantity":0 },
-    { "id": 909, "name": "Sutki Shutki Combo", "description": "Mixed mash platter", "price": 90, "category": "Vorta", "isAvailable": true, "isVeg": false, "calories": 300, "imageUrl": "/images/combo-vorta.jpg","cartQuantity":0 },
-    { "id": 910, "name": "Vorta Platter", "description": "5-item mash platter with rice", "price": 150, "category": "Combo", "isAvailable": true, "isVeg": false, "calories": 450, "imageUrl": "/images/vorta-platter.jpg","cartQuantity":0 }
-  ]
-},
-    ]
-  },
-  {
-    id: 4,
-    CuisinesName:"Fast Food",
-    imageUrl: "/myFood.jpg",
-    restaurantsData:[
-      {
-  "id": 9,
-  "restaurantName": "Pasta Paradise",
-  "location": "Bashundhara",
-  "rating": 4.4,
-  "ratingPersons": 220,
-  "deliveryFee": 50,
-  "deliveryTime": "10-12 min",
-  "distance": 1,
-  "cuisines": ["Italian", "Continental"],
-  "discountPercent": 5,
-  "minimumOrder": 200,
-  "isOpen": true,
-  "imageUrl": "/images/pasta-paradise.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/pasta-paradise.jpg",
-    "fullLocation": "Block D, Road 5, Bashundhara R/A",
-    "aboutDeliveryFee": "Standard delivery applies for all orders.",
-    "aboutMinimumOrder": "Minimum Tk 200 required.",
-    "OpeningHours": [
-      "sunday - 11:00 AM - 11:00 PM",
-      "monday - 11:00 AM - 11:00 PM",
-      "Tuesday - 11:00 AM - 11:00 PM",
-      "Wednesday - 11:00 AM - 11:00 PM",
-      "Thursday - 11:00 AM - 11:00 PM",
-      "Friday - 1:00 PM - 12:00 AM"
-    ]
-  },
-  "foods": [
-    { "id": 1001, "name": "Spaghetti Carbonara", "description": "Creamy egg-based pasta with beef bacon", "price": 350, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 720, "imageUrl": "/images/carbonara.jpg","cartQuantity":0 },
-    { "id": 1002, "name": "Fettuccine Alfredo", "description": "Rich cheese sauce with grilled chicken", "price": 370, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 800, "imageUrl": "/images/alfredo.jpg","cartQuantity":0 },
-    { "id": 1003, "name": "Penne Arrabbiata", "description": "Spicy tomato-based pasta", "price": 290, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 600, "imageUrl": "/images/arrabbiata.jpg","cartQuantity":0 },
-    { "id": 1004, "name": "Chicken Lasagna", "description": "Layered pasta with chicken and cheese", "price": 400, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 850, "imageUrl": "/images/lasagna.jpg","cartQuantity":0 },
-    { "id": 1005, "name": "Beef Macaroni", "description": "Minced beef with elbow macaroni", "price": 320, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 700, "imageUrl": "/images/macaroni.jpg","cartQuantity":0 },
-    { "id": 1006, "name": "Pasta Bolognese", "description": "Traditional Italian meat sauce pasta", "price": 350, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 780, "imageUrl": "/images/bolognese.jpg","cartQuantity":0 },
-    { "id": 1007, "name": "Cheesy Pasta Bake", "description": "Baked pasta with 3 cheeses", "price": 370, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 840, "imageUrl": "/images/pasta-bake.jpg","cartQuantity":0 },
-    { "id": 1008, "name": "Mushroom Penne", "description": "Creamy mushroom with penne", "price": 300, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 650, "imageUrl": "/images/mushroom-penne.jpg","cartQuantity":0 },
-    { "id": 1009, "name": "Seafood Pasta", "description": "Mixed seafood in garlic sauce", "price": 420, "category": "Pasta", "isAvailable": true, "isVeg": false, "calories": 760, "imageUrl": "/images/seafood-pasta.jpg","cartQuantity":0 },
-    { "id": 1010, "name": "Spinach Ravioli", "description": "Stuffed ravioli with spinach and cheese", "price": 380, "category": "Pasta", "isAvailable": true, "isVeg": true, "calories": 690, "imageUrl": "/images/ravioli.jpg","cartQuantity":0 }
-  ]
-},
-{
-  "id": 10,
-  "restaurantName": "Sylhet Sweets & Snacks",
-  "location": "Mirpur",
-  "rating": 4.1,
-  "ratingPersons": 180,
-  "deliveryFee": 30,
-  "deliveryTime": "2-3 hours",
-  "distance": 12,
-  "cuisines": ["Sweets", "Snacks"],
-  "discountPercent": 5,
-  "minimumOrder": 100,
-  "isOpen": true,
-  "imageUrl": "/images/sylhet-sweets.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/sylhet-sweets.jpg",
-    "fullLocation": "House 45, Road 3, Section 10, Mirpur",
-    "aboutDeliveryFee": "Delivery fee depends on distance.",
-    "aboutMinimumOrder": "Minimum order is Tk 100.",
-    "OpeningHours": [
-      "sunday - 08:00 AM - 10:00 PM",
-      "monday - 08:00 AM - 10:00 PM",
-      "Tuesday - 08:00 AM - 10:00 PM",
-      "Wednesday - 08:00 AM - 10:00 PM",
-      "Thursday - 08:00 AM - 10:00 PM",
-      "Friday - 02:00 PM - 11:00 PM"
-    ]
-  },
-  "foods": [
-    { "id": 1101, "name": "Rosogolla", "description": "Soft syrupy balls", "price": 120, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 250, "imageUrl": "/images/rosogolla.jpg","cartQuantity":0 },
-    { "id": 1102, "name": "Sandesh", "description": "Sweet milk-based dessert", "price": 100, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/sandesh.jpg","cartQuantity":0 },
-    { "id": 1103, "name": "Chomchom", "description": "Traditional syrupy sweet", "price": 130, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 300, "imageUrl": "/images/chomchom.jpg","cartQuantity":0 },
-    { "id": 1104, "name": "Motichoor Laddu", "description": "Sweet laddus made from boondi", "price": 90, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 240, "imageUrl": "/images/laddu.jpg","cartQuantity":0 },
-    { "id": 1105, "name": "Nimki", "description": "Crispy salty snack", "price": 60, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 120, "imageUrl": "/images/nimki.jpg","cartQuantity":0 },
-    { "id": 1106, "name": "Chanachur Mix", "description": "Spicy snack mix", "price": 80, "category": "Snacks", "isAvailable": true, "isVeg": true, "calories": 160, "imageUrl": "/images/chanachur.jpg","cartQuantity":0 },
-    { "id": 1107, "name": "Peda", "description": "Milk sweet", "price": 90, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 180, "imageUrl": "/images/peda.jpg","cartQuantity":0 },
-    { "id": 1108, "name": "Balushahi", "description": "Fried flaky dessert", "price": 110, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 280, "imageUrl": "/images/balushahi.jpg","cartQuantity":0 },
-    { "id": 1109, "name": "Khaja", "description": "Layered sweet", "price": 95, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 230, "imageUrl": "/images/khaja.jpg","cartQuantity":0 },
-    { "id": 1110, "name": "Jilapi", "description": "Deep-fried syrupy spiral", "price": 70, "category": "Sweets", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/jilapi.jpg","cartQuantity":0 }
-  ]
-},
-    ]
-  },
 {
   id: 5,
     CuisinesName:"Burger",
-    imageUrl: "/myFood.jpg",
+    imageUrl: "/burgers/3.jpg",
     restaurantsData:[{
-  "id": 11,
-  "restaurantName": "Nawab Curry & Grill",
-  "location": "Gulshan",
-  "rating": 4.4,
-  "ratingPersons": 370,
-  "deliveryFee": 60,
-  "deliveryTime": "20-30 min",
-  "distance": 3,
-  "cuisines": ["Curry", "Grill"],
-  "discountPercent": 12,
-  "minimumOrder": 300,
-  "isOpen": true,
-  "imageUrl": "/images/nawab-curry.jpg",
-  "moreInfo": {
-    "imageUrl": "/images/nawab-curry.jpg",
-    "fullLocation": "House 7A, Road 105, Gulshan-2",
-    "aboutDeliveryFee": "Delivery fee varies by area and traffic.",
-    "aboutMinimumOrder": "Minimum order Tk 300.",
-    "OpeningHours": [
-      "sunday - 11:00 AM - 11:00 PM",
-      "monday - 11:00 AM - 11:00 PM",
-      "Tuesday - 11:00 AM - 11:00 PM",
-      "Wednesday - 11:00 AM - 11:00 PM",
-      "Thursday - 11:00 AM - 11:00 PM",
-      "Friday - 01:00 PM - 11:30 PM"
-    ]
-  },
-  "foods": [
-    { "id": 1201, "name": "Mutton Curry", "description": "Slow-cooked mutton with rich spices", "price": 420, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 850, "imageUrl": "/images/mutton-curry.jpg","cartQuantity":0 },
-    { "id": 1202, "name": "Chicken Rezala", "description": "Mild creamy chicken curry", "price": 350, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 700, "imageUrl": "/images/rezala.jpg","cartQuantity":0 },
-    { "id": 1203, "name": "Beef Korma", "description": "Beef cooked in ghee and spices", "price": 460, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 900, "imageUrl": "/images/beef-korma.jpg","cartQuantity":0 },
-    { "id": 1204, "name": "Grilled Chicken", "description": "Smoky grilled half chicken", "price": 300, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 600, "imageUrl": "/images/grilled-chicken.jpg","cartQuantity":0 },
-    { "id": 1205, "name": "Seekh Kebab", "description": "Skewered minced meat", "price": 250, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 500, "imageUrl": "/images/seekh-kebab.jpg","cartQuantity":0 },
-    { "id": 1206, "name": "Paratha", "description": "Buttery flatbread", "price": 30, "category": "Bread", "isAvailable": true, "isVeg": true, "calories": 150, "imageUrl": "/images/paratha.jpg","cartQuantity":0 },
-    { "id": 1207, "name": "Plain Rice", "description": "Steamed basmati rice", "price": 60, "category": "Rice", "isAvailable": true, "isVeg": true, "calories": 200, "imageUrl": "/images/plain-rice.jpg","cartQuantity":0 },
-    { "id": 1208, "name": "Beef Bhuna", "description": "Dry spiced beef curry", "price": 400, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 800, "imageUrl": "/images/beef-bhuna.jpg","cartQuantity":0 },
-    { "id": 1209, "name": "Mixed Grill Platter", "description": "Kebab, chicken, beef in one plate", "price": 550, "category": "Grill", "isAvailable": true, "isVeg": false, "calories": 950, "imageUrl": "/images/mixed-grill.jpg","cartQuantity":0 },
-    { "id": 1210, "name": "Chicken Curry", "description": "Home-style chicken with potatoes", "price": 340, "category": "Curry", "isAvailable": true, "isVeg": false, "calories": 680, "imageUrl": "/images/chicken-curry.jpg","cartQuantity":0 }
-  ]
+  id: 2,
+    restaurantName: "Burger Bhoot",
+    location: "Mirpur",
+    rating: 4.4,
+    ratingPersons: 210,
+    deliveryFee: 30,
+    deliveryTime: "20-25 min",
+    distance: 2,
+    cuisines: ["Fast Food", "Burger"],
+    discountPercent: 10,
+    minimumOrder: 150,
+    isOpen: true,
+    imageUrl: "/burgers/3.jpg",
 },
 {
-  id: 12,
-  restaurantName: "Rangdhanu Vorta Ghar",
-  location: "Mirpur",
-  rating: 4.7,
-  ratingPersons: 490,
-  deliveryFee: 40,
-  deliveryTime: "15-20 min",
-  distance: 1,
-  cuisines: ["Traditional", "Deshi"],
-  discountPercent: 15,
-  minimumOrder: 100,
+   id: 7,
+  restaurantName: "FastFood Junction",
+  location: "Uttara",
+  rating: 4.3,
+  ratingPersons: 410,
+  deliveryFee: 50,
+  deliveryTime: "20-30 min",
+  distance: 6,
+  cuisines: ["Fast Food", "Snacks"],
+  discountPercent: 20,
+  minimumOrder: 180,
   isOpen: true,
-  imageUrl: "/images/rangdhanu-vorta-ghar.jpg",
-  moreInfo: {
-    imageUrl: "/images/rangdhanu-vorta-ghar.jpg",
-    fullLocation: "House 60, Road 11, Mirpur-12, Dhaka",
-    aboutDeliveryFee: "Delivery fee is calculated based on distance.",
-    aboutMinimumOrder: "Minimum order amount is Tk 100.",
-    OpeningHours: [
-      "sunday - 09:30 AM - 09:30 PM",
-      "monday - 09:30 AM - 09:30 PM",
-      "Tuesday - 09:30 AM - 09:30 PM",
-      "Wednesday - 09:30 AM - 09:30 PM",
-      "Thursday - 09:30 AM - 09:30 PM",
-      "Friday - 01:00 PM - 10:00 PM"
-    ]
-  },
-  foods: [
-    {
-      id: 1201,
-      name: "Shutki Vorta",
-      description: "Spicy mashed dried fish with mustard oil and chili",
-      price: 80,
-      category: "Vorta",
-      isAvailable: true,
-      isVeg: false,
-      calories: 150,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1202,
-      name: "Aloo Vorta",
-      description: "Mashed potato with mustard oil, onion, and chili",
-      price: 50,
-      category: "Vorta",
-      isAvailable: true,
-      isVeg: true,
-      calories: 120,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1203,
-      name: "Begun Vorta",
-      description: "Smoky eggplant mash with mustard and garlic",
-      price: 60,
-      category: "Vorta",
-      isAvailable: true,
-      isVeg: true,
-      calories: 130,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1204,
-      name: "Tomato Vorta",
-      description: "Tangy tomato mash with garlic and mustard seeds",
-      price: 55,
-      category: "Vorta",
-      isAvailable: true,
-      isVeg: true,
-      calories: 110,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1205,
-      name: "Pui Shaak Bhuna",
-      description: "Stir-fried Malabar spinach with garlic",
-      price: 70,
-      category: "Vegetable",
-      isAvailable: true,
-      isVeg: true,
-      calories: 180,
-     imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1206,
-      name: "Shutki Bhuna",
-      description: "Dry fish curry with onion, garlic, and green chili",
-      price: 120,
-      category: "Fish",
-      isAvailable: true,
-      isVeg: false,
-      calories: 250,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1207,
-      name: "Daal",
-      description: "Traditional lentil soup with fried garlic and chili",
-      price: 40,
-      category: "Lentils",
-      isAvailable: true,
-      isVeg: true,
-      calories: 150,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1208,
-      name: "Plain Rice",
-      description: "Steamed white rice",
-      price: 30,
-      category: "Staple",
-      isAvailable: true,
-      isVeg: true,
-      calories: 200,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1209,
-      name: "Hilsha Fry",
-      description: "Crispy fried Ilish fish with mustard touch",
-      price: 250,
-      category: "Fish",
-      isAvailable: true,
-      isVeg: false,
-      calories: 380,
-      imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-    },
-    {
-      id: 1210,
-      name: "Korola Bhaji",
-      description: "Fried bitter gourd slices with onion",
-      price: 60,
-      category: "Vegetable",
-      isAvailable: true,
-      isVeg: true,
-      calories: 130,
-      imageUrl: "/images/onion-rings.jpg",
-      cartQuantity:0
-      
-    }
-  ]
+  imageUrl: "/fastFood/2.jpg",
 }]
 },
+// End 5
+
 {
-   id: 1,
+   id: 6,
     CuisinesName:"Dessert",
-    imageUrl: "/myFood.jpg",
+     imageUrl: "/dessert/3.jpg",
     restaurantsData:[  {
-    id: 3,
-    restaurantName: "Shingara Station",
-    location: "Gulshan 1",
-    rating: 4.3,
-    ratingPersons: 180,
-    deliveryFee: 25,
-    deliveryTime: "10-15 min",
-    distance: 1,
-    cuisines: ["Snacks", "Traditional"],
-    discountPercent: 20,
-    minimumOrder: 100,
-    isOpen: true,
-    imageUrl: "/images/shingara.jpg",
-    moreInfo: {
-      imageUrl: "/images/shingara.jpg",
-      fullLocation: "Opposite Gulshan Pink City, Gulshan 1",
-      aboutDeliveryFee: "Standard flat rate delivery fee.",
-      aboutMinimumOrder: "Minimum Tk 100 purchase.",
-      OpeningHours: [
-        "sunday - 09:00 AM - 09:00 PM",
-        "monday - 09:00 AM - 09:00 PM",
-        "tuesday - 09:00 AM - 09:00 PM",
-        "wednesday - 09:00 AM - 09:00 PM",
-        "thursday - 09:00 AM - 09:00 PM",
-        "friday - 02:00 PM - 10:00 PM"
-      ]
-    },
-    foods: [
-      {
-        id: 301,
-        name: "Beef Shingara",
-        description: "Deep fried snack filled with spicy beef",
-        price: 25,
-        category: "Snack",
-        isAvailable: true,
-        isVeg: false,
-        calories: 200,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 302,
-        name: "Vegetable Shingara",
-        description: "Stuffed with mashed potato and vegetables",
-        price: 20,
-        category: "Snack",
-        isAvailable: true,
-        isVeg: true,
-        calories: 180,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 303,
-        name: "Chicken Roll",
-        description: "Chicken filling inside a crispy roll",
-        price: 40,
-        category: "Snack",
-        isAvailable: true,
-        isVeg: false,
-        calories: 300,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 304,
-        name: "Egg Puff",
-        description: "Boiled egg inside a flaky pastry",
-        price: 30,
-        category: "Snack",
-        isAvailable: true,
-        isVeg: false,
-        calories: 250,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 305,
-        name: "Samucha",
-        description: "Crispy fried triangle snack with spiced potato filling",
-        price: 15,
-        category: "Snack",
-        isAvailable: true,
-        isVeg: true,
-        calories: 160,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 306,
-        name: "Hot Tea",
-        description: "Traditional Bangladeshi milk tea",
-        price: 15,
-        category: "Beverage",
-        isAvailable: true,
-        isVeg: true,
-        calories: 100,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 307,
-        name: "Singara Box (10 pcs)",
-        description: "Mix of beef and vegetable shingara",
-        price: 220,
-        category: "Combo",
-        isAvailable: true,
-        isVeg: false,
-        calories: 1800,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 308,
-        name: "Chicken Patties",
-        description: "Spiced chicken inside puff pastry",
-        price: 35,
-        category: "Snack",
-        isAvailable: true,
-        isVeg: false,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 309,
-        name: "Milk Tea (Iced)",
-        description: "Iced version of milk tea",
-        price: 25,
-        category: "Beverage",
-        isAvailable: true,
-        isVeg: true,
-        calories: 120,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 310,
-        name: "Chicken Pakora",
-        description: "Crispy chicken fritters",
-        price: 60,
-        category: "Appetizer",
-        isAvailable: true,
-        isVeg: false,
-        calories: 500,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      }
-    ]
+      id: 15,
+  restaurantName: "Dessert Den",
+  location: "Dhanmondi",
+  rating: 4.5,
+  ratingPersons: 240,
+  deliveryFee: 35,
+  deliveryTime: "20-30 min",
+  distance: 3,
+  cuisines: ["Dessert", "Cafe"],
+  discountPercent: 12,
+  minimumOrder: 120,
+  isOpen: true,
+  imageUrl: "/dessert/3.jpg",
   },
   {
-    id: 4,
-    restaurantName: "Biriyani Darbar",
-    location: "Mirpur",
-    rating: 4.5,
-    ratingPersons: 300,
-    deliveryFee: 45,
-    deliveryTime: "45-50 min",
-    distance: 7,
-    cuisines: ["Bangladeshi", "Biriyani"],
-    discountPercent: 15,
-    minimumOrder: 120,
-    isOpen: true,
-    imageUrl: "/biriyaniDarbar.jpg",
-    moreInfo: {
-      imageUrl: "/biriyaniDarbar.jpg",
-      fullLocation: "House 7, Road 9, Block C, Mirpur-11",
-      aboutDeliveryFee: "Delivery fee may vary depending on time and location.",
-      aboutMinimumOrder: "Minimum order Tk 120.",
-      OpeningHours: [
-        "sunday - 11:00 AM - 10:00 PM",
-        "monday - 11:00 AM - 10:00 PM",
-        "Tuesday - 11:00 AM - 10:00 PM",
-        "Wednesday - 11:00 AM - 10:00 PM",
-        "Thursday - 11:00 AM - 10:00 PM",
-        "Friday - 1:00 PM - 11:00 PM"
-      ]
-    },
-    foods: [
-      {
-        id: 401,
-        name: "Kacchi Biriyani",
-        description: "Mutton kacchi with aloo and salad",
-        price: 280,
-        category: "Biriyani",
-        isAvailable: true,
-        isVeg: false,
-        calories: 950,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 402,
-        name: "Chicken Tehari",
-        description: "Aromatic rice with chicken and spices",
-        price: 180,
-        category: "Biriyani",
-        isAvailable: true,
-        isVeg: false,
-        calories: 720,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 403,
-        name: "Beef Tehari",
-        description: "Spiced beef cooked with fragrant rice",
-        price: 220,
-        category: "Biriyani",
-        isAvailable: true,
-        isVeg: false,
-        calories: 850,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 404,
-        name: "Morog Polao",
-        description: "Traditional chicken pulao with boiled egg",
-        price: 200,
-        category: "Polao",
-        isAvailable: true,
-        isVeg: false,
-        calories: 790,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 405,
-        name: "Shami Kebab",
-        description: "Minced beef kebab, 2 pcs",
-        price: 100,
-        category: "Kebab",
-        isAvailable: true,
-        isVeg: false,
-        calories: 380,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 406,
-        name: "Firni",
-        description: "Dessert made with milk, sugar & rice",
-        price: 60,
-        category: "Dessert",
-        isAvailable: true,
-        isVeg: true,
-        calories: 280,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 407,
-        name: "Jali Kebab",
-        description: "Egg wrapped kebab (2 pcs)",
-        price: 120,
-        category: "Kebab",
-        isAvailable: true,
-        isVeg: false,
-        calories: 410,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 408,
-        name: "Plain Polao",
-        description: "Flavored rice with ghee & whole spices",
-        price: 100,
-        category: "Polao",
-        isAvailable: true,
-        isVeg: true,
-        calories: 600,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 409,
-        name: "Borhani",
-        description: "Traditional yogurt drink (spicy)",
-        price: 40,
-        category: "Drink",
-        isAvailable: true,
-        isVeg: true,
-        calories: 150,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      },
-      {
-        id: 410,
-        name: "Chicken Roast",
-        description: "Spiced chicken curry (1 piece)",
-        price: 120,
-        category: "Curry",
-        isAvailable: true,
-        isVeg: false,
-        calories: 500,
-        imageUrl: "/images/onion-rings.jpg",
-        cartQuantity:0
-      }
-    ]
+  id: 14,
+  restaurantName: "Sweet Treats",
+  location: "Gulshan",
+  rating: 4.7,
+  ratingPersons: 180,
+  deliveryFee: 25,
+  deliveryTime: "15-20 min",
+  distance: 1.5,
+  cuisines: ["Dessert", "Bakery"],
+  discountPercent: 5,
+  minimumOrder: 100,
+  isOpen: true,
+  imageUrl: "/dessert/6.jpg",
   },]
 }
+// End 6
 
 ];

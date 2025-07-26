@@ -67,8 +67,7 @@ const CartItemBox = () => {
                   <div className="w-full flex justify-between items-center ">
                    <div className="flex justify-center items-center">
                      <Image
-                      // src={item.imageUrl}
-                      src="/myFood.jpg"
+                      src={item.imageUrl}
                       width={200}
                       height={300}
                       alt="no pic"

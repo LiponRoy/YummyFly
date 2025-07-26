@@ -111,14 +111,15 @@ export default function Home() {
 
   return (
     <div className="container-custom text-slate-600 mt-14">
-      <div className="grid grid-cols-12 h-screen gap-x-4">
+      <div className="grid grid-cols-12 gap-x-4">
         {/* Desktop Sidebar */}
-        <aside className="hidden md:block col-span-2 bg-slate-200-800 text-slate-800 p-4 overflow-y-auto h-screen border border-slate-300 rounded-md mt-4 ">
-          <SidebarContent />
-        </aside>
+       <aside className="hidden md:block col-span-2 bg-slate-100 text-slate-800 p-4 border border-slate-300 rounded-md mt-2 sticky top-20 h-fit">
+  <SidebarContent />
+</aside>
+
 
         {/* Main Content */}
-        <main className="col-span-12 md:col-span-10 p-4 md:p-0 overflow-y-auto h-full relative custom-scrollbar-hide">
+        <main className="col-span-12 md:col-span-10 p-4 md:p-0 h-full relative custom-scrollbar-hide">
           {/* Filter Button (Mobile only) */}
           <div
             onClick={() => setSidebarToggle(true)}

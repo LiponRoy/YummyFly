@@ -64,8 +64,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
             <div className="w-full md:w-[55%] grid grid-cols-1 md:grid-cols-8 md:space-x-2 ">
               <div className="md:col-span-2 ">
                 <Image
-                  // src={product.imageUrl}
-                  src="/myFood.jpg"
+                  src={product.imageUrl}
                   alt={"food"}
                   width={500}
                   height={500}
@@ -121,8 +120,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 <Modal isOpen={openModal} onClose={() => setOpenModal(false)} header="Restaurants More Info">
                   <div className="">
                     <Image
-                      // src={product?.moreInfo?.imageUrl}
-                      src="/myFood.jpg"
+                      src={product?.moreInfo?.imageUrl}
                       alt={"food"}
                       width={500}
                       height={500}
@@ -191,8 +189,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                   {selectedFoodItem ? (
                     <div className="">
                       <Image
-                        // src={selectedFoodItem.imageUrl}
-                        src="/myFood.jpg"
+                        src={selectedFoodItem.imageUrl}
                         alt={"food"}
                         width={200}
                         height={200}

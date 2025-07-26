@@ -23,8 +23,7 @@ const FoodItemCard = ({ val, clickPerFoodItem }: any) => {
       </div>
       <div className="col-span-4 ml-4">
         <Image
-          // src={val.imageUrl}
-          src="/myFood.jpg"
+          src={val.imageUrl}
           alt={"food"}
           width={200}
           height={200}

@@ -18,8 +18,7 @@ const RestaurantCard: React.FC<any> = ({
         <div onClick={()=>goToFoodDetail(restaurant.id)} className="w-full h-[270px] rounded-xl shadow-sm border bg-white  cursor-pointer overflow-hidden">
             <div className="relative overflow-hidden">
                 <Image
-                    // src={restaurant.imageUrl}
-                    src="/myFood.jpg"
+                    src={restaurant.imageUrl}
                     alt={"noImg"}
                     width={500}
                     height={500}
