@@ -1,13 +1,23 @@
 // components/HeroRightSlider.tsx
 "use client";
 import { Cuisines, FavouriteCuisinesData } from "@/Constant";
+import { ArrowBigLeftDash, ArrowBigRight, CircleArrowLeft, CircleArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 
 const FavouriteCuisines = () => {
   const route =useRouter();
+  	const sliderRef = useRef<Slider | null>(null);
+
+	const handleNext = () => {
+		sliderRef.current?.slickNext();
+	};
+
+	const handlePrev = () => {
+		sliderRef.current?.slickPrev();
+	};
   
   const goToFoodCuisines = (id:number) => {
     route.push(`/cuisines/${id}`);
@@ -45,8 +55,8 @@ const settings = {
         <div className="relative  text-slate-700 text-[24px] text-start ">
                 Favorite Cuisines
             </div>
-      <div className="w-[90%]">
-        <Slider {...settings}>
+      <div className="relative w-[90%]">
+        <Slider {...settings} ref={sliderRef}>
         {Cuisines?.map((item, index) => (
           <div
           onClick={()=>goToFoodCuisines(item.id)}
@@ -70,6 +80,15 @@ const settings = {
           </div>
         ))}
       </Slider>
+      {/*Arrow btn For desktop */} 
+				<CircleArrowLeft
+					onClick={handlePrev}
+					className="prev-btn hidden md:block absolute top-0 bottom-0 -left-8 my-auto  z-50 w-[40px] h-[40px] bg-orange-deep p-1 rounded-full text-primary-2 cursor-pointer"
+				/>
+				<CircleArrowRight
+					onClick={handleNext}
+					className="prev-btn hidden md:block absolute top-0 bottom-0 -right-5 my-auto z-50 w-[40px] h-[40px] bg-orange-deep p-1 rounded-full text-primary-2 cursor-pointer"
+				/>
       </div>
     </div>
   );

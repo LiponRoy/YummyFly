@@ -28,7 +28,7 @@ const RestaurantCard: React.FC<any> = ({
 
                 {/* Percent counting */}
                 {restaurant.discountPercent &&  (
-                    <div className="absolute top-4 -left-1 bg-green-600 px-2 text-white rounded-md">
+                    <div className="absolute top-4 -left-1 bg-primary-2 px-2 text-white rounded-md">
                         <div className="flex justify-center items-center pl-4">
                             <div className=" pr-2">
                                 <BadgePercent size={16}/>

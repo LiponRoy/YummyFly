@@ -12,8 +12,8 @@ const Navbar = () => {
     <Link href="/" className="text-xl font-bold text-primary-1">
      
       <div className="flex justify-center items-center space-x-4 ">
-         <span>BD-Foody-Zone</span>
-          <div className="flex justify-center items-center space-x-1 cursor-default">
+         <span><span className="text-primary-2">BD</span>-Foody-Zone</span>
+          <div className="hidden md:flex justify-center items-center space-x-1 cursor-default">
             <ShoppingCart size={16} />
         <span className="text-md font-normal text-slate-500">{cartProducts.length}</span>
           </div>
@@ -23,7 +23,7 @@ const Navbar = () => {
 
     <Link href="/cartDetails" className="text-gray-700 flex justify-center items-center gap-x-1 cursor-pointer md:hidden">
       <span className="text-xl text-slate-500">{cartProducts.length}</span>
-      <ShoppingCart size={28} />
+      <ShoppingCart size={24} className="animate-pulse" />
     </Link>
 
     <div className="space-x-4 flex items-center">

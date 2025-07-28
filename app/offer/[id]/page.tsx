@@ -8,15 +8,13 @@ type FoodProps = {
   };
 };
 
-const CuisinesPage = ({ params }: { params: { id: string } }) => {
-  const discount = params.id; // ✅ use id instead of discount
-  // const DailyDeals = Restaurants?.filter((item) => item.discountPercent.toString ===discount));
+const CuisinesPage = async ({ params }: { params: { id: string } }) => {
+  const discount = params.id; // 
   const DailyDeals = Restaurants?.filter((item)=>item.discountPercent.toString()===discount); 
 
   console.log("DailyDeals..", DailyDeals);
   console.log("Full data..", Restaurants);
 
-  // console.log("cuisinesData xx :", cuisinesData[0].restaurantsData);
 
   return (
     <div className="mt-14 mb-1 ">
