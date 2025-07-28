@@ -70,7 +70,7 @@ const DailyDeals = () => {
       <div className="relative text-start ml-2 text-slate-700 text-[24px] my-2">Your Daily Deals</div>
       <Slider className="w-full" {...settings}>
         {DailyDealsData?.map((item, index) => (
-          <div key={index} onClick={()=>goToFoodCuisines(item.id)} className=" flex flex-col justify-between items-center space-y-1 cursor-pointer">
+          <div key={index} onClick={()=>goToFoodCuisines(item.discount)} className=" flex flex-col justify-between items-center space-y-1 cursor-pointer">
             <div
               className="  h-[150px] md:h-[130px] w-[96%] md:w-[250px] bg-cover bg-center rounded-xl"
               style={{

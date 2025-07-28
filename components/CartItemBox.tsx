@@ -50,15 +50,15 @@ const CartItemBox = () => {
 
   return (
     <div>
-      <div className="border border-slate-400 rounded-xl p-1 md:p-4 mt-10 md:mt-0 mx-4 md:mx-0 w-[368px] md:w-[400px] max-h-[600px] overflow-y-auto">
-       
+      <div className="border border-slate-400 rounded-xl p-1 md:p-4 mt-10 md:mt-0 mx-4 md:mx-0 w-[368px] md:w-[400px] max-h-[600px] overflow-y-auto ">
+       <h4 className="w-full bg-slate-100 py-1 px-2 rounded-xl" >Your Cart </h4>
 
         {/* Scrollable container */}
-        <div className="w-full  pr-2 flex flex-col justify-center">
+        <div className="w-full  pr-2 flex flex-col justify-center ">
           {/* Right side Cart items */}
           <div className="w-full flex flex-col justify-center items-center ">
           {cartProducts && cartProducts.length > 0 ? (
-            <div className="w-full">
+            <div className="w-full ">
               {cartProducts.map((item, i) => (
                 <div
                   key={i}

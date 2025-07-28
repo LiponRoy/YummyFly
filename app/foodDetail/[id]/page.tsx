@@ -255,7 +255,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 </Modal>
                 {/* // End modal of selected food item */}
               </div>
-              <div className="hidden md:flex justify-end items-start col-span-4 mt-16 ">
+              <div className="hidden md:flex justify-end items-start col-span-4 mt-16 sticky top-20 h-fit">
                 {/* //  cart option */}
                 <CartItemBox />
               </div>

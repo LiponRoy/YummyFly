@@ -1,16 +1,20 @@
 import RestaurantCard from "@/components/Card";
-import { DailyDealsData } from "@/Constant";
+import { Restaurants } from "@/Constant";
 import React, { use } from "react";
 
 type FoodProps = {
   params: {
-    id: string;
+    discount: string;
   };
 };
 
-const CuisinesPage = ({ params }: { params: Promise<FoodProps["params"]> }) => {
-  const { id } = use(params);
-  const DailyDeals = DailyDealsData.filter((item) => item.id.toString() === id);
+const CuisinesPage = ({ params }: { params: { id: string } }) => {
+  const discount = params.id; // ✅ use id instead of discount
+  // const DailyDeals = Restaurants?.filter((item) => item.discountPercent.toString ===discount));
+  const DailyDeals = Restaurants?.filter((item)=>item.discountPercent.toString()===discount); 
+
+  console.log("DailyDeals..", DailyDeals);
+  console.log("Full data..", Restaurants);
 
   // console.log("cuisinesData xx :", cuisinesData[0].restaurantsData);
 
@@ -28,7 +32,7 @@ const CuisinesPage = ({ params }: { params: Promise<FoodProps["params"]> }) => {
       {/* // card Grid */}
       <div className="container-custom m-3">
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-          {DailyDeals?.[0]?.restaurants?.map((val, i) => (
+          {DailyDeals?.map((val, i) => (
             <RestaurantCard key={i} restaurant={val} />
           ))}
         </div>
