@@ -3,7 +3,7 @@ import React from "react";
 
 const CartDetailsForMobile = () => {
   return (
-    <div className="mt-16">
+    <div className="w-full flex justify-center items-center mt-16">
       <CartItemBox />
     </div>
   );

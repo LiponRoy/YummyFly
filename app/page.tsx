@@ -1,14 +1,45 @@
 "use client";
 import RestaurantCard from "@/components/Card";
+import { SkeletonLoader } from "@/components/SkeletonLoader";
 import DailyDeals from "@/components/sliders/DailyDeals";
 import FavouriteCuisines from "@/components/sliders/FavouriteCuisines";
 import { allCuisines, Restaurants } from "@/Constant";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [selectedCuisines, setSelectedCuisines] = useState<string[]>([]);
   const [selectedSort, setSelectedSort] = useState("");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Fake loading for 2 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    // Clear timeout if component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+
+
+   const goDown=()=>{
+    const timer = setTimeout(() => {
+      window.scrollBy({
+        top: 400, // scroll down 300px
+        behavior: 'smooth',
+      });
+    }, 500); // 5 seconds delay
+  }
+
+   const goTop=()=>{
+   const timer = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // use 'auto' for instant scroll
+      });
+    }, 500); // 5 seconds
+  }
 
   // Handler for multi-select filters
   const handleCheckboxChange = (
@@ -59,7 +90,9 @@ export default function Home() {
     <>
       {/* Sort By */}
       <div>
-        <label className="block mb-1 font-medium mt-4">Filters:</label>
+    <div className="w-full border-b border-slate-300 mt-1">
+          <label className="block mb-1 font-semibold ">Filters:</label>
+    </div>
         <label className="block mb-1 font-medium mt-2">Sort By:</label>
         <div className="flex flex-col space-y-1">
           {[
@@ -171,7 +204,8 @@ export default function Home() {
           </div>
           <div className="my-2 text-slate-700 text-[24px] text-start ml-2">Restaurants</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {filteredProducts.map((restaurant, i) => (
+            {loading?<SkeletonLoader/>:
+            filteredProducts.map((restaurant, i) => (
               <RestaurantCard key={i} restaurant={restaurant} />
             ))}
           </div>

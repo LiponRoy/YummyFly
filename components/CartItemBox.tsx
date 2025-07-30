@@ -50,7 +50,7 @@ const CartItemBox = () => {
 
   return (
     <div>
-      <div className="border border-slate-400 rounded-xl p-1 md:p-4 mt-10 md:mt-0 mx-4 md:mx-0 w-[368px] md:w-[400px] max-h-[600px] overflow-y-auto ">
+      <div className="border border-slate-400 rounded-xl p-1 md:p-4 mt-10 md:mt-0 mx-4 md:mx-0 min-w-[340px] md:w-[400px] max-h-[600px] overflow-y-auto ">
         <h4 className="w-full bg-slate-100 py-1 px-2 rounded-xl">Your Cart </h4>
 
         {/* Scrollable container */}
@@ -110,8 +110,8 @@ const CartItemBox = () => {
             ) : (
               <div className=" flex flex-col justify-center items-center text-slate-700 space-y-1">
                 <ShoppingBasket className="text-primary-1" size={60} />
-                <span className="text-2xl font-bold">Hungry ?</span>
-                <span className="text-md">Your Cart Is Empty !!!</span>
+                <span className="text-xl md:text-2xl font-bold">Hungry ?</span>
+                <span className="text-sm md:text-md">Your Cart Is Empty !!!</span>
               </div>
             )}
             {/* // Total Count */}

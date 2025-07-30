@@ -209,26 +209,25 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                         <div className="flex justify-center items-center space-x-4">
                           {alreadyInCart && alreadyInCart(selectedFoodItem.id.toString()) && (
                             <div className=" flex justify-center items-center space-x-2">
-                                <span onClick={() => selectedFoodItem && removeItemFromCart(selectedFoodItem)}>
-                                  <ArchiveX />
-                                </span>
-                              <div className="flex justify-between items-center border-2 border-slate-200 px-1 rounded-md w-[80px] text-lg ">
+                               
+                              <div className="flex justify-between items-center border-2 border-slate-200 px-1 rounded-md w-[110px] md:w-[140px] text-lg p-1">
                             <button
-                              className={`font-bold ${
+                              className={`font-bold w-8 h-8  text-white  rounded-full flex justify-center items-center ${
                                 selectedFoodItem.cartQuantity === 1
-                                  ? "text-slate-100 cursor-not-allowed"
-                                  : "cursor-pointer"
+                                  ? "text-slate-100 cursor-not-allowed bg-red-300"
+                                  : "cursor-pointer bg-primary-1"
                               }`}
                               onClick={() => decrementItem(selectedFoodItem)}
                             >
-                              -
+                              <span className="text-[22px]">-</span>
+                             
                             </button>
                             {/* <span className=" mx-2">{item.cartQuantity}</span> */}
                             <span className=" mx-2">
                               {getItemQuantity && getItemQuantity(selectedFoodItem.id.toString())}
                             </span>
                             <button
-                              className="cursor-pointer font-bold"
+                              className="cursor-pointer w-8 h-8  text-white bg-primary-1 rounded-full flex justify-center items-center font-bold"
                               onClick={() => incrementItem(selectedFoodItem)}
                             >
                               +
@@ -255,7 +254,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 </Modal>
                 {/* // End modal of selected food item */}
               </div>
-              <div className="hidden md:flex justify-end items-start col-span-4 mt-16 sticky top-20 h-fit">
+              <div className="hidden md:flex justify-end items-start col-span-4 mt-16 sticky top-20 h-fit m-2">
                 {/* //  cart option */}
                 <CartItemBox />
               </div>
