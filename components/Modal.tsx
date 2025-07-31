@@ -14,10 +14,12 @@ const Modal = ({ isOpen, onClose, header = "Header", children }: Imodal) => {
     <div
       onClick={onClose}
       className="fixed inset-0 bg-black/50 bg-opacity-50 z-50 flex items-start justify-center h-full "
+      data-testid="modal-overlay"
     >
       <div
         onClick={(e) => e.stopPropagation()}
         className="bg-white rounded-lg shadow-lg max-w-xl w-full p-6 relative mx-4 md:mx-1 mt-24"
+        data-testid="modal-box" // 
       >
         <div className="absolute top-1 left-3 ">
           <span className="text-[14px]">{header}</span>

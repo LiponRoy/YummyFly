@@ -15,9 +15,10 @@ const RestaurantCard: React.FC<any> = ({
   };
     return (
         // href={`/user/${user.id}`}
-        <div onClick={()=>goToFoodDetail(restaurant.id)} className="w-full h-[270px] rounded-xl shadow-sm border bg-white  cursor-pointer overflow-hidden">
+        <div data-testid="restaurant-card" onClick={()=>goToFoodDetail(restaurant.id)} className="w-full h-[270px] rounded-xl shadow-sm border bg-white  cursor-pointer overflow-hidden">
             <div className="relative overflow-hidden">
                 <Image
+                    data-testid="restaurant-image"
                     src={restaurant.imageUrl}
                     alt={"noImg"}
                     width={500}
@@ -52,7 +53,7 @@ const RestaurantCard: React.FC<any> = ({
 
             <div className="p-3">
                 <div className="flex justify-start items-center space-x-1">
-                    <span className="font-semibold text-sm text-gray-600">
+                    <span data-testid="restaurant-name" className="font-semibold text-sm text-gray-600">
                         {restaurant.restaurantName}
                     </span>
                     <span className="font-semibold text-sm text-gray-600">
