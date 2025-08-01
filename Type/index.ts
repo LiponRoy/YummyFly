@@ -1,3 +1,4 @@
+import mongoose, {Document } from 'mongoose';
 // export interface IFood {
 //   id: number;
 //   name: string;
@@ -64,8 +65,50 @@ export interface IMoreInfo {
   OpeningHours: string[];
 }
 
-// Restaurant interface
-export interface IRestaurant {
+// // Restaurant interface
+// export interface IRestaurant {
+//   id: number;
+//   restaurantName: string;
+//   location: string;
+//   rating: number;
+//   ratingPersons: number;
+//   deliveryFee: number;
+//   deliveryTime: string;
+//   distance: number;
+//   cuisines: string[];
+//   discountPercent: number;
+//   minimumOrder: number;
+//   isOpen: boolean;
+//   imageUrl: string;
+//   moreInfo: IMoreInfo;
+//   foods: IFood[];
+// }
+
+
+export interface IAvailableDeals {
+  id: number;
+  title: string;
+  description: string;
+  time: string;
+  minOrder: string;
+  Conditions?: string[];
+}
+
+// Mongoose ..........
+export interface IFoodItem {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+  isAvailable: boolean;
+  isVeg: boolean;
+  calories: number;
+  imageUrl: string;
+  cartQuantity: number;
+}
+
+export interface IRestaurant extends Document {
   id: number;
   restaurantName: string;
   location: string;
@@ -79,16 +122,5 @@ export interface IRestaurant {
   minimumOrder: number;
   isOpen: boolean;
   imageUrl: string;
-  moreInfo: IMoreInfo;
-  foods: IFood[];
-}
-
-
-export interface IAvailableDeals {
-  id: number;
-  title: string;
-  description: string;
-  time: string;
-  minOrder: string;
-  Conditions?: string[];
+  foods: IFoodItem[];
 }

@@ -1,29 +1,20 @@
-// lib/mongodb.ts
-import mongoose, { ConnectOptions } from 'mongoose';
+import mongoose from 'mongoose';
 
-const MONGODB_URI: string = process.env.MONGODB_URI || '';
+const MONGODB_URI = process.env.MONGODB_URI || 'your-mongodb-url-here';
 
-if (!MONGODB_URI) {
-  throw new Error(' MONGODB_URI is not defined in environment variables');
-}
+if (!MONGODB_URI) throw new Error('Please define MONGODB_URI');
 
-// Track connection state
-let isConnected: boolean = false;
+let cached = (global as any).mongoose || { conn: null, promise: null };
 
-export const connectToDatabase = async (): Promise<void> => {
-  if (isConnected) return;
+export async function connectDB() {
+  if (cached.conn) return cached.conn;
 
-  try {
-    const options: ConnectOptions = {
-      dbName: 'bd-foody-zone',
-    };
-
-    await mongoose.connect(MONGODB_URI, options);
-    isConnected = true;
-
-    console.log(' MongoDB connected');
-  } catch (error) {
-    console.error(' MongoDB connection error:', (error as Error).message);
-    throw error;
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(MONGODB_URI).then((mongoose) => {
+      return mongoose;
+    });
   }
-};
+
+  cached.conn = await cached.promise;
+  return cached.conn;
+}
