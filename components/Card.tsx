@@ -11,11 +11,12 @@ const RestaurantCard: React.FC<any> = ({
     const route =useRouter();
 
     const goToFoodDetail = (id:string) => {
+    // route.push(`/foodDetailCopy/${id}`);
     route.push(`/foodDetail/${id}`);
   };
     return (
         // href={`/user/${user.id}`}
-        <div data-testid="restaurant-card" onClick={()=>goToFoodDetail(restaurant.id)} className="w-full h-[270px] rounded-xl shadow-sm border bg-white  cursor-pointer overflow-hidden">
+        <div data-testid="restaurant-card" onClick={()=>goToFoodDetail(restaurant._id)} className="w-full h-[270px] rounded-xl shadow-sm border bg-white  cursor-pointer overflow-hidden">
             <div className="relative overflow-hidden">
                 <Image
                     data-testid="restaurant-image"

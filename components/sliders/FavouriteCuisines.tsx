@@ -19,8 +19,8 @@ const FavouriteCuisines = () => {
 		sliderRef.current?.slickPrev();
 	};
   
-  const goToFoodCuisines = (id:number) => {
-    route.push(`/cuisines/${id}`);
+  const goToFoodCuisines = (CuisinesName:string) => {
+    route.push(`/cuisines/${CuisinesName}`);
   };
 
 const settings = {
@@ -59,7 +59,7 @@ const settings = {
         <Slider {...settings} ref={sliderRef}>
         {Cuisines?.map((item, index) => (
           <div
-          onClick={()=>goToFoodCuisines(item.id)}
+          onClick={()=>goToFoodCuisines(item.CuisinesName)}
             key={index}
             className=" flex flex-col justify-center items-center w-full"
           >

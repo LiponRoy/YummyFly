@@ -1,4 +1,3 @@
-// components/HeroRightSlider.tsx
 "use client";
 import { DailyDealsData } from "@/Constant";
 import { useRouter } from "next/navigation";
@@ -52,16 +51,6 @@ const DailyDeals = () => {
           // centerPadding: "5",
         },
       },
-      // {
-      //   breakpoint: 400,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     centerMode: false,
-      //     // variableWidth: true,
-      //     dots: false,
-      //     // centerPadding: "2",
-      //   },
-      // },
     ],
   };
 

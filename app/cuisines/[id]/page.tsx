@@ -1,6 +1,8 @@
+"use client"
 import RestaurantCard from "@/components/Card";
-import React, { use } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Cuisines } from "@/Constant";
+import { getRestaurants } from "@/lib/getData";
 
 type FoodProps = {
   params: {
@@ -10,9 +12,21 @@ type FoodProps = {
 
 const CuisinesPage = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { id } = use(params);
-  const cuisinesData = Cuisines.filter((item) => item.id.toString() === id);
+  const [loading, setLoading] = useState(true);
+  const [restaurants, setRestaurants] = useState<any[]>([]);
 
-  console.log("cuisinesData xx :", cuisinesData[0].restaurantsData);
+    useEffect(() => {
+    const fetchRestaurants = async () => {
+      const data = await getRestaurants();
+      setRestaurants(data);
+         setLoading(false);
+    };
+    fetchRestaurants();
+  }, []);
+
+  const cuisinesData = restaurants.filter((restaurant) =>
+  restaurant.cuisines.includes(id)
+);
 
   return (
     <div className="mt-14 mb-1 ">
@@ -32,7 +46,7 @@ const CuisinesPage = ({ params }: { params: Promise<FoodProps["params"]> }) => {
       {/* // card Grid */}
       <div className="container-custom m-3">
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-          {cuisinesData?.[0]?.restaurantsData?.map((val, i) => (
+          {cuisinesData?.map((val, i) => (
             <RestaurantCard key={i} restaurant={val} />
           ))}
         </div>

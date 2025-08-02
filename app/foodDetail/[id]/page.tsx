@@ -4,10 +4,10 @@ import AvailableDeals from "@/components/AvailableDeals";
 import CartItemBox from "@/components/CartItemBox";
 import FoodItemCard from "@/components/FoodItemCard";
 import Modal from "@/components/Modal";
-import { Restaurants } from "@/Constant";
+import { getRestaurantById } from "@/lib/getData";
 import { IAvailableDeals, IFood } from "@/Type";
 
-import { ArchiveX, Bike, ChefHat, ChevronDown, MapPin, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
+import { Bike, ChefHat, ChevronDown, MapPin, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
 import Image from "next/image";
 import React, { use, useEffect, useState } from "react";
 
@@ -18,8 +18,9 @@ type FoodProps = {
 };
 const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { id } = use(params);
+    const [product, setProduct] = useState<any>();
 
-  const { addItemToCart, removeItemFromCart, cartProducts, incrementCart, decrementCart } = useCartStore();
+  const { addItemToCart, incrementCart, decrementCart } = useCartStore();
   const getItemQuantity = useCartStore((state) => state.getItemQuantity);
   const alreadyInCart = useCartStore((state) => state.alreadyInCart);
 
@@ -27,6 +28,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const [openingHour, setOpeningHour] = useState<Boolean>(false);
   const [openFoodItemModal, setOpenFoodItemModal] = useState<Boolean>(false);
   const [selectedFoodItem, setSelectedFoodItem] = useState<IFood>();
+
 
   const clickPerFoodItem = (val: IFood) => {
     setSelectedFoodItem(val);
@@ -41,7 +43,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const [openAvailableDealsModal, setOpenAvailableDealsModal] = useState<Boolean>(false);
   const [selectedAvailableDeals, setSelectedAvailableDeals] = useState<IAvailableDeals>();
 
-  const product = Restaurants.find((item) => item.id.toString() === id);
+  // const product = Restaurants.find((item) => item.id.toString() === id);
 
   const incrementItem = (item: IFood) => {
     incrementCart(item);
@@ -50,6 +52,18 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const decrementItem = (item: IFood) => {
     decrementCart(item);
   };
+
+    useEffect(() => {
+    const fetchRestaurant = async () => {
+      // const res = await fetch(`/api/restaurants/${id}`);
+      // const data = await res.json();
+      const data = await getRestaurantById(id);
+      setProduct(data);
+    };
+    if (id) {
+      fetchRestaurant();
+    }
+  }, [id]);
 
   if (!product) {
     return <div className="p-6 text-red-500 font-bold">Product not found for ID: {id}</div>;
@@ -99,7 +113,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                   <div className="flex justify-center items-center space-x-1 text-[16px]">
                     <ChefHat size={16} />
                     <span className="mr-2 font-semibold">Cuisines :</span>
-                    {product.cuisines.map((val, i) => (
+                    {product?.cuisines.map((val:string, i:number) => (
                       <div key={i} className="flex justify-center items-center ">
                         {val},
                       </div>
@@ -154,7 +168,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                           />
                         </div>
                         {openingHour &&
-                          product?.moreInfo?.OpeningHours.map((val, i) => (
+                          product?.moreInfo?.OpeningHours.map((val:string, i:number) => (
                             <div key={i} className="">
                               {val}
                             </div>
@@ -179,7 +193,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 {/* // All menu based on this restaurant */}
                 <h4 className=" text-start text-[20px] md:text-[24px] font-medium mb-2">All Food Menu :</h4>
                 <div className="w-full md:w-[97%] grid grid-cols-1 md:grid-cols-2 gap-4 ">
-                  {product?.foods.map((val: IFood, i) => (
+                  {product?.foods.map((val: IFood, i:number) => (
                     <FoodItemCard key={i} val={val} clickPerFoodItem={clickPerFoodItem} />
                   ))}
                 </div>

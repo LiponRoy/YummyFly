@@ -3,23 +3,24 @@ import RestaurantCard from "@/components/Card";
 import { SkeletonLoader } from "@/components/SkeletonLoader";
 import DailyDeals from "@/components/sliders/DailyDeals";
 import FavouriteCuisines from "@/components/sliders/FavouriteCuisines";
-import { allCuisines, Restaurants } from "@/Constant";
-import Image from "next/image";
+import { allCuisines } from "@/Constant";
+import { getRestaurants } from "@/lib/getData";
+import { IFood } from "@/Type";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [selectedCuisines, setSelectedCuisines] = useState<string[]>([]);
   const [selectedSort, setSelectedSort] = useState("");
   const [loading, setLoading] = useState(true);
+  const [restaurants, setRestaurants] = useState<any>();
 
-  useEffect(() => {
-    // Fake loading for 2 seconds
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    // Clear timeout if component unmounts
-    return () => clearTimeout(timer);
+    useEffect(() => {
+    const fetchRestaurants = async () => {
+      const data = await getRestaurants();
+      setRestaurants(data);
+         setLoading(false);
+    };
+    fetchRestaurants();
   }, []);
 
 
@@ -55,15 +56,15 @@ export default function Home() {
   };
 
   // Filtering
-  const filteredProducts = Restaurants.filter((product) => {
+  const filteredProducts = restaurants?.filter((product:any) => {
     // Filter by cuisines: show product if any cuisine matches any selected cuisine
     const cuisineMatch =
-      selectedCuisines.length === 0 ? true : product.cuisines.some((c) => selectedCuisines.includes(c));
+      selectedCuisines.length === 0 ? true : product.cuisines.some((c:string) => selectedCuisines.includes(c));
 
     return cuisineMatch;
   })
     .slice()
-    .sort((a, b) => {
+    .sort((a:any, b:any) => {
       if (!selectedSort) return 0;
 
       if (selectedSort === "fastestDelivery") {
@@ -205,7 +206,7 @@ export default function Home() {
           <div className="my-2 text-slate-700 text-[24px] text-start ml-2">Restaurants</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {loading?<SkeletonLoader/>:
-            filteredProducts.map((restaurant, i) => (
+            filteredProducts.map((restaurant:IFood, i:number) => (
               <RestaurantCard key={i} restaurant={restaurant} />
             ))}
           </div>
