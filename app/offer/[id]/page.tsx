@@ -1,26 +1,18 @@
 'use client';
 
 import RestaurantCard from "@/components/Card";
-import { getRestaurants } from "@/lib/getData";
+import { useRestaurant } from "@/hooks/useRestaurant";
+import { IRestaurant } from "@/Type";
 import { useEffect, useState, use } from "react";
 
 const CuisinesPage = ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = use(params); // unwrap the params Promise
 
-  const [loading, setLoading] = useState(true);
-  const [restaurants, setRestaurants] = useState<any[]>([]);
-
-    useEffect(() => {
-    const fetchRestaurants = async () => {
-      const data = await getRestaurants();
-      setRestaurants(data);
-         setLoading(false);
-    };
-    fetchRestaurants();
-  }, []);
+  // fetch data using SWR 
+  const { restaurants, isLoading, isError } = useRestaurant();
 
   const DailyDeals = restaurants?.filter(
-    (item) => item.discountPercent.toString() === id
+    (item:IRestaurant) => item.discountPercent.toString() === id
   );
 
   return (
@@ -35,7 +27,7 @@ const CuisinesPage = ({ params }: { params: Promise<{ id: string }> }) => {
 
       <div className="container-custom m-3">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-          {DailyDeals?.map((val, i) => (
+          {DailyDeals?.map((val:IRestaurant, i:number) => (
             <RestaurantCard key={i} restaurant={val} />
           ))}
         </div>

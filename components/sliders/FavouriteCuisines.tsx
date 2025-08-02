@@ -51,7 +51,7 @@ const settings = {
   ],
 };
   return (
-    <div className="w-full   rounded-md text-sm text-center mt-5 flex flex-col justify-center items-center">
+    <div className="w-full   rounded-md text-sm text-center flex flex-col justify-center items-center mt-8">
         <div className="relative  text-slate-700 text-[24px] text-start ">
                 Favorite Cuisines
             </div>

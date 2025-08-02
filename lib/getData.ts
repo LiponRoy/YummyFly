@@ -1,25 +1,32 @@
-const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+// const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:5000/api/v1";
 
-export async function getRestaurants() {
-  const res = await fetch(`${baseUrl}/all`, {
-    cache: "no-store",
-  });
+// async function fetchWithTimeout(url: string, options: RequestInit = {}, timeout = 8000) {
+//   return Promise.race([
+//     fetch(url, options),
+//     new Promise<Response>((_, reject) =>
+//       setTimeout(() => reject(new Error("Request timed out")), timeout)
+//     ),
+//   ]) as Promise<Response>;
+// }
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch products");
-  }
+// export async function getRestaurants() {
+//   const res = await fetchWithTimeout(`${baseUrl}/all`, { cache: "no-store" });
 
-  return res.json();
-}
+//   if (!res.ok) {
+//     const errorText = await res.text();
+//     throw new Error(`Failed to fetch restaurants: ${res.status} ${res.statusText} - ${errorText}`);
+//   }
 
-export async function getRestaurantById(id: string) {
-  const res = await fetch(`${baseUrl}/restaurant/${id}`, {
-    cache: "no-store",
-  });
+//   return res.json();
+// }
 
-  if (!res.ok) {
-    throw new Error(`Failed to fetch product with id ${id}`);
-  }
+// export async function getRestaurantById(id: string) {
+//   const res = await fetchWithTimeout(`${baseUrl}/restaurant/${id}`, { cache: "no-store" });
 
-  return res.json();
-}
+//   if (!res.ok) {
+//     const errorText = await res.text();
+//     throw new Error(`Failed to fetch restaurant ${id}: ${res.status} ${res.statusText} - ${errorText}`);
+//   }
+
+//   return res.json();
+// }

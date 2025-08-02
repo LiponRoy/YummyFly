@@ -2,7 +2,8 @@
 import RestaurantCard from "@/components/Card";
 import React, { use, useEffect, useState } from "react";
 import { Cuisines } from "@/Constant";
-import { getRestaurants } from "@/lib/getData";
+import { useRestaurant } from "@/hooks/useRestaurant";
+import { IRestaurant } from "@/Type";
 
 type FoodProps = {
   params: {
@@ -12,20 +13,12 @@ type FoodProps = {
 
 const CuisinesPage = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { id } = use(params);
-  const [loading, setLoading] = useState(true);
-  const [restaurants, setRestaurants] = useState<any[]>([]);
 
-    useEffect(() => {
-    const fetchRestaurants = async () => {
-      const data = await getRestaurants();
-      setRestaurants(data);
-         setLoading(false);
-    };
-    fetchRestaurants();
-  }, []);
+    // fetch data using SWR 
+  const { restaurants, isLoading, isError } = useRestaurant();
 
-  const cuisinesData = restaurants.filter((restaurant) =>
-  restaurant.cuisines.includes(id)
+  const cuisinesData = restaurants.filter((data:IRestaurant) =>
+  data.cuisines.includes(id)
 );
 
   return (
@@ -46,7 +39,7 @@ const CuisinesPage = ({ params }: { params: Promise<FoodProps["params"]> }) => {
       {/* // card Grid */}
       <div className="container-custom m-3">
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-          {cuisinesData?.map((val, i) => (
+          {cuisinesData?.map((val:IRestaurant, i:number) => (
             <RestaurantCard key={i} restaurant={val} />
           ))}
         </div>

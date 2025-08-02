@@ -4,7 +4,7 @@ import AvailableDeals from "@/components/AvailableDeals";
 import CartItemBox from "@/components/CartItemBox";
 import FoodItemCard from "@/components/FoodItemCard";
 import Modal from "@/components/Modal";
-import { getRestaurantById } from "@/lib/getData";
+import { useRestaurantById } from "@/hooks/useRestaurant";
 import { IAvailableDeals, IFood } from "@/Type";
 
 import { Bike, ChefHat, ChevronDown, MapPin, MapPinPlusInside, OctagonAlert, Star } from "lucide-react";
@@ -18,7 +18,6 @@ type FoodProps = {
 };
 const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { id } = use(params);
-    const [product, setProduct] = useState<any>();
 
   const { addItemToCart, incrementCart, decrementCart } = useCartStore();
   const getItemQuantity = useCartStore((state) => state.getItemQuantity);
@@ -53,20 +52,12 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
     decrementCart(item);
   };
 
-    useEffect(() => {
-    const fetchRestaurant = async () => {
-      // const res = await fetch(`/api/restaurants/${id}`);
-      // const data = await res.json();
-      const data = await getRestaurantById(id);
-      setProduct(data);
-    };
-    if (id) {
-      fetchRestaurant();
-    }
-  }, [id]);
+   // fetch data using SWR 
+  const { restaurant, isLoading, isError } = useRestaurantById(id as string);
 
-  if (!product) {
-    return <div className="p-6 text-red-500 font-bold">Product not found for ID: {id}</div>;
+
+  if (!restaurant) {
+    return <div className="p-6 text-red-500 font-bold">restaurant not found for ID: {id}</div>;
   }
 
   return (
@@ -78,7 +69,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
             <div className="w-full md:w-[55%] grid grid-cols-1 md:grid-cols-8 md:space-x-2 ">
               <div className="md:col-span-2 ">
                 <Image
-                  src={product.imageUrl}
+                  src={restaurant.imageUrl}
                   alt={"food"}
                   width={500}
                   height={500}
@@ -89,31 +80,31 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 <div className="flex flex-col justify-start items-start space-y-1 ml-2">
                   <div className="flex flex-col justify-center items-start mt-3 md:mt-0">
                     <span className="text-[28px] md:text-[32px] font-bold text-slate-800">
-                      {product.restaurantName}
+                      {restaurant.restaurantName}
                     </span>
                   <div className="flex justify-center items-center space-x-1 text-[16px]">
                     <MapPin size={16} />
                     <span className="mr-2 font-semibold">Location :</span>
-                    {product.location} 
+                    {restaurant.location} 
                   </div>
                   </div>
                   <div className="flex justify-center items-center space-x-1 text-[16px]">
                     <Star size={14} className="mr-1 text-red-600" />
                     <span>
                       <span className="mr-2 font-semibold ">Rating :</span>
-                      {product.rating}
-                      <span className="ml-2">({product.ratingPersons}+)</span>
+                      {restaurant.rating}
+                      <span className="ml-2">({restaurant.ratingPersons}+)</span>
                     </span>
                   </div>
                   <div className="flex justify-center items-center space-x-1 text-[16px]">
                     <Bike size={16} />
                     <span className="mr-2 font-semibold">Delivery Fee :</span>
-                    {product.deliveryFee} <span className="ml-1">Taka</span>
+                    {restaurant.deliveryFee} <span className="ml-1">Taka</span>
                   </div>
                   <div className="flex justify-center items-center space-x-1 text-[16px]">
                     <ChefHat size={16} />
                     <span className="mr-2 font-semibold">Cuisines :</span>
-                    {product?.cuisines.map((val:string, i:number) => (
+                    {restaurant?.cuisines.map((val:string, i:number) => (
                       <div key={i} className="flex justify-center items-center ">
                         {val},
                       </div>
@@ -134,7 +125,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 <Modal isOpen={openModal} onClose={() => setOpenModal(false)} header="Restaurants More Info">
                   <div className="">
                     <Image
-                      src={product?.moreInfo?.imageUrl}
+                      src={restaurant?.moreInfo?.imageUrl}
                       alt={"food"}
                       width={500}
                       height={500}
@@ -142,19 +133,19 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                     />
                     <div className=" ">
                       <div className="flex flex-col justify-start items-start space-x-1 my-2">
-                        <span className="text-md font-semibold">{product.restaurantName} :</span>
+                        <span className="text-md font-semibold">{restaurant.restaurantName} :</span>
                         <div className="flex justify-center items-center space-x-1 mt-1">
                           <MapPinPlusInside size={14} className="text-red-400" />
-                          <span>{product?.moreInfo?.fullLocation}</span>
+                          <span>{restaurant?.moreInfo?.fullLocation}</span>
                         </div>
                       </div>
                       <div className="flex flex-col justify-start items-start">
                         <span className="text-md font-semibold">Delivery Fee :</span>
-                        <span>{product?.moreInfo?.aboutDeliveryFee}</span>
+                        <span>{restaurant?.moreInfo?.aboutDeliveryFee}</span>
                       </div>
                       <div className="flex flex-col justify-start items-start">
                         <span className="text-md font-semibold">Minimum Order</span>
-                        <span>{product?.moreInfo?.aboutMinimumOrder}</span>
+                        <span>{restaurant?.moreInfo?.aboutMinimumOrder}</span>
                       </div>
                       <div className="flex flex-col justify-start items-start mt-4">
                         <div
@@ -168,7 +159,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                           />
                         </div>
                         {openingHour &&
-                          product?.moreInfo?.OpeningHours.map((val:string, i:number) => (
+                          restaurant?.moreInfo?.OpeningHours.map((val:string, i:number) => (
                             <div key={i} className="">
                               {val}
                             </div>
@@ -193,7 +184,7 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
                 {/* // All menu based on this restaurant */}
                 <h4 className=" text-start text-[20px] md:text-[24px] font-medium mb-2">All Food Menu :</h4>
                 <div className="w-full md:w-[97%] grid grid-cols-1 md:grid-cols-2 gap-4 ">
-                  {product?.foods.map((val: IFood, i:number) => (
+                  {restaurant?.foods.map((val: IFood, i:number) => (
                     <FoodItemCard key={i} val={val} clickPerFoodItem={clickPerFoodItem} />
                   ))}
                 </div>

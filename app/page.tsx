@@ -4,24 +4,16 @@ import { SkeletonLoader } from "@/components/SkeletonLoader";
 import DailyDeals from "@/components/sliders/DailyDeals";
 import FavouriteCuisines from "@/components/sliders/FavouriteCuisines";
 import { allCuisines } from "@/Constant";
-import { getRestaurants } from "@/lib/getData";
+import { useRestaurant } from "@/hooks/useRestaurant";
 import { IFood } from "@/Type";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [selectedCuisines, setSelectedCuisines] = useState<string[]>([]);
   const [selectedSort, setSelectedSort] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [restaurants, setRestaurants] = useState<any>();
 
-    useEffect(() => {
-    const fetchRestaurants = async () => {
-      const data = await getRestaurants();
-      setRestaurants(data);
-         setLoading(false);
-    };
-    fetchRestaurants();
-  }, []);
+  // fetch data using SWR 
+  const { restaurants, isLoading, isError } = useRestaurant();
 
 
    const goDown=()=>{
@@ -205,7 +197,7 @@ export default function Home() {
           </div>
           <div className="my-2 text-slate-700 text-[24px] text-start ml-2">Restaurants</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {loading?<SkeletonLoader/>:
+            {isLoading?<SkeletonLoader/>:
             filteredProducts.map((restaurant:IFood, i:number) => (
               <RestaurantCard key={i} restaurant={restaurant} />
             ))}
