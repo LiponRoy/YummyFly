@@ -9,7 +9,7 @@ export function useRestaurant() {
   );
 
   return {
-    restaurants: data,
+    restaurants: data?.data,
     isLoading,
     isError: error,
   };
@@ -24,7 +24,7 @@ export function useRestaurantById(id?: string) {
   );
 
   return {
-    restaurant: data,
+    restaurant: data?.data,
     isLoading,
     isError: error,
   };

@@ -1,6 +1,6 @@
 "use client";
 import RestaurantCard from "@/components/Card";
-import { SkeletonLoader } from "@/components/SkeletonLoader";
+import { HorizontalSliderSkeleton, SkeletonLoader } from "@/components/SkeletonLoader";
 import DailyDeals from "@/components/sliders/DailyDeals";
 import FavouriteCuisines from "@/components/sliders/FavouriteCuisines";
 import { allCuisines } from "@/Constant";
@@ -80,14 +80,14 @@ export default function Home() {
   const [sidebarToggle, setSidebarToggle] = useState(false);
 
  const SidebarContent = () => (
-    <>
+    <> 
       {/* Sort By */}
       <div>
     <div className="w-full border-b border-slate-300 mt-1">
           <label className="block mb-1 font-semibold ">Filters:</label>
     </div>
         <label className="block mb-1 font-medium mt-2">Sort By:</label>
-        <div className="flex flex-col space-y-1">
+        {isLoading?<div className="h-40 w-full bg-slate-200"></div>:<div className="flex flex-col space-y-1">
           {[
             { label: "None", value: "" },
             { label: "Fastest Delivery", value: "fastestDelivery" },
@@ -106,13 +106,13 @@ export default function Home() {
               <span>{label}</span>
             </label>
           ))}
-        </div>
+        </div>}
       </div>
 
       {/* Cuisine Filter */}
       <div className="mt-4">
         <label className="block mb-1 font-medium mt-2">Cuisine:</label>
-        {allCuisines.map((cuisine) => (
+       {isLoading?<div className="h-40 w-full bg-slate-200"></div>:<div> {allCuisines.map((cuisine) => (
           <label key={cuisine} className="flex items-center space-x-1 ">
             <input
               type="checkbox"
@@ -122,7 +122,7 @@ export default function Home() {
             />
             <span>{cuisine}</span>
           </label>
-        ))}
+        ))}</div>}
       </div>
 
       {/* Reset Button */}
@@ -190,15 +190,16 @@ export default function Home() {
 
           {/* Main Section Content */}
           <div className="w-full my-2">
-            <DailyDeals />
+            {isLoading?<HorizontalSliderSkeleton count={6} title="Your Daily Deals"/>: <DailyDeals />}
+           
           </div>
           <div className="w-full my-4">
-            <FavouriteCuisines />
+            {isLoading?<HorizontalSliderSkeleton count={6} title="Favorite Cuisines"/>:<FavouriteCuisines />}
           </div>
           <div className="my-2 text-slate-700 text-[24px] text-start ml-2">Restaurants</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {isLoading?<SkeletonLoader/>:
-            filteredProducts.map((restaurant:IFood, i:number) => (
+            filteredProducts?.map((restaurant:IFood, i:number) => (
               <RestaurantCard key={i} restaurant={restaurant} />
             ))}
           </div>

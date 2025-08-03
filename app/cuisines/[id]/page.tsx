@@ -17,8 +17,8 @@ const CuisinesPage = ({ params }: { params: Promise<FoodProps["params"]> }) => {
     // fetch data using SWR 
   const { restaurants, isLoading, isError } = useRestaurant();
 
-  const cuisinesData = restaurants.filter((data:IRestaurant) =>
-  data.cuisines.includes(id)
+  const cuisinesData = restaurants?.filter((data:IRestaurant) =>
+  data?.cuisines?.includes(id)
 );
 
   return (
