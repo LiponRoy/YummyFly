@@ -16,7 +16,7 @@ describe("RestaurantCard", () => {
   });
 
   const restaurantMock = {
-    id: "123",
+    _id:"123",
     imageUrl: "/some-image.jpg",
     discountPercent: 20,
     deliveryTime: "30 mins",
