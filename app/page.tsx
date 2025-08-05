@@ -145,7 +145,7 @@ export default function Home() {
   );
 
   return (
-    <div className="container-custom text-slate-600 mt-14">
+    <div className="container-custom text-slate-600 mt-16">
       <div className="grid grid-cols-12 gap-x-4">
         {/* Desktop Sidebar */}
        <aside className="hidden md:block col-span-2 bg-slate-100 text-slate-800 p-4 border border-slate-300 rounded-md mt-2 sticky top-20 h-fit">
