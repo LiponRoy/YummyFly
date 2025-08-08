@@ -83,11 +83,11 @@ const settings = {
       {/*Arrow btn For desktop */} 
 				<CircleArrowLeft
 					onClick={handlePrev}
-					className="prev-btn hidden md:block absolute top-0 bottom-0 -left-8 my-auto  z-50 w-[40px] h-[40px] bg-orange-deep p-1 rounded-full text-primary-2 cursor-pointer"
+					className="prev-btn hidden md:block absolute top-0 bottom-0 -left-8 my-auto  z-30 w-[40px] h-[40px] bg-orange-deep p-1 rounded-full text-primary-2 cursor-pointer"
 				/>
 				<CircleArrowRight
 					onClick={handleNext}
-					className="prev-btn hidden md:block absolute top-0 bottom-0 -right-5 my-auto z-50 w-[40px] h-[40px] bg-orange-deep p-1 rounded-full text-primary-2 cursor-pointer"
+					className="prev-btn hidden md:block absolute top-0 bottom-0 -right-5 my-auto z-30 w-[40px] h-[40px] bg-orange-deep p-1 rounded-full text-primary-2 cursor-pointer"
 				/>
       </div>
     </div>
