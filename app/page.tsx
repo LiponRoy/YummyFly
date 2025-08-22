@@ -6,33 +6,26 @@ import FavouriteCuisines from "@/components/sliders/FavouriteCuisines";
 import { allCuisines } from "@/Constant";
 import { useRestaurant } from "@/hooks/useRestaurant";
 import { IFood } from "@/Type";
-import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
+import {useRef, useState } from "react";
 
 export default function Home() {
   const [selectedCuisines, setSelectedCuisines] = useState<string[]>([]);
   const [selectedSort, setSelectedSort] = useState("");
+  const restaurantsRef = useRef<HTMLDivElement | null>(null);
+  const topRef = useRef<HTMLDivElement | null>(null);
 
   // fetch data using SWR 
   const { restaurants, isLoading, isError } = useRestaurant();
 
+  // go to food cards when click on filters
+    const handleRestaurantsScroll = () => {
+    restaurantsRef.current?.scrollIntoView({ behavior: "smooth",block: "start" });
+  };
 
-   const goDown=()=>{
-    const timer = setTimeout(() => {
-      window.scrollBy({
-        top: 400, // scroll down 300px
-        behavior: 'smooth',
-      });
-    }, 500); // 5 seconds delay
-  }
-
-   const goTop=()=>{
-   const timer = setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth', // use 'auto' for instant scroll
-      });
-    }, 500); // 5 seconds
-  }
+  const handleTopScroll = () => {
+  topRef.current?.scrollIntoView({ behavior: "smooth"});
+  };
 
   // Handler for multi-select filters
   const handleCheckboxChange = (
@@ -45,6 +38,8 @@ export default function Home() {
     } else {
       setSelectedList([...selectedList, value]);
     }
+
+    handleRestaurantsScroll();
   };
 
   // Filtering
@@ -52,7 +47,7 @@ export default function Home() {
     // Filter by cuisines: show product if any cuisine matches any selected cuisine
     const cuisineMatch =
       selectedCuisines.length === 0 ? true : product.cuisines.some((c:string) => selectedCuisines.includes(c));
-
+// 
     return cuisineMatch;
   })
     .slice()
@@ -60,16 +55,23 @@ export default function Home() {
       if (!selectedSort) return 0;
 
       if (selectedSort === "fastestDelivery") {
+         handleRestaurantsScroll();
         return a.distance - b.distance;
       }
       if (selectedSort === "distance") {
+         handleRestaurantsScroll();
         return a.distance - b.distance;
       }
       if (selectedSort === "topRated") {
+         handleRestaurantsScroll();
         return b.rating - a.rating;
       }
+
+     
       return 0;
     });
+
+    console.log("filteredProducts", filteredProducts)
 
   const resetFilter = () => {
     setSelectedCuisines([]);
@@ -91,8 +93,9 @@ export default function Home() {
           {[
             { label: "None", value: "" },
             { label: "Fastest Delivery", value: "fastestDelivery" },
+             { label: "Top Rated", value: "topRated" },
             { label: "Distance", value: "distance" },
-            { label: "Top Rated", value: "topRated" },
+           
           ].map(({ label, value }) => (
             <label key={value} className="flex items-center space-x-1">
               <input
@@ -145,7 +148,12 @@ export default function Home() {
   );
 
   return (
-    <div className="container-custom text-slate-600 mt-16">
+    <div className="container-custom relative text-slate-600 mt-16">
+
+      <div onClick={handleTopScroll} className="fixed bottom-10 right-4 w-12 h-12 rounded-full bg-slate-200 hover:bg-slate-300 z-50 flex justify-center items-center cursor-pointer">
+        <ArrowUp />
+      </div>
+      
       <div className="grid grid-cols-12 gap-x-4">
         {/* Desktop Sidebar */}
        <aside className="hidden md:block col-span-2 bg-slate-100 text-slate-800 p-4 border border-slate-300 rounded-md mt-2 sticky top-20 h-fit">
@@ -189,15 +197,15 @@ export default function Home() {
           )}
 
           {/* Main Section Content */}
-          <div className="w-full my-2">
+          <div ref={topRef}  className="w-full scroll-mt-16 my-2">
             {isLoading?<HorizontalSliderSkeleton count={6} title="Your Daily Deals"/>: <DailyDeals />}
            
           </div>
           <div className="w-full my-4">
             {isLoading?<HorizontalSliderSkeleton count={6} title="Favorite Cuisines"/>:<FavouriteCuisines />}
           </div>
-          <div className="my-2 text-slate-700 text-[24px] text-start ml-2">Restaurants</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div ref={restaurantsRef} className="scroll-mt-16 my-2 text-slate-700 text-[24px] text-start ml-2">Restaurants</div>
+          <div  className="relative grid grid-cols-1 md:grid-cols-3 gap-4">
             {isLoading?<SkeletonLoader/>:
             filteredProducts?.map((restaurant:IFood, i:number) => (
               <RestaurantCard key={i} restaurant={restaurant} />
