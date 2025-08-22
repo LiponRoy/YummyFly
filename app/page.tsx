@@ -1,6 +1,6 @@
 "use client";
 import RestaurantCard from "@/components/Card";
-import { HorizontalSliderSkeleton, SkeletonLoader } from "@/components/SkeletonLoader";
+import { HorizontalSliderSkeleton, SkeletonLoader } from "@/components/skeletonLoader/SkeletonLoader";
 import DailyDeals from "@/components/sliders/DailyDeals";
 import FavouriteCuisines from "@/components/sliders/FavouriteCuisines";
 import { allCuisines } from "@/Constant";

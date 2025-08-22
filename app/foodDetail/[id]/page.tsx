@@ -4,6 +4,7 @@ import AvailableDeals from "@/components/AvailableDeals";
 import CartItemBox from "@/components/CartItemBox";
 import FoodItemCard from "@/components/FoodItemCard";
 import Modal from "@/components/Modal";
+import { SkeletonFoodDetails } from "@/components/skeletonLoader/SkeletonFoodDetails";
 import { useRestaurantById } from "@/hooks/useRestaurant";
 import { IAvailableDeals, IFood } from "@/Type";
 
@@ -18,6 +19,8 @@ type FoodProps = {
 };
 const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { id } = use(params);
+  const [dd, setdd] = useState<Boolean>(true);
+
 
   const { addItemToCart, incrementCart, decrementCart } = useCartStore();
   const getItemQuantity = useCartStore((state) => state.getItemQuantity);
@@ -56,9 +59,21 @@ const FoodDetail = ({ params }: { params: Promise<FoodProps["params"]> }) => {
   const { restaurant, isLoading, isError } = useRestaurantById(id as string);
 
 
-  if (!restaurant) {
-    return <div className="p-6 text-red-500 font-bold">restaurant not found for ID: {id}</div>;
-  }
+if (isLoading) {
+  return (
+    <div className="p-6">
+      <SkeletonFoodDetails/>
+    </div>
+  );
+}
+
+if (isError) {
+  return <div className="p-6 text-red-500 font-bold">Failed to load restaurant data</div>;
+}
+
+if (!restaurant) {
+  return <div className="p-6 text-red-500 font-bold">Restaurant not found for ID: {id}</div>;
+}
 
   return (
     <>
