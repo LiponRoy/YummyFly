@@ -66,13 +66,16 @@ const CartItemBox = () => {
                   >
                     <div className="w-full flex justify-between items-center ">
                       <div className="flex justify-center items-center">
-                        <Image
+                        {
+                          item.imageUrl && <Image
                           src={item.imageUrl}
                           width={200}
                           height={300}
                           alt="no pic"
                           className="w-12 h-12 rounded-md m-1"
                         />
+                        }
+                        
                         <div className="flex flex-col justify-start items-start">
                           <span className="text-[12px]">{item.name}</span>
                           <span className="ml-2 md:ml-1">{item.price} /=</span>
