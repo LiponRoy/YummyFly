@@ -1,9 +1,9 @@
 'use server'
-import { signIn, signOut } from "next-auth/react";
+import { signIn, signOut } from "../../auth";
 
 export async function doSocialLogin(formData) {
     const action = formData.get('action');
-    await signIn(action, { redirectTo: "/home" });
+    await signIn(action, { redirectTo: "/cartDetails" });
 }
 
 export async function doLogout() {
