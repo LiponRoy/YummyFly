@@ -27,11 +27,18 @@ const Navbar = () => {
       </div>
     </Link>
 
-    <Link href="/cartDetails" className="text-gray-900 flex justify-center items-center gap-x-1 cursor-pointer ">
+<div className="flex justify-center items-center space-x-6">
+      <Link href="/cartDetails" className="text-gray-900 flex justify-center items-center gap-x-1 cursor-pointer ">
       <span className="text-xl text-slate-500">{cartProducts.length}</span>
       <ShoppingCart size={24} className="animate-pulse" />
      
     </Link>
+
+    <Link href="/login" className="text-gray-900 flex justify-center items-center gap-x-1 cursor-pointer ">
+      <span className="text-xl text-slate-500">Login</span>
+    </Link>
+</div>
+
 
   </div>
 </nav>
