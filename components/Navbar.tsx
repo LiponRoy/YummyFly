@@ -1,11 +1,14 @@
 "use client";
 import useCartStore from "@/app/store/useCartStore";
+import { auth } from "../auth";
 import { ShoppingCart } from "lucide-react";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = async () => {
   const { cartProducts } = useCartStore();
+ const session = await auth();
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow px-2 py-1 z-50 border-b-2 border-primary-1">
@@ -34,9 +37,28 @@ const Navbar = () => {
      
     </Link>
 
-    <Link href="/login" className="text-gray-900 flex justify-center items-center gap-x-1 cursor-pointer ">
+   <div>
+        {session?.user ? (
+          <form
+            action={async () => {
+              await signOut();
+            }}
+          >
+            <button
+              type="submit"
+              className="px-4 py-2 bg-red-500 text-white rounded-md"
+            >
+              Logout
+            </button>
+          </form>
+        ) : (
+          <Link href="/login" className="text-gray-900 flex justify-center items-center gap-x-1 cursor-pointer ">
       <span className="text-xl text-slate-500">Login</span>
     </Link>
+        )}
+      </div>
+
+    
 </div>
 
 
