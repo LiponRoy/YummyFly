@@ -38,14 +38,16 @@ const LoginForm = () => {
               type="submit"
               name="action"
               value="google"
-              className="flex items-center gap-2 bg-primary-1 text-white font-bold px-4 py-2 rounded-lg shadow transition "
+              className="flex items-center gap-2 bg-primary-1 text-white font-bold px-4 py-2 rounded-lg shadow transition cursor-pointer"
             >
-              <Image
+            <div className="bg-slate-200 p-2 rounded-full">
+                <Image
                 src="/google.png" 
                 alt="Google"
                 width={30}
                 height={30}
               />
+            </div>
               Sign in with Google
             </button>
           </form>

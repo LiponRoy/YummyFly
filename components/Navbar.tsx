@@ -2,9 +2,9 @@
 import useCartStore from "@/app/store/useCartStore";
 import { auth } from "../auth";
 import { ShoppingCart } from "lucide-react";
-import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import Logout from "./Logout";
 
 const Navbar = async () => {
   const { cartProducts } = useCartStore();
@@ -39,21 +39,10 @@ const Navbar = async () => {
 
    <div>
         {session?.user ? (
-          <form
-            action={async () => {
-              await signOut();
-            }}
-          >
-            <button
-              type="submit"
-              className="px-4 py-2 bg-red-500 text-white rounded-md"
-            >
-              Logout
-            </button>
-          </form>
+          <Logout/>
         ) : (
           <Link href="/login" className="text-gray-900 flex justify-center items-center gap-x-1 cursor-pointer ">
-      <span className="text-xl text-slate-500">Login</span>
+       <button className="bg-primary-1 m-2 text-white px-3 py-2 rounded cursor-pointer" type="submit">Login</button>
     </Link>
         )}
       </div>
