@@ -20,4 +20,8 @@ export const {
             },
         }),
     ],
+    secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: "/login", // redirect here if user is not logged in
+  },
 });
