@@ -19,7 +19,7 @@ export default function RestaurantsSection({ isLoading, restaurants, restaurants
         {isLoading ? (
           <SkeletonLoader />
         ) : (
-          restaurants.map((restaurant, i) => (
+          restaurants?.map((restaurant, i) => (
             <RestaurantCard key={i} restaurant={restaurant} />
           ))
         )}
